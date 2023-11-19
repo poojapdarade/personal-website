@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Git</title>
+    <base href="/">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/articles">Articles</a></li>
+        </ul>
+    </nav>
+    <h1>Learning Git</h1>
+    <p>I am learning about Git and here I am documenting my progress. As a part of learning I am using Git while making
+        my website.</p>
+    <p>The commands I have learned so far are:</p>
+    <ol>
+        <li>git add</li>
+        <li>git status</li>
+        <li>git push</li>
+        <li>git commit</li>
+        <li>git clone</li>
+        <li>git log</li>
+        <li>git pull</li>
+    </ol>
+    <h2>git add</h2>
+    <p>
+        In Git, the `git add` command is used to stage changes for the next commit. When you make modifications to your
+        project, such as adding new files or editing existing ones, these changes are initially untracked by Git. By
+        using `git add`, you inform Git that you want to include these changes in the next commit. Staging changes
+        allows you to selectively choose which modifications should be part of the next snapshot of your project. This
+        separation between working directory changes and the staging area provides flexibility and precision in crafting
+        commits, as it enables you to commit specific changes while keeping others uncommitted for further refinement.
+        git add <file-name> (to add a specific file)
+            git add -A (adds all changed files to staging ready to be committed)
+    </p>
+    <h2>git status</h2>
+    <p>
+        The git status command in Git provides a comprehensive overview of the current state of your repository. When
+        executed, it displays information about any changes in your working directory compared to the last committed
+        version. This includes untracked files, modifications to tracked files, and files that are staged for the next
+        commit. git status is a valuable tool for understanding the status of your project, helping you keep track of
+        changes, and guiding you on what actions are needed, such as committing changes or adding files to the staging
+        area. It provides a snapshot of the repository's status, allowing you to make informed decisions about the next
+        steps in your version control workflow.
+        For example, if you have added a file to git by using git add ''file_name'' and also do a git commit when you do
+        git status it will show a message ''branch is one ahead'' of origin
+    </p>
+    <h2>git push</h2>
+    <p>
+        The git push command is used in Git to upload the committed changes from your local repository to a remote
+        repository. It enables you to synchronize your work with a shared or central repository, making your changes
+        accessible to others collaborating on the project. By specifying the remote repository and branch you want to
+        push to, such as git push origin master, you update the corresponding branch on the remote with your local
+        commits, ensuring that both repositories are in sync and reflecting the latest state of the project.
+    </p>
+    <h2>git commit</h2>
+    <p>The git pull command in Git is used to fetch and merge changes from a remote repository into your local working
+        branch. When you run git pull, it automatically combines the git fetch command, which retrieves the latest
+        changes from the remote repository, with the git merge command, which incorporates those changes into your local
+        branch. This ensures that your local copy is updated with the most recent modifications from the remote
+        repository, providing a seamless way to keep your local branch in sync with the collaborative development
+        happening in the shared repository.
+    </p>
+    <h2>git clone</h2>
+    <p>
+        The git clone command in Git is used to create a copy of a remote repository on your local machine. When you run
+        git clone, it not only copies the repository but also sets up a connection to the remote, allowing you to fetch
+        and pull changes from the original repository. This command is commonly used when starting a new project or when
+        you want to contribute to an existing one. The cloned repository contains the entire project history, branches,
+        and files, providing you with a complete and independent working copy that you can modify and contribute to
+        while maintaining a link to the original repository for updates.
+    </p>
+    <h2>git log</h2>
+    <p>
+        It returns the git commit history, each log contains when the change happened, who did it and also the commit
+        message.
+    </p>
+    <h2>git pull</h2>
+    <p>
+        The git pull command in Git is used to fetch and merge changes from a remote repository into your local working
+        branch. When you run git pull, it automatically combines the git fetch command, which retrieves the latest
+        changes from the remote repository, with the git merge command, which incorporates those changes into your local
+        branch. This ensures that your local copy is updated with the most recent modifications from the remote
+        repository, providing a seamless way to keep your local branch in sync with the collaborative development
+        happening in the shared repository.
+    </p>
+</body>
+
+</html>
