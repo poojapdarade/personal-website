@@ -8,13 +8,18 @@
     <base href="/">
 
     <style>
+        body {
+            background-color: floralwhite;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
@@ -27,6 +32,11 @@
         tr:hover {
             background-color: #f5f5f5;
         }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -38,7 +48,9 @@
         </ul>
     </nav>
 
-    <h1>Learning Git</h1>
+    <h1 style="text-decoration: underline;">Learning Git</h1>
+
+    <img src="/images/git-article.jpg" alt="Grapefruit slice atop a pile of other slices" />
 
     <p>I am learning about Git and here I am documenting my progress. As a part of learning I am using Git while making
         my website.</p>
@@ -62,7 +74,7 @@
             <th>
                 Git commands
             </th>
-    
+
             <th>
                 Flags
             </th>
@@ -77,7 +89,7 @@
                     <li>--amend</li>
                     <li>-no edit</li>
                 </ul>
-                
+
             </td>
         </tr>
         <tr>
@@ -112,7 +124,8 @@
             </td>
             <td>
                 <ul>
-                    <li>-f stands for force. this flag forces the changes from your local repository to remote repository</li>
+                    <li>-f stands for force. this flag forces the changes from your local repository to remote
+                        repository</li>
                 </ul>
             </td>
         </tr>
@@ -130,7 +143,7 @@
         </tr>
         <tr>
             <td>
-            <code>git branch</code>
+                <code>git branch</code>
             </td>
             <td></td>
         </tr>
@@ -160,7 +173,7 @@
     </ul>
 
     <p> Detailed description of the commands I know which are listed above:</p>
-    <h2>git add</h2>
+    <h2><code>git add</code></h2>
     <p>
         In Git, the `git add` command is used to stage changes for the next commit. When you make modifications to your
         project, such as adding new files or editing existing ones, these changes are initially untracked by Git. By
@@ -171,7 +184,7 @@
         git add <file-name> (to add a specific file)
             git add -A (adds all changed files to staging ready to be committed)
     </p>
-    <h2>git status</h2>
+    <h2><code>git status</code></h2>
     <p>
         The git status command in Git provides a comprehensive overview of the current state of your repository. When
         executed, it displays information about any changes in your working directory compared to the last committed
@@ -183,7 +196,7 @@
         For example, if you have added a file to git by using git add ''file_name'' and also do a git commit when you do
         git status it will show a message ''branch is one ahead'' of origin
     </p>
-    <h2>git push</h2>
+    <h2><code>git push</code></h2>
     <p>
         The git push command is used in Git to upload the committed changes from your local repository to a remote
         repository. It enables you to synchronize your work with a shared or central repository, making your changes
@@ -191,7 +204,7 @@
         push to, such as git push origin master, you update the corresponding branch on the remote with your local
         commits, ensuring that both repositories are in sync and reflecting the latest state of the project.
     </p>
-    <h2>git commit</h2>
+    <h2><code>git commit</code></h2>
     <p>The git pull command in Git is used to fetch and merge changes from a remote repository into your local working
         branch. When you run git pull, it automatically combines the git fetch command, which retrieves the latest
         changes from the remote repository, with the git merge command, which incorporates those changes into your local
@@ -199,7 +212,7 @@
         repository, providing a seamless way to keep your local branch in sync with the collaborative development
         happening in the shared repository.
     </p>
-    <h2>git clone</h2>
+    <h2><code>git clone</code></h2>
     <p>
         The git clone command in Git is used to create a copy of a remote repository on your local machine. When you run
         git clone, it not only copies the repository but also sets up a connection to the remote, allowing you to fetch
@@ -208,12 +221,12 @@
         and files, providing you with a complete and independent working copy that you can modify and contribute to
         while maintaining a link to the original repository for updates.
     </p>
-    <h2>git log</h2>
+    <h2><code>git log</code></h2>
     <p>
         It returns the git commit history, each log contains when the change happened, who did it and also the commit
         message.
     </p>
-    <h2>git pull</h2>
+    <h2><code>git pull</code></h2>
     <p>
         The git pull command in Git is used to fetch and merge changes from a remote repository into your local working
         branch. When you run git pull, it automatically combines the git fetch command, which retrieves the latest
@@ -222,7 +235,7 @@
         repository, providing a seamless way to keep your local branch in sync with the collaborative development
         happening in the shared repository.
     </p>
-    <h2>git branch</h2>
+    <h2><code>git branch</code></h2>
     <p>
         The git branch command is used to create, list, and delete branches. Branches allow developers to work on their
         code and create commits in isolation
@@ -230,15 +243,15 @@
     <p>
         To delete a branch we use <code>git branch -D branch_name</code> command.
     </p>
-    <h2>git checkout</h2>
+    <h2><code>git checkout</code></h2>
     <p>
         The git checkout command is used to navigate between branches. You can use
         <code>git checkout -b branch_name</code> command
         to create and jump to a new branch.
     </p>
-    <h2>git merge</h2>
+    <h2><code>git merge</code></h2>
     <p>
-        <code>git merge branch_name</code> takes commits from branch_name into current branch. 
+        <code>git merge branch_name</code> takes commits from branch_name into current branch.
     </p>
 
 </body>
