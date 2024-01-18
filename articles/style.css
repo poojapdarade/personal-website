@@ -10,8 +10,7 @@
 }
 
 .columns {
-  column-count: 4;
-  column-width: 250px;
+  columns: 4 250px;
 }
 
 html {
