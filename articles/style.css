@@ -10,12 +10,8 @@
 }
 
 .columns {
-  column-count: 3;
+  column-count: 4;
   column-width: 250px;
-}
-
-/*img {
-  max-width: 100%;
 }
 
 html {
@@ -23,131 +19,9 @@ html {
 }
 
 body {
-  padding: 10px 20px;
-  font-size: 1.5rem;
+  padding: 30px 40px;
+  font-size: 1.2rem;
   font-family: "Times New Roman", Times, serif;
   background-color: hsl(209, 71%, 90%);
   color: rgb(1, 1, 56);
 }
-
-table,
-tr,
-th,
-td,
-caption {
-  border: 1px solid #160707;
-  font-family: "Courier New", "Courier New", Courier, monospace;
-  border-collapse: collapse;
-  padding: 0.5rem;
-}
-
-a {
-  color: hsl(207, 44%, 49%);
-}
-
-a:visited {
-  color: hsl(214, 71%, 60%);
-}
-a:hover,
-a:focus {
-  display: inline-block;
-  text-decoration: underline;
-  color: hsl(204, 74%, 66%);
-  background: hsl(196, 61%, 83%);
-}
-a:active {
-  color: hsl(219, 60%, 49%);
-}
-
-nav {
-  font-size: 1.5rem;
-}
-
-nav li {
-  display: inline-block;
-  margin-inline: 0.5rem;
-}
-
-p {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: hsl(33, 92%, 15%);
-  background-color: hsl(201, 61%, 73%);
-  text-align: justify;
-  line-height: 1.5;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.2rem;
-  font-family: "Times New Roman", Times, serif;
-}
-
-h1 {
-  width: 400px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-h2 {
-  padding: 1rem;
-  background-color: hsl(219, 83%, 82%);
-  border-radius: 2rem 2rem 0 0;
-}
-
-/* Typography is a way that the text is arranged and presented
-
-ol {
-  list-style-type: upper-alpha;
-}
-
-li a {
-  display: block;
-}
-
-li a,
-li:visited {
-  text-decoration: none;
-  color: #333;
-}
-
-li a:hover,
-li a:focus {
-  color: var(--link-color-when-point);
-  background: var(--link-background-when-point);
-}
-input,
-button {
-  font: inherit;
-}
-
-.container {
-  border: 10px outset hsl(207, 87%, 78%);
-  padding: 1.5rem;
-  outline: 5px solid hsl(306, 57%, 82%);
-  outline-offset: 5px;
-}
-*/
-
-/* CHAPTER 11: FLOAT
-  .block {
-    width: 30vw;
-    height: 30vw;
-    background-color: #160707;
-    color: hsl(207, 87%, 78%);
-    padding: 1rem;
-  }
-  
-  .left {
-    float: left;
-    margin-right: 1rem;
-  }
-  .right {
-    float: right;
-    margin-left: 1rem;
-  }
-  .clear {
-    clear: both;
-  }
-  section {
-    background-color: rgb(186, 217, 245);
-    border: 1px solid #333;
-    padding: 1rem;
-    display: flow-root;
-  } */
