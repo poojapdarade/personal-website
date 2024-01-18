@@ -9,6 +9,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 200vh;
+  padding: 30px 40px;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+  background-color: hsl(209, 71%, 90%);
+  color: rgb(1, 1, 56);
+}
+
 .columns {
   columns: 4 250px;
   column-rule: 3px solid #333;
@@ -38,14 +51,30 @@
   white-space: nowrap;
 }
 
-html {
-  font-size: 100%;
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 80vh;
+  margin: 40px auto;
+  position: relative;
 }
 
-body {
-  padding: 30px 40px;
-  font-size: 1.2rem;
-  font-family: "Times New Roman", Times, serif;
-  background-color: hsl(209, 71%, 90%);
-  color: rgb(1, 1, 56);
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+  position: relative;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+
+.absolute {
+  background-color: hsl(240, 16%, 35%);
+  position: absolute;
 }
