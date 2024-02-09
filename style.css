@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --BGCOLOR: hsl(338, 30%, 95%);
+  --FFamily: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: var(--BGCOLOR);
+}
+
+h1 {
+  font-family: var(--FFamily);
+}
