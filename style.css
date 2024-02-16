@@ -1,47 +1,74 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 :root {
   --BGCOLOR: hsl(180, 30%, 95%);
   --COLOR: hsl(180, 100%, 98%);
   --FFamily: "Times New Roman", Times, serif;
-  /* for hamburger menu */
-  --BAR-WIDTH: 60px;
-  --BAR-HEIGHT: 8px;
-  --HAMBURGER-GAP: 6px;
-  --FOREGROUND: hsl(0, 0%, 0%);
-  --BACKGROUND: hsl(0, 0%, 100%);
-  --HAMBURGER-MARGIN: 5px;
-  --ANIMATION-TIMING: 200ms ease-in-out;
-  --HAMBURGER-HEIGHT: calc(var(--BAR-HEIGHT) * 3+var(--HAMBURGER-GAP) * 2);
+}
+
+/* for hamburger menu */
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #333;
+  --background: white;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 .hamburger-menu {
-  --x-width: calc(var(--HAMBURGER-HEIGHT) * 1.41421356237);
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
   display: flex;
   flex-direction: column;
-  gap: var(--HAMBURGER-GAP);
-  width: max-content; /* To only give color to maximum content of the block */
-  /*  background-color: lightblue;*/
+  gap: var(--hamburger-gap);
+  width: max-content;
   position: absolute;
-  top: var(--HAMBURGER-MARGIN);
-  left: var(--HAMBURGER-MARGIN);
+  top: var(--hamburger-margin);
+  left: var(--hamburger-margin);
   z-index: 2;
   cursor: pointer;
 }
-.hamburger-menu ::before,
+
+.hamburger-menu:has(input:checked) {
+  --foreground: white;
+  --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
 .hamburger-menu::after,
 .hamburger-menu input {
   content: "";
-  width: var(--BAR-WIDTH);
-  height: var(--BAR-HEIGHT);
-  background-color: var(--FOREGROUND);
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
   border-radius: 9999px;
-  transition: opacity var(--ANIMATION-TIMING), width var(--ANIMATION-TIMING);
   transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
 }
 
 .hamburger-menu input {
@@ -55,18 +82,33 @@
 .hamburger-menu:has(input:checked)::before {
   rotate: 45deg;
   width: var(--x-width);
-  translate: 0 calc(var(--BAR-HEIGHT) / 2);
+  translate: 0 calc(var(--bar-height) / -2);
 }
 
 .hamburger-menu:has(input:checked)::after {
   rotate: -45deg;
   width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
 }
 
-.hamburger-menu input :checked {
+.hamburger-menu input:checked {
   opacity: 0;
   width: 0;
-  /*  I don't understand how it is checking whenever we clicked on that area, video 8.49 */
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  max-width: 10rem;
+  min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
 }
 
 .menu {
