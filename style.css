@@ -8,25 +8,29 @@
   --BGCOLOR: hsl(180, 30%, 95%);
   --COLOR: hsl(180, 100%, 98%);
   --FFamily: "Times New Roman", Times, serif;
-
   /* for hamburger menu */
   --BAR-WIDTH: 60px;
   --BAR-HEIGHT: 8px;
   --HAMBURGER-GAP: 6px;
   --FOREGROUND: hsl(0, 0%, 0%);
   --BACKGROUND: hsl(0, 0%, 100%);
-}
-
-body {
-  margin: 0;
-  background-color: var(--BGCOLOR);
+  --HAMBURGER-MARGIN: 5px;
+  --ANIMATION-TIMING: 200ms ease-in-out;
+  --HAMBURGER-HEIGHT: calc(var(--BAR-HEIGHT) * 3+var(--HAMBURGER-GAP) * 2);
 }
 
 .hamburger-menu {
+  --x-width: calc(var(--HAMBURGER-HEIGHT) * 1.41421356237);
   display: flex;
   flex-direction: column;
   gap: var(--HAMBURGER-GAP);
-  border-radius: 9999px;
+  width: max-content; /* To only give color to maximum content of the block */
+  /*  background-color: lightblue;*/
+  position: absolute;
+  top: var(--HAMBURGER-MARGIN);
+  left: var(--HAMBURGER-MARGIN);
+  z-index: 2;
+  cursor: pointer;
 }
 .hamburger-menu ::before,
 .hamburger-menu::after,
@@ -35,6 +39,9 @@ body {
   width: var(--BAR-WIDTH);
   height: var(--BAR-HEIGHT);
   background-color: var(--FOREGROUND);
+  border-radius: 9999px;
+  transition: opacity var(--ANIMATION-TIMING), width var(--ANIMATION-TIMING);
+  transform-origin: left center;
 }
 
 .hamburger-menu input {
@@ -44,10 +51,23 @@ body {
   outline: none;
   pointer-events: none;
 }
-/* .hamburger-menu input:: :checked{
-  background: red ;
-  I dont understand how it is checking whenever we clicked on that area, video 8.49
-} */
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--BAR-HEIGHT) / 2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+}
+
+.hamburger-menu input :checked {
+  opacity: 0;
+  width: 0;
+  /*  I don't understand how it is checking whenever we clicked on that area, video 8.49 */
+}
 
 .menu {
   font-size: large;
