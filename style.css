@@ -8,11 +8,46 @@
   --BGCOLOR: hsl(180, 30%, 95%);
   --COLOR: hsl(180, 100%, 98%);
   --FFamily: "Times New Roman", Times, serif;
+
+  /* for hamburger menu */
+  --BAR-WIDTH: 60px;
+  --BAR-HEIGHT: 8px;
+  --HAMBURGER-GAP: 6px;
+  --FOREGROUND: hsl(0, 0%, 0%);
+  --BACKGROUND: hsl(0, 0%, 100%);
 }
 
 body {
+  margin: 0;
   background-color: var(--BGCOLOR);
 }
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--HAMBURGER-GAP);
+  border-radius: 9999px;
+}
+.hamburger-menu ::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--BAR-WIDTH);
+  height: var(--BAR-HEIGHT);
+  background-color: var(--FOREGROUND);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+/* .hamburger-menu input:: :checked{
+  background: red ;
+  I dont understand how it is checking whenever we clicked on that area, video 8.49
+} */
 
 .menu {
   font-size: large;
@@ -59,7 +94,7 @@ body {
 button {
   border-radius: 5px;
   background-color: hsl(150, 100%, 90%);
-  border-color: aliceblue;
+  border-color: hsl(208, 100%, 97%);
 }
 
 .introduction {
