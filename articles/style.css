@@ -111,6 +111,20 @@ body {
   translate: 0;
 }
 
+.content-table {
+  border-collapse: collapse; /*It is a popular css table property to reduce the space between cells*/
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  min-width: 400px;
+}
+
+.content-table thead tr {
+  background-color: hsl(180, 90%, 89%);
+  color: black;
+  text-align: left;
+}
+
 .menu {
   font-size: large;
   padding: 0.5rem;
