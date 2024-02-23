@@ -210,3 +210,15 @@ button {
   padding: 25%;
   display: inline-grid;
 }
+
+.js-notes {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.js-notes li {
+  margin-bottom: 1rem;
+}
