@@ -27,7 +27,7 @@
             element that results nothing for the output for that element<br>boolean: True or False<br>string : set of
             characters<br>symbol: A symbol is an immutable primitive value that is unique<br>number: numbers<br>object:
             An object can store a lot of different key value pairs.<br></li>
-        <li>Variables:<br> We often set data into a variable. A variable allows computers to store and manipulate data
+        <li>Variables<br> We often set data into a variable. A variable allows computers to store and manipulate data
             in a
             dynamic fashion. It is basically a label to point to a data. To declare variable<br>There are three ways to
             declare
@@ -37,9 +37,79 @@
             used throughout your whole program. Let will only be able to use within scope where you declare that and
             const is a variable that can never change. There is difference between declaring the variable and assigning
             the
-            variable.<br><code> var a; This how to declare variable.</code><br><code>var b=2; By using = assignment operator we can assign variable to a value.</code><br><code>console.log(a) console.log allows you to see things in the console. </code><br>
+            variable.<br><code> var a; This how to declare variable.</code><br><code>var b=2; By using = assignment operator we can assign variable to a value.</code><br><code>console.log(a) console.log allows you to see things in the console. </code><br><code>var a=9;</code>
+            In this we are declaring and initializing variable at the same time. var a is declaring it and by using
+            assignment operator = we are initializing value 9;
         </li>
+        <li>Case sensitivity in variables:<br> Variable names and function names are case sensitive in the
+            javascript.<br>Use camelCase when are you declaring variable. For example. start a variable name with small
+            letters and when you have new work use capital letter<code> studyJavaScript</code>
+        </li>
+        <li>Adding numbers<br> We use + operator for adding numbers in Javascript.</li>
+
+        <li>Escape sequences in strings:<br>1. '\ single quote <br>2. "\ double quote <br>3. \\ backslash<br>4. \n
+            newline<br>5. \r carriage return<br>5. \t tab<br>6.\b backspace<br>7. \f form feed</li>
+
+        <li>Concatenating strings with plus operator: <br> <code>Option 1: var ourStr = "I come first." + "I come second.";
+
+            var myStr2 = "This is the start" + "This is the end.";
+            console.log(myStr2);
+    
+            Option 2:
+            var ourStr = "I come first.";
+            ourStr += "I come second"; 
+            console.log(ourStr);</code></li>
+        <li>Constructing strings with
+            variables:<br><code>var ourName="Pooja"; var ourStr="Hello, my name is "+ ourName + "how are you?";</code><br>console.log(ourStr);
+        </li>
+        <li>Appeding variables to
+            strings:<br><code>var anAdjective="Awasome!";<br>var ourStr="The Earth is ";<br>ourStr+=anAdjective;</code>
+        </li>
+        <li>Find length of the
+            string: by using .length we can find out the length of the
+            string<br><code>var firstNameLength=0;<br>var firstName="Ada";<br>firstNameLength=firstName.length;<br>console.log(firstNameLength);</code>
+        </li>
+        <li>Bracket notation to find first character in string: It is a way to get a character at a specific index
+            within a
+            string.<code>var firstLetter="";<br>var firstName=Ada";<br>firstLetter=firstName[0];<br>console.log(firstLetter);</code>
+        </li>
+        <li>Bracket notation to find last character in string: It is a way to get a character at a specific index
+            within a
+            string.<br>You can find whatever position by subtracting nth
+            number.<br><code>var firstName="Ada";<br>var lastLetter=firstName[firstName.length-1];</code></li>
+        <li>String Immutability:<br>Strings are immutable,meaning they cannot be altered once created.It does not mean
+            it cannot be changed, just that the individual characters of a string literal cannot be
+            changed.<br><code>var myStr="Jello World";<br>myStr="Hello World";</code></li>
+        <li>Word
+            Blanks:<br><code>function wordBlanks(myNoun, myAdjective,myVerb,MyAdverb){<br>var result="";<br>}<br>result+="The"+ myAdjective+ " " +myNoun+" "+myVerb+" "+ to the store"+" "+ myAdverb;<br>return result;<br>console.log(wordBlanks("cat","big","ran","quickly"));</code>
+        </li>
+        <li>Arrays:<br>arrays allow you to store several pieces of data in one place.<br>Following is the example of
+            array:<br>var ourArray=["John", 23];<br>It can be any data types.</li>
+        <li>Nested arrays:<br>It means arrays within another Array<br><code>var ourArray=[["The
+            universe",42],["everything",101010]];</code></li>
+        <li>Access Array data with
+            Indexes:<br><code>var ourArray=[50,60,70];<br>var ourData=ourArray[0];<br>console.log(ourData);</code>
+        </li>
+        <li>Modify array data :<br><code>var ourArray=[18,64,99];<br>ourArray[1]=45;</code><br>And for multi-dimensional
+            Arrays:<br>var myArray=[[1,2,3],[4,5,6,],[7,8,9][[10,11,12],12,14]];<br>var myData=myArray[2][1];</li>
+        <li>Manipulate array with push():<br>You can have pinned data to the end of an array with the push
+            function.<br><code>var ourArray=["Stimpson","J","Cat"];<br>ourArray.push(["happy","joy"]);</code><br>This
+            will give output as follows:<br><code>ourArray now equals to ["Stimpson","J","Cat"["happy","joy"]];</code>
+        </li>
+        <li>Manipulate array with pop(): We can remove an item from an Array with the
+            pop().<br><code>var ourArray=[1,2,3];<br>var removedFromOurArray=ourArray.pop();</code><br>The above code
+            gives following output<br><code>removedFromOurArray now equals 3, and ourArray now equals[1,2]</code></li>
+        <li>Manipulate arrays with shift():<br>shift() is similar as pop() except shift() removes the first element of
+            the array instead of the final
+            element.<br><code>var ourArray=["Stimpson","J",["cat"]];<br>var removedFromOurArray=ourArray.shift();</code>
+        </li>
+        <li>Manipulate arrays using unshift():<br>It is similar to the push(), while push() adds an element at the end
+            of the array, unshift() adds an element to the beginning of the array.<br>var
+            ourArray=["Stimpson","J",["cat"]];<br>ourArray.shift();//oueArray now equals
+            ["J","cat"]<br>ourArray.unshift("Happy")// ourArraynow equals to ["Happy","J","cat"];</li>
     </ol>
+
+
 </body>
 
 </html>
