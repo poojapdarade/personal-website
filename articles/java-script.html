@@ -106,7 +106,83 @@
         <li>Manipulate arrays using unshift():<br>It is similar to the push(), while push() adds an element at the end
             of the array, unshift() adds an element to the beginning of the array.<br>var
             ourArray=["Stimpson","J",["cat"]];<br>ourArray.shift();//oueArray now equals
-            ["J","cat"]<br>ourArray.unshift("Happy")// ourArraynow equals to ["Happy","J","cat"];</li>
+            ["J","cat"]<br>ourArray.unshift("Happy")// ourArray now equals to ["Happy","J","cat"];</li>
+        <li>Shopping list</li>
+
+        <li>Write reusable code with functions:<br>Functions allows us to create reusable code in javascript.<br>how to
+            write a function:<br><code>function function-name(){}</code><br>Anything inside the curly bracket will learn
+            every time function is called.<br><code>function myName() {
+                console.log("My name is Pooja");
+            }
+            myName();</code></li>
+        <li>Passing values to functions with Arguments:<br>Parameters are variables that act as placeholders for the
+            values that are to be the input to a function when it is called.<br>
+            <code>function ourFunctionArgs(a,b){<br>console.log(a-b);<br>}<br>ourFunctionArgs(10,5);//outputs 5</code>
+        </li>
+        <li>Global scope and functions:<br>Scope refers to the visibility of the variables.Variables which are defined
+            outside of a function have a global scope. Global scope means they can be seen everywhere is your javascript
+            scope.<br><code>var myVar=5<br>function myGlobalScope()<br>{<br>console.log(myVar);<br>}<br>myGlobalScope();</code>
+        </li>
+        <li>Local Scope and functions:<br>variables which are declared within a function as well as the function
+            parameters have local scope which means they are only visible from within the
+            function.<br><code>function myLocalScope(){<br>var myVar=5;<br>console.log(myVar);<br>}<br>myLocalScope();</code>
+        </li>
+
+        <li>Return a value from a function:
+            <code>function minusSever(num){<br>return num-7;<br>}<br>console.log(minusSeven(10));</code><br>The above
+            code explain that you can return a value from the return statement.When you pass a number from the
+            minusSeven() it will execute whatever is after the return statement.
+        </li>
+        <li>Undefined value entered:<br>If we don't specify the return value then return value is undefined.</li>
+
+        <li>Stand in Line:</li>
+
+        <li>Boolean Values: It only returns True or False.<code>function welcomeBoolean(){<br>return true;<br>}</code>
+        </li>
+
+        <li>Use of conditional logic using if-else
+            statements:<br><code>function ourTrueFalse(){<br>if(isItTrue){<br>return "Yes,it is true";<br>}<br>return "No, it is false.";<br>}</code>
+        </li>
+        <li>Equality Operators:<br> == This is a sign of equality operator. By val==12 we are not declaring that value
+            is equals to 12 it is checking if val is 12 or not. this equality operator converts the type for example it
+            will convert a string to a number.<br> There is also a <b>Strict Equality Operator ===
+            </b>: this operator needs same type of element on the other side as it does not do any conversions and it
+            will evaluate
+            false if the type is not same. </li>
+
+
+        <li>Inequality operator:<br> != is the sign of inequality operator.<br> Strict inequality operator used !== .it
+            works opposite of strict equality operator. We can use > >= < <=in out code.</li>
+
+        <li>And / Or Operators: && is used for And operator and || is used for or operator.<br>For Example,<br>function
+            testLogicalAnd(val){<br>if(val
+            <=50 && val>=25){<br>return "Yes";<br>return "No";<br>testLogicalAnd(10);}<br>Above example explains that
+                both the statements in the if statement have to be true otherwise answer will be No.
+        </li>
+        <li>if-else statements</li>
+        <li>Switch statement : <br>Instead of choosing chained if-else statement, we can use switch statements.<br>For
+            example;<br><code>function chainToSwitch(val){<br>var answer="";<br>switch(val){<br>case "Bob":<br>answer="Marley";<br>break;<br>case 42:<br>answer="The Answer";<br>break;<br>}</code>
+        </li>
+        <li>Returning boolean values from functions:<br>You can use this if you want a function to return true or false
+            value. For
+            example-<br><code>function isLess(a,c){<br>if(a<c){<br>return true;<br>} else {<br>return false;<br>}<br>}<br>isLess(10,15);</b></code>
+            <br>Instead we can write it as follows
+            :<br><code>function isLess(a,c){<br>return a<c; <br>}<br>console.log(isless(10,15));</code>
+        </li>
+
+        <li>Objects:<br>Objects are similar to arrays except instead of using indexes access data, we use
+            properties.<br><code>var ourDog={<br>"name":"Camper";<br>"legs"=4;<br>"friends"=[]<br>};</code><br>There are
+            two ways to access the property of an object.<br>1. Dot notation.<br>2.Bracket
+            Notation.<br><code>var ourDog={<br>"name":"Camper";<br>"legs"=4;<br>"friends"=[]<br>};<br>var dogName=ourDog.name;<br> var dogLegs=ourDog["legs"]; </code><br>Bracket
+            notation also can be used to look up object properties using
+            variables.<br><code>var ourDog={<br>"name":"Camper";<br>"legs"=4;<br>"friends"=[]<br>};<br>var dogName="name";<br>var dog=ourDog[dogName];</code>
+        </li>
+        <li>Updating object properties:<br><code>ourDog.name="Happy Camper";</code></li>
+        <li>Add and delete properties to object:<br>To add a property - <code>ourDog.bark="bow-wow";</code><br>To delete
+            a property : <code>delete ourDog.bark;</code></li>
+        <li>Objects for lookup values:For example, <br>function phoneticLookup(val){<br>var result="";<br>var
+            lookup={<br>"alpha":"Adams",<br>"bravo":"Boston",<br>"charlie":"chicago",<br>};<br>result=lookup[val];<br>return
+            result;<br>}<br>console.log(phoneticLookup("charlie"));</li>
     </ol>
 
 
