@@ -289,9 +289,9 @@
                 scope.</p>
             <p><code>var myVar=5</code></p>
             <p><code> myGlobalScope()</code></p>
-            <p><code>{</code>
+            <p><code>{</code></p>
             <p><code>console.log(myVar);</code></p>
-            <p><code>}</code>
+            <p><code>}</code></p>
             <p><code>myGlobalScope();</code></p>
         </li>
         <li>
@@ -306,66 +306,191 @@
             <p><code>myLocalScope();</code></p>
         </li>
 
-        <li>Return a value from a function:
-            <code>function minusSever(num){<br>return num-7;<br>}<br>console.log(minusSeven(10));</code><br>The above
-            code explain that you can return a value from the return statement.When you pass a number from the
-            minusSeven() it will execute whatever is after the return statement.
+        <li>
+            <p>Return a value from a function:</p>
+            <p><code>function minusSever(num){</code></p>
+            <p><code>return num-7;</code></p>
+            <p><code>}</code></p>
+            <p><code>console.log(minusSeven(10));</code></p>
+            <p>The above
+                code explain that you can return a value from the return statement.When you pass a number from the
+                minusSeven() it will execute whatever is after the return statement.</p>
         </li>
-        <li>Undefined value entered:<br>If we don't specify the return value then return value is undefined.</li>
-
-        <li>Stand in Line:</li>
-
-        <li>Boolean Values: It only returns True or False.<code>function welcomeBoolean(){<br>return true;<br>}</code>
+        <li>
+            <p>Undefined value entered:</p>
+            <p>If we don't specify the return value then return value is undefined.</p>
         </li>
 
-        <li>Use of conditional logic using if-else
-            statements:<br><code>function ourTrueFalse(){<br>if(isItTrue){<br>return "Yes,it is true";<br>}<br>return "No, it is false.";<br>}</code>
+        <li>
+            <p>Stand in Line</p>
         </li>
-        <li>Equality Operators:<br> == This is a sign of equality operator. By val==12 we are not declaring that value
-            is equals to 12 it is checking if val is 12 or not. this equality operator converts the type for example it
-            will convert a string to a number.<br> There is also a <b>Strict Equality Operator ===
-            </b>: this operator needs same type of element on the other side as it does not do any conversions and it
-            will evaluate
-            false if the type is not same. </li>
+
+        <li>
+            <p>Boolean Values: It only returns True or False.</p>
+            <p><code>function welcomeBoolean()</code></p>
+            <p><code>{</code></p>
+            <p><code>return true;</code></p>
+        </li>
+
+        <li>
+            <p>Use of conditional logic using if-else
+                statements:</p>
+            <p><code>function ourTrueFalse(){</code></p>
+            <p><code>if(isItTrue){</code></p>
+            <p><code>return "Yes,it is true";</code></p>
+            <p><code>}</code></p>
+            <p><code>return "No, it is false.";</code></p>
+            <p><code>}</code></p>
+        </li>
+        <li>
+            <p>Equality Operators: == </p>
+            <p>This is a sign of equality operator. By val==12 we are not declaring that
+                value
+                is equals to 12 it is checking if val is 12 or not. this equality operator converts the type for example
+                it
+                will convert a string to a number.There is also a <b>Strict Equality Operator ===
+                </b>: this operator needs same type of element on the other side as it does not do any conversions and
+                it
+                will evaluate
+                false if the type is not same.</p>
+        </li>
 
 
-        <li>Inequality operator:<br> != is the sign of inequality operator.<br> Strict inequality operator used !== .it
-            works opposite of strict equality operator. We can use &gt; &gt;= &lt; &lt;=in out code.</li>
+        <li>
+            <p>Inequality operator: </p>
+            <p> !=is the sign of inequality operator.<br> Strict inequality operator used !==
+                .it
+                works opposite of strict equality operator. We can use &gt; &gt;= &lt; &lt;=in out code.</p>
+        </li>
 
-        <li>And / Or Operators: &amp;&amp; is used for And operator and || is used for or operator.<br>For
-            Example,<br>function
-            testLogicalAnd(val){ <br>if(val
-            &lt;=50 &amp;&amp; val&gt;=25){<br>return "Yes";<br>return "No";<br>testLogicalAnd(10);}<br>Above example
-            explains
-            that
-            both the statements in the if statement have to be true otherwise answer will be No.
+        <li>
+            <p>And / Or Operators:</p>
+            <p> &amp;&amp; is used for And operator and || is used for or operator.</p>
+            <p>For
+                Example,</p>
+            <p><code>function
+                testLogicalAnd(val){ </code></p>
         </li>
-        <li>if-else statements</li>
-        <li>Switch statement : <br>Instead of choosing chained if-else statement, we can use switch statements.<br>For
-            example;<br><code>function chainToSwitch(val){<br>var answer="";<br>switch(val){<br>case "Bob":<br>answer="Marley";<br>break;<br>case 42:<br>answer="The Answer";<br>break;<br>}</code>
+        <li>
+            <p><code>if(val
+            &lt;=50 &amp;&amp; val&gt;=25){</code></p>
+            <p><code>return "Yes";</code></p>
+            <p><code>return "No";</code></p>
+            <p><code>testLogicalAnd(10);}</code></p>
+            <p>Above
+                example
+                explains
+                that
+                both the statements in the if statement have to be true otherwise answer will be No.</p>
         </li>
-        <li>Returning boolean values from functions:<br>You can use this if you want a function to return true or false
-            value. For
-            example-<br><code>function isLess(a,c){<br>if(a&lt;c){<br>return true;<br>} else {<br>return false;<br>}<br>}<br>isLess(10,15);</b></code>
-            <br>Instead we can write it as follows
-            :<br><code>function isLess(a,c){<br>return a&lt;c; <br>}<br>console.log(isless(10,15));</code>
+        <li>
+            <p>if-else statements</p>
         </li>
-        <li>Objects:<br>Objects are similar to arrays except instead of using indexes access data, we use
-            properties.<br><code>var ourDog={<br>"name":"Camper";<br>"legs"=4;<br>"friends"=[]<br>};</code><br>There are
-            two ways to access the property of an object.<br>1. Dot notation.<br>2.Bracket
-            Notation.<br><code>var ourDog={<br>"name":"Camper";<br>"legs"=4;<br>"friends"=[]<br>};<br>var dogName=ourDog.name;<br> var dogLegs=ourDog["legs"]; </code><br>Bracket
-            notation also can be used to look up object properties using
-            variables.<br><code>var ourDog={<br>"name":"Camper";<br>"legs"=4;<br>"friends"=[]<br>};<br>var dogName="name";<br>var dog=ourDog[dogName];</code>
+        <li>
+            <p>Switch statement :</p>
+            <p>Instead of choosing chained if-else statement, we can use switch statements.<br>For
+                example;</p>
+            <p><code>function chainToSwitch(val){</code></p>
+            <p><code>var answer="";</code></p>
+            <p><code>switch(val){</code></p>
+            <p><code>case "Bob":</code></p>
+            <p><code>answer="Marley";</code></p>
+            <p><code>break;</code></p>
+            <p><code>case 42:</code></p>
+            <p><code>answer="The
+                Answer";</code></p>
+            <p><code>break;</code></p>
+            <p><code>}</code></p>
         </li>
-        <li>Updating object properties:<br><code>ourDog.name="Happy Camper";</code></li>
-        <li>Add and delete properties to object:<br>To add a property - <code>ourDog.bark="bow-wow";</code><br>To delete
-            a property : <code>delete ourDog.bark;</code></li>
-        <li>Objects for lookup values:For example, <br>function phoneticLookup(val){<br>var result="";<br>var
-            lookup={<br>"alpha":"Adams",<br>"bravo":"Boston",<br>"charlie":"chicago",<br>};<br>result=lookup[val];<br>return
-            result;<br>}<br>console.log(phoneticLookup("charlie"));</li>
+        <li>
+            <p>Returning boolean values from functions:</p>
+            <p>You can use this if you want a function to return true or false
+                value. For
+                example-</p>
+            <p><code>function isLess(a,c){</code></p>
+            <p><code>(a&lt;c){</code></p>
+            <p><code>return true;</code></p>
+            <p><code> else {</code></p>
+            <p><code>return
+                false;</code></p>
+            <p><code>}</code>
+            <p><code>};</code></p>
+            <p><code>isLess(10,15);</code></p>
+            <p>Instead we can write it as follows
+                :</p>
+            <p><code>function isLess(a,c){</code></p>
+            <p><code>return a&lt;c; </code></p>
+            <p><code>}</code></p>
+            <p><code>console.log(isless(10,15));</code></p>
+        </li>
+        <li>
+            <p>Objects:</p>
+            <p>Objects are similar to arrays except instead of using indexes access data, we use
+                properties.</p>
+            <p><code>var ourDog={</code></p>
+            <p>"name":"Camper";</p>
+            <p>"legs"=4;</p>
+            <p>"friends"=[]</p>
+            <p>};</p>
+            <p>There are
+                two ways to access the property of an object.</p>
+            <ol>
+                <li>Dot notation</li>
+                <li>2.Bracket
+                    Notation.</li>
+            </ol>
+            <p>var ourDog={</p>
+            <p>"name":"Camper";</p>
+            <p>"legs"=4;</p>
+            <p>"friends"=[]</p>
+            <p>};</p>
+            <p>var dogName=ourDog.name;</p>
+            <p> var dogLegs=ourDog["legs"];</p>
+            <p>Bracket
+                notation also can be used to look up object properties using
+                variables.</p>
+            <p><code>var ourDog={</code></p>
+            <p><code>"name":"Camper";</code></p>
+            <p><code>"legs"=4;</code></p>
+            <p><code>"friends"=[]</code></p>
+            <p><code>};</code></p>
+            <p><code>var dogName="name";</code></p>
+            <p><code>var dog=ourDog[dogName];</code></p>
+        </li>
+        <li>
+            <p>Updating object properties:</p>
+            <p><code>ourDog.name="Happy Camper";</code></p>
+        </li>
+        <li>
+            <p>Add and delete properties to object:</p>
+            <p>To add a property -</p>
+            <p><code>ourDog.bark="bow-wow";</code></p>
+            <p>To delete
+                a property : <code>delete ourDog.bark;</code></p>
+        </li>
+        <li>
+            <p>Objects for lookup values:For example,</p>
+            <p>function phoneticLookup(val){</p>
+            <p><code>var result="";</code></p>
+            <p><code>var
+                lookup={</code></p>
+            <p><code>"alpha":"Adams",</code></p>
+            <p><code>"bravo":"Boston",</code></p>
+            <p><code>"charlie":"chicago",</code></p>
+            <p><code>};</code></p>
+            <p><code>result=lookup[val];</code></p>
+            <p><code>return
+                result;</code></p>
+            <p><code>}</code></p>
+            <p><code>console.log(phoneticLookup("charlie"));</code></p>
+        </li>
 
-        <li>Testing objects for properties</li>
-        <li>Manipulating complex objects </li>
+        <li>
+            <p>Testing objects for properties</p>
+        </li>
+        <li>
+            <p>Manipulating complex objects </p>
+        </li>
     </ol>
 
 
