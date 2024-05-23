@@ -18,14 +18,28 @@
     <button type="button" id="playButton">Play</button>
     <p>Output : <span id="output"></span></p>
 
+    <button type="button" id="reset">Reset</button>
+
     <script>
+        const playArray = [];
+
         const addNumbersButton = document.querySelector('#addNumbers');
         addNumbersButton.addEventListener('click', handleAddNumbers);
 
         const playButton = document.querySelector('#playButton');
         playButton.addEventListener('click', minimumNumberGame);
 
-        const playArray = [];
+        const resetButton = document.querySelector("#reset")
+        resetButton.addEventListener('click', () => {
+            while (playArray.length) {
+                playArray.pop()
+            }
+
+            updateCurrentNumberDisplay()
+            updateOutputDisplay([])
+        })
+
+
 
         function updateCurrentNumberDisplay() {
             const displayNumbers = document.querySelector('#currentNumbers');
