@@ -194,19 +194,3 @@ button {
   background-color: hsl(195, 53%, 85%);
   border-color: hsl(208, 100%, 97%);
 }
-
-.introduction {
-  color: hsl(195, 53%, 55%);
-  background-color: hsl(195, 53%, 85%);
-  position: fixed;
-  top: 0;
-  left: 10%;
-  font-size: larger;
-  display: flex;
-  min-width: 400px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--COLOR);
-  padding: 25%;
-  display: inline-grid;
-}
