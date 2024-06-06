@@ -1,0 +1,13 @@
+.article-menu {
+  background-color: var(--COLOR);
+
+  font-family: var(--FFamily);
+}
+
+.article-menu ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

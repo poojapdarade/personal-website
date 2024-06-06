@@ -1,0 +1,8 @@
+.page-layout {
+  display: flex;
+  gap: 12px;
+}
+
+.title {
+  margin-top: 0;
+}

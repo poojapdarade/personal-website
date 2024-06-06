@@ -1,9 +1,11 @@
+import "./Navigation.css";
+
 export function Navigation() {
   return (
     <aside className="sidebar">
       <nav>
         <div>
-          <a href="./index.html">Home</a>
+          <a href="/">Home</a>
         </div>
         <div>
           <a href="./articles/">Articles</a>
