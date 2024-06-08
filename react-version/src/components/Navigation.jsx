@@ -11,7 +11,7 @@ export function Navigation() {
           <a href="./articles/">Articles</a>
         </div>
         <div>
-          <a href="./contact.html">Contact</a>
+          <a href="./Contact">Contact</a>
         </div>
       </nav>
     </aside>
