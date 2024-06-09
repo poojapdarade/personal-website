@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/articles" element={<Articles />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/articles/learning-css" element={<LearningCss />} />
-        <Route path="/articles/leanring-html" element={<LearningHtml />} />
+        <Route path="/articles/learning-html" element={<LearningHtml />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
