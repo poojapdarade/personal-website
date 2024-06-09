@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Homepage } from "./pages/Homepage.jsx";
 import { Articles } from "./pages/Articles.jsx";
 import { Contact } from "./pages/Contact.jsx";
+import { LearningCss } from "./pages/Learning-css.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Homepage />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/articles/learning-css" element={<LearningCss />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
