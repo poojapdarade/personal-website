@@ -1,4 +1,3 @@
-import { Navigation } from "../components/Navigation";
 import { PageLayout } from "../components/PageLayout";
 import "./Articles.css";
 
