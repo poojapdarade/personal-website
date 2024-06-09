@@ -3,7 +3,7 @@ import { PageLayout } from "../components/PageLayout";
 export function LearningHtml() {
   return (
     <PageLayout title="Learning HTML">
-      <div className="learninghtml">
+      <div>
         <nav className="menu">
           <ul>
             <li>

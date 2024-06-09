@@ -1,9 +1,9 @@
 import { PageLayout } from "../components/PageLayout";
-import "./Articles.css";
+import "./LearingCss.css";
 export function LearningCss() {
   return (
     <PageLayout title="Learning Css">
-      <div className="learning-css">
+      <div>
         <h3>What is CSS?</h3>
         <ul>
           <li>
