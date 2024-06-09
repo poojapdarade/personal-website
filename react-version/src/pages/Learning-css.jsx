@@ -46,7 +46,7 @@ export function LearningCss() {
           </p>
           <p>
             &#8220;Where's my food, man? &#8221;
-            {/* <span className="nowrap">&#8212;The Dude</span> */}
+            <span> &#8212;The Dude</span>
           </p>
           <p>
             Colors: In CSS, colors define how elements look. You can use names
