@@ -1,5 +1,5 @@
 import { PageLayout } from "../components/PageLayout";
-import "./LearingCss.css";
+
 export function LearningCss() {
   return (
     <PageLayout title="Learning Css">
@@ -36,7 +36,7 @@ export function LearningCss() {
             use for beginners{" "}
           </li>
         </ul>
-        <section className="columns">
+        <section>
           <h3>What I have learned in CSS</h3>
           <p>
             What is selectors? In CSS, selectors are patterns that target HTML
@@ -44,9 +44,9 @@ export function LearningCss() {
             attributes, or their relationship with other elements. Selectors
             help apply styles selectively to specific parts of a web page.
           </p>
-          <p className="quote">
-            &#8220;Where's my food, man? &#8221;{" "}
-            <span className="nowrap">&#8212;The Dude</span>
+          <p>
+            &#8220;Where's my food, man? &#8221;
+            {/* <span className="nowrap">&#8212;The Dude</span> */}
           </p>
           <p>
             Colors: In CSS, colors define how elements look. You can use names
