@@ -2,7 +2,7 @@ import { PageLayout } from "../components/PageLayout";
 import "./Articles.css";
 export function LearningCss() {
   return (
-    <PageLayout>
+    <PageLayout title="Learning Css">
       <div className="learning-css">
         <h3>What is CSS?</h3>
         <ul>
@@ -22,8 +22,8 @@ export function LearningCss() {
           <li>External</li>
           <li>Inline</li>
         </ol>
-        <p>syntax for css:</p>
-        <p> selector &123; (property = property_value) &125; <p/>
+        <p>syntax for css:</p>{" "}
+        <p>selector &123;(property = property_value)&125;</p>
         <p>3 types of selectors:</p>
         <ol>
           <li>Element - Least specific </li>

@@ -8,7 +8,7 @@ export function Navigation() {
           <a href="/">Home</a>
         </div>
         <div>
-          <a href="./articles/">Articles</a>
+          <a href="./articles">Articles</a>
         </div>
         <div>
           <a href="./Contact">Contact</a>
