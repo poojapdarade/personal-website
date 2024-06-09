@@ -6,6 +6,7 @@ import { Homepage } from "./pages/Homepage.jsx";
 import { Articles } from "./pages/Articles.jsx";
 import { Contact } from "./pages/Contact.jsx";
 import { LearningCss } from "./pages/Learning-css.jsx";
+import { LearningHtml } from "./pages/LearningHTML.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/articles" element={<Articles />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/articles/learning-css" element={<LearningCss />} />
+        <Route path="/articles/leanring-html" element={<LearningHtml />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

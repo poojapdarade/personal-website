@@ -9,19 +9,19 @@ export function Articles() {
         <nav className="article-menu">
           <ul>
             <li>
-              <a href="/articles/learning-git.html">Learning Git</a>
+              <a href="/articles/learning-git">Learning Git</a>
             </li>
             <li>
-              <a href="/articles/learning-html.html">Learning HTML</a>
+              <a href="/articles/learning-html">Learning HTML</a>
             </li>
             <li>
-              <a href="/articles/learning-css.html">Learning CSS</a>
+              <a href="/articles/learning-css">Learning CSS</a>
             </li>
             <li>
-              <a href="/articles/java-script.html">Learning JavaScript</a>
+              <a href="/articles/java-script">Learning JavaScript</a>
             </li>
             <li>
-              <a href="/articles/coding-puzzles/index.html">Coding Puzzles</a>
+              <a href="/articles/coding-puzzles/index">Coding Puzzles</a>
             </li>
           </ul>
         </nav>

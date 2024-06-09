@@ -82,9 +82,6 @@ export function LearningCss() {
         a webpage, including font properties (family, size, color), line height,
         letter spacing, and text alignment.
       </p>
-      <h3>
-        <a href="/articles/articles.html">Back</a>
-      </h3>
     </div>
   );
 }
