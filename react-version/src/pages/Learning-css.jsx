@@ -1,5 +1,5 @@
 import { PageLayout } from "../components/PageLayout";
-
+import "./Articles.css";
 export function LearningCss() {
   return (
     <PageLayout>
@@ -23,7 +23,7 @@ export function LearningCss() {
           <li>Inline</li>
         </ol>
         <p>syntax for css:</p>
-        selector &123 (property = property_value) &125
+        <p> selector &123; (property = property_value) &125; <p/>
         <p>3 types of selectors:</p>
         <ol>
           <li>Element - Least specific </li>
