@@ -15,10 +15,8 @@ export function LearningHtml() {
           </ul>
         </nav>
 
-        <h1 style="text-decoration: underline;">Learning Git</h1>
-
         <img
-          src="/images/git-article.jpg"
+          src="/react-version/images/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
 
@@ -42,110 +40,112 @@ export function LearningHtml() {
         </ol>
 
         <table>
-          <tr>
-            <th>Git commands</th>
+          <tbody>
+            <tr>
+              <th>Git commands</th>
 
-            <th>Flags</th>
-          </tr>
-          <tr>
-            <td>
-              <code>git commit</code>
-            </td>
-            <td>
-              <ul>
-                <li>-m is used to add the commit message</li>
-                <li>
-                  --amend is used to amend changes to the most recent commit
-                </li>
-                <li>
-                  --no-edit means most recent message stays unchanged in the
-                  most recent commit
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>git init</code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <code>git add</code>
-            </td>
-            <td>
-              <ul>
-                <li>-A is use to add al the changes to the staging area </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>git clone</code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <code>git pull</code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <code>git push</code>
-            </td>
-            <td>
-              <ul>
-                <li>
-                  -f stands for force. this flag forces the changes from your
-                  local repository to remote repository
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>git status</code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <code>git log</code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <code>git branch</code>
-            </td>
-            <td>
-              <ul>
-                <li>-D is use to delete the branch</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>git checkout</code>
-            </td>
-            <td>
-              <ul>
-                <li>
-                  -b branch-name is used to create a new branch and jump into it
-                  straight away
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>git merge</code>
-            </td>
-            <td></td>
-          </tr>
+              <th>Flags</th>
+            </tr>
+            <tr>
+              <td>
+                <code>git commit</code>
+              </td>
+              <td>
+                <ul>
+                  <li>-m is used to add the commit message</li>
+                  <li>
+                    --amend is used to amend changes to the most recent commit
+                  </li>
+                  <li>
+                    --no-edit means most recent message stays unchanged in the
+                    most recent commit
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>git init</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <code>git add</code>
+              </td>
+              <td>
+                <ul>
+                  <li>-A is use to add al the changes to the staging area </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>git clone</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <code>git pull</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <code>git push</code>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    -f stands for force. this flag forces the changes from your
+                    local repository to remote repository
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>git status</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <code>git log</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <code>git branch</code>
+              </td>
+              <td>
+                <ul>
+                  <li>-D is use to delete the branch</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>git checkout</code>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    -b branch-name is used to create a new branch and jump into
+                    it straight away
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>git merge</code>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
         </table>
 
         <p>
@@ -291,12 +291,6 @@ export function LearningHtml() {
           <code>git merge branch_name</code> takes commits from branch_name into
           current branch.
         </p>
-
-        <h4>
-          <h3>
-            <a href="/articles/articles.html">Back</a>
-          </h3>
-        </h4>
       </div>
     </PageLayout>
   );
