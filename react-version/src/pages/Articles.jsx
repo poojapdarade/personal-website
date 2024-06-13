@@ -17,7 +17,7 @@ export function Articles() {
               <a href="/articles/learning-css">Learning CSS</a>
             </li>
             <li>
-              <a href="/articles/java-script">Learning JavaScript</a>
+              <a href="/articles/learning-javaScript">Learning JavaScript</a>
             </li>
             <li>
               <a href="/articles/coding-puzzles/index">Coding Puzzles</a>
