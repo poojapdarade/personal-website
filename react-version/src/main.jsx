@@ -9,6 +9,7 @@ import { LearningCss } from "./pages/Learning-css.jsx";
 import { LearningHtml } from "./pages/LearningHTML.jsx";
 import { LearningJavaScript } from "./pages/Javascript.jsx";
 import { LearningGit } from "./pages/LearningGit.jsx";
+import { JewelsAndStones } from "./pages/coding-puzzles/jewelsAndStones.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -24,6 +25,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={<LearningJavaScript />}
         />
         <Route path="/articles/learning-git" element={<LearningGit />} />
+        <Route
+          path="/articles/coding-puzzles/jewels-and-stones"
+          element={<JewelsAndStones />}
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
