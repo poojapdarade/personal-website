@@ -9,7 +9,9 @@ import { LearningCss } from "./pages/Learning-css.jsx";
 import { LearningHtml } from "./pages/LearningHTML.jsx";
 import { LearningJavaScript } from "./pages/Javascript.jsx";
 import { LearningGit } from "./pages/LearningGit.jsx";
-import { JewelsAndStones } from "./pages/coding-puzzles/jewelsAndStones.jsx";
+import { JewelsAndStones } from "./pages/coding-puzzles/JewelsAndStones.jsx";
+import { CodingPuzzle } from "./pages/coding-puzzles/CodingPuzzles.jsx";
+import { PageLayout } from "./components/PageLayout.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -25,10 +27,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={<LearningJavaScript />}
         />
         <Route path="/articles/learning-git" element={<LearningGit />} />
+        <Route path="/articles/coding-puzzles" element={<CodingPuzzle />} />
         <Route
           path="/articles/coding-puzzles/jewels-and-stones"
           element={<JewelsAndStones />}
         />
+        <Route path="*" element={<PageLayout title="404 - Page Not Found" />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

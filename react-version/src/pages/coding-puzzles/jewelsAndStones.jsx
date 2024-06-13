@@ -49,38 +49,3 @@ export function JewelsAndStones() {
     </PageLayout>
   );
 }
-
-// function getJewels() {
-//     return(
-//     <input className="jewels" defaultValue={jewels}></input>
-
-//         {jewels};
-//     )}
-
-//     function getStones() {
-//         const stones = document.querySelector("#stones").value;
-//         return stones;
-//     }
-//     function calculate() {
-//         const jewels = getJewels();
-//         const stones = getStones();
-//         const numberOfJewels = jewelsAndStones(jewels, stones);
-
-//         const paragraph = document.querySelector('#answer');
-//         paragraph.textContent = `for stones (${stones}) and jewels (${jewels}) we found ${numberOfJewels} jewels`;
-//     }
-
-//     function jewelsAndStones(jewels, stones) {
-//         let numberOfJewels = 0;
-
-//         const jewelsToFind = new Set(jewels.split(''));
-//         for (const stone of stones) {
-//             if (jewelsToFind.has(stone)) {
-//                 numberOfJewels++;
-//             }
-//         }
-//         return numberOfJewels;
-//     };
-
-//     const calculateButton = document.querySelector("#calculate")
-//     calculateButton.addEventListener("click", calculate)
