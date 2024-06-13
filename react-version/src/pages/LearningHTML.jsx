@@ -22,7 +22,7 @@ export function LearningHtml() {
 
         <p>
           I am learning about Git and here I am documenting my progress. As a
-          part of learning I am using Git while making my website.
+          part of learning I am using Git while making my website
         </p>
 
         <p>The commands I have learned so far:</p>
