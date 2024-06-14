@@ -9,9 +9,9 @@ export function CodingPuzzle() {
             Jewels And Stones
           </a>
         </li>
-        {/* <li>
+        <li>
           <a href="./minimum-number-game">Minimum Number Game</a>
-        </li> */}
+        </li>
       </ul>
     </PageLayout>
   );

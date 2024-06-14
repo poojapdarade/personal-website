@@ -12,6 +12,10 @@ import { LearningGit } from "./pages/LearningGit.jsx";
 import { JewelsAndStones } from "./pages/coding-puzzles/JewelsAndStones.jsx";
 import { CodingPuzzle } from "./pages/coding-puzzles/CodingPuzzles.jsx";
 import { PageLayout } from "./components/PageLayout.jsx";
+import {
+  MinimumNumberGame,
+  minimumNumberGame,
+} from "./pages/coding-puzzles/MinimumNumberGame.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,6 +35,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/articles/coding-puzzles/jewels-and-stones"
           element={<JewelsAndStones />}
+        />
+        <Route
+          path="/articles/coding-puzzle/minimum-number-game"
+          element={<MinimumNumberGame />}
         />
         <Route path="*" element={<PageLayout title="404 - Page Not Found" />} />
       </Routes>
