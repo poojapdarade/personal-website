@@ -34,7 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={<JewelsAndStones />}
         />
         <Route
-          path="/articles/coding-puzzle/minismum-number-game"
+          path="/articles/coding-puzzles/minimum-number-game"
           element={<MinimumNumberGame />}
         />
         <Route path="*" element={<PageLayout title="404 - Page Not Found" />} />

@@ -4,8 +4,6 @@ import { useState } from "react";
 export function MinimumNumberGame() {
   return (
     <PageLayout title:Minimum Number Game>
-      <h1>Hiiiiiiiiiiiiiiiii</h1>
-      {/* <h1>Hi</h1>
       <p>Add two numbers</p>
       <input type="number" id="number1" />
       <input type="number" id="number2" />
@@ -24,7 +22,7 @@ export function MinimumNumberGame() {
 
       <button type="button" id="reset">
         Reset
-      </button> */}
+      </button>
 
       {/* const playArray = [];
 
