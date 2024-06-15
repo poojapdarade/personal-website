@@ -20,53 +20,66 @@
 
     <button type="button" id="reset">Reset</button>
 
-    const playArray = [];
+    <script>
+        const playArray = [];
 
-    const addNumbersButton = document.querySelector('#addNumbers');
-    addNumbersButton.addEventListener('click', handleAddNumbers);
+        const addNumbersButton = document.querySelector('#addNumbers');
+        addNumbersButton.addEventListener('click', handleAddNumbers);
 
-    const playButton = document.querySelector('#playButton');
-    playButton.addEventListener('click', minimumNumberGame);
+        const playButton = document.querySelector('#playButton');
+        playButton.addEventListener('click', minimumNumberGame);
 
-    const resetButton = document.querySelector("#reset")
-    resetButton.addEventListener('click', () => {
-    while (playArray.length) {
-    playArray.pop()
-    }
+        const resetButton = document.querySelector("#reset")
+        resetButton.addEventListener('click', () => {
+            while (playArray.length) {
+                playArray.pop()
+            }
 
-    updateCurrentNumberDisplay()
-    updateOutputDisplay([])
-    })
+            updateCurrentNumberDisplay()
+            updateOutputDisplay([])
+        })
 
 
 
-    function updateCurrentNumberDisplay() {
-    const displayNumbers = document.querySelector('#currentNumbers');
-    displayNumbers.textContent = playArray;
-    }
+        function updateCurrentNumberDisplay() {
+            const displayNumbers = document.querySelector('#currentNumbers');
+            displayNumbers.textContent = playArray;
+        }
 
-    function updateOutputDisplay(gameArray) {
-    const output = document.querySelector("#output");
-    output.textContent = gameArray;
-    }
+        function updateOutputDisplay(gameArray) {
+            const output = document.querySelector("#output");
+            output.textContent = gameArray;
+        }
 
-    function handleAddNumbers() {
-    const firstNumber = document.querySelector('#number1');
-    const secondNumber = document.querySelector('#number2');
-    const firstNumberValue = Number(firstNumber.value);
-    const secondNumberValue = Number(secondNumber.value);
-    playArray.push(firstNumberValue);
-    playArray.push(secondNumberValue);
+        function handleAddNumbers() {
+            const firstNumber = document.querySelector('#number1');
+            const secondNumber = document.querySelector('#number2');
+            const firstNumberValue = Number(firstNumber.value);
+            const secondNumberValue = Number(secondNumber.value);
+            playArray.push(firstNumberValue);
+            playArray.push(secondNumberValue);
 
-    updateCurrentNumberDisplay()
-    }
+            updateCurrentNumberDisplay()
+        }
 
-    function minimumNumberGame() {
-    const gameArray = [];
-    const ascendingArray = playArray.toSorted((a, b) => a - b);
+        function minimumNumberGame() {
+            const gameArray = [];
+            const ascendingArray = playArray.toSorted((a, b) => a - b);
 
-    for (let i = 0; i < ascendingArray.length; i +=2) { const alice=ascendingArray[i]; const bob=ascendingArray[i + 1];
-        gameArray.push(bob); gameArray.push(alice); } updateOutputDisplay(gameArray); } </script>
+            for (let i = 0; i < ascendingArray.length; i += 2) {
+                const alice = ascendingArray[i];
+                const bob = ascendingArray[i + 1];
+                gameArray.push(bob);
+                gameArray.push(alice);
+            }
+
+
+            updateOutputDisplay(gameArray);
+        }
+
+
+
+    </script>
 </body>
 
 </html>

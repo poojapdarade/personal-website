@@ -10,7 +10,9 @@ export function CodingPuzzle() {
           </a>
         </li>
         <li>
-          <a href="./minimum-number-game">Minimum Number Game</a>
+          <a href="/articles/coding-puzzles/minimum-number-game">
+            Minimum Number Game
+          </a>
         </li>
       </ul>
     </PageLayout>
