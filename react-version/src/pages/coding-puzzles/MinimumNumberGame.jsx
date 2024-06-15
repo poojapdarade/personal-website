@@ -2,17 +2,8 @@ import { PageLayout } from "../../components/PageLayout";
 import { useState } from "react";
 
 export function MinimumNumberGame() {
+  const [displayOutput, setDisplayOutput] = useState(null);
   const playArray = [];
-
-  function updateCurrentNumberDisplay() {
-    const displayNumbers = currentNumbers;
-    displayNumbers.textContent = playArray;
-  }
-
-  function updateOutputDisplay(gameArray) {
-    const output = [];
-    output.textContent = gameArray;
-  }
 
   function handleAddNumbers() {
     const firstNumber = number1;
@@ -21,8 +12,7 @@ export function MinimumNumberGame() {
     const secondNumberValue = Number(secondNumber.value);
     playArray.push(firstNumberValue);
     playArray.push(secondNumberValue);
-
-    updateCurrentNumberDisplay();
+    setDisplayOutput(playArray);
   }
 
   function minimumNumberGame() {
@@ -35,7 +25,7 @@ export function MinimumNumberGame() {
       gameArray.push(bob);
       gameArray.push(alice);
     }
-    updateOutputDisplay(gameArray);
+    displayOutput(gameArray);
   }
 
   return (
@@ -43,27 +33,26 @@ export function MinimumNumberGame() {
       <p>Add two numbers</p>
       <input type="number" id="number1" />
       <input type="number" id="number2" />
-      <button type="button" id="addNumbers" onClick={handleAddNumbers}>
+      <button type="button" onClick={handleAddNumbers}>
         Add Numbers
       </button>
       <p>
-        Current Numbers: <span id="currentNumbers"></span>
+        Current Numbers: <span onClick={setDisplayOutput}></span>
       </p>
-      <button type="button" id="playButton" onClick={minimumNumberGame}>
+      <button type="button" onClick={minimumNumberGame}>
         Play
       </button>
       <p>
-        Output : <span id="output"></span>
+        Output : <span onClick={setDisplayOutput}></span>
       </p>
       <button
         type="button"
-        id="reset"
         onClick={() => {
           while (playArray.length) {
             playArray.pop();
           }
-          updateCurrentNumberDisplay();
-          updateOutputDisplay();
+          displayOutput();
+          setDisplayOutput();
         }}
       >
         Reset
