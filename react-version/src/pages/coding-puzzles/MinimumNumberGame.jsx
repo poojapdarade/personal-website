@@ -1,6 +1,10 @@
-import { PageLayout } from "../../components/PageLayout";
-import { useState } from "react";
-
+import React, { useState } from "react";
 export function MinimumNumberGame() {
-  return <PageLayout title:Minimum Number Game></PageLayout>;
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
 }
