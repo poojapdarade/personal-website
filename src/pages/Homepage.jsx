@@ -1,20 +1,37 @@
 import { PageLayout } from "../components/PageLayout";
 import "./Homepage.css";
+import Sparkles from "react-sparkle";
 
 export function Homepage() {
   return (
     <PageLayout>
       <IntroSection />
+      <SkillSection />
     </PageLayout>
+  );
+}
+
+function JobTitle() {
+  return (
+    <div style={{ position: "relative", width: "fit-content" }}>
+      <p>Junior Web Developer</p>
+      <Sparkles
+        color={["#f472b6", "#831843"]}
+        count={10}
+        overflowPx={8}
+        fadeOutSpeed={25}
+        flickerSpeed="slowest"
+      />
+    </div>
   );
 }
 
 function IntroSection() {
   return (
-    <div className="intro-layout">
+    <div className="intro-layout width-container">
       <div className="description-mobile">
         <h2 className="name">Pooja Darade</h2>
-        <p>Junior Web Developer</p>
+        <JobTitle />
         <p>
           I'm a passionate junior web developer with a foundation in HTML, CSS,
           JavaScript, and React. With a background in computer engineering and
@@ -36,7 +53,7 @@ function IntroSection() {
       <div className="description-desktop">
         <div className="description-desktop-text">
           <h2 className="name">Pooja Darade</h2>
-          <p>Junior Web Developer</p>
+          <JobTitle />
           <p>
             I'm a passionate junior web developer with a foundation in HTML,
             CSS, JavaScript, and React. With a background in computer
@@ -54,6 +71,22 @@ function IntroSection() {
           </div>
         </div>
         <img src="/avatar.jpeg" className="avatar" />
+      </div>
+    </div>
+  );
+}
+
+function SkillSection() {
+  return (
+    <div
+      style={{
+        backgroundColor: "#d1d5db",
+        marginLeft: "-18px",
+        marginRight: "-18px",
+      }}
+    >
+      <div className="width-container">
+        <p>test</p>
       </div>
     </div>
   );
