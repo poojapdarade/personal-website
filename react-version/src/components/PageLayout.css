@@ -1,6 +1,5 @@
-.page-layout {
-  display: flex;
-  gap: 12px;
+.layout {
+  padding: 10px 18px;
 }
 
 .title {

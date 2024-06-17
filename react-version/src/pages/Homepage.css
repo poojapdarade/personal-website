@@ -1,15 +1,55 @@
-.introduction {
-  color: hsl(195, 53%, 55%);
-  background-color: hsl(195, 53%, 85%);
-  position: fixed;
-  top: 0;
-  left: 10%;
-  font-size: larger;
+.intro-layout {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding: 40px 0px;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.description {
   display: flex;
-  min-width: 400px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--COLOR);
-  padding: 25%;
-  display: inline-grid;
+  flex-direction: column;
+  gap: 12px;
+}
+
+p {
+  color: #374151;
+}
+
+.intro-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intro-buttons a {
+  border-radius: 6px;
+  padding: 8px 0px;
+  text-align: center;
+}
+
+.intro-buttons a:hover {
+  text-decoration: none;
+}
+
+.view-work {
+  color: white;
+  background-color: #831843;
+}
+
+.view-work:hover {
+  color: white;
+  background-color: #be185d;
+}
+
+.contact {
+  border: 1px solid #374151;
+  color: black;
+}
+
+.contact:hover {
+  color: black;
+  background-color: #e5e7eb;
 }

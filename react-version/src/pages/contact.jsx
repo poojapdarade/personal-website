@@ -1,7 +1,5 @@
+import { PageLayout } from "../components/PageLayout";
+
 export function Contact() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+  return <PageLayout title="Hello"></PageLayout>;
 }

@@ -1,5 +1,5 @@
-.sidebar {
-  padding: 0.5rem 1rem;
-  max-width: 10rem;
-  min-height: 100svh;
+.mainMenu {
+  display: flex;
+  gap: 18px;
+  justify-content: end;
 }
