@@ -19,7 +19,7 @@ function IntroSection() {
           I'm a passionate junior web developer with a foundation in HTML, CSS,
           JavaScript and react.
         </p>
-        <img src="public/avatar.jpeg" />
+        <img src="/avatar.jpeg" />
         <div className="intro-buttons">
           <a href="/articles" className="view-work">
             View Work
