@@ -77,6 +77,8 @@ function IntroSection() {
 }
 
 function SkillSection() {
+  const skills = ["HTML", "CSS", "JavaScript", "React", "Git"];
+
   return (
     <div
       style={{
@@ -86,7 +88,12 @@ function SkillSection() {
       }}
     >
       <div className="width-container">
-        <p>test</p>
+        <p>Skills</p>
+        <div className="skills">
+          {skills.map(function (skill) {
+            return <p>{skill}</p>;
+          })}
+        </div>
       </div>
     </div>
   );

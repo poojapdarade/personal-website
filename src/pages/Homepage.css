@@ -98,3 +98,8 @@ p {
   flex-direction: column;
   gap: 16px;
 }
+
+.skills {
+  display: flex;
+  gap: 16px;
+}
