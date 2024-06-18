@@ -102,4 +102,21 @@ p {
 .skills {
   display: flex;
   gap: 16px;
+  color: black;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.card {
+  width: 200px;
+  background-color: #ecc2d4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(red, green, blue, alpha);
+  margin: 20px;
 }

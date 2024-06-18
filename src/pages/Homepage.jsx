@@ -89,10 +89,16 @@ function SkillSection() {
     >
       <div className="width-container">
         <p>Skills</p>
-        <div className="skills">
-          {skills.map(function (skill) {
-            return <p>{skill}</p>;
-          })}
+        <div className="card-container">
+          <div className="skills">
+            {skills.map(function (skill) {
+              return (
+                <div className="card">
+                  <p>{skill}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
