@@ -1,6 +1,7 @@
 import { PageLayout } from "../components/PageLayout";
 import "./Homepage.css";
 import Sparkles from "react-sparkle";
+import { Code, Heading1, Atom, GitMerge, Box } from "lucide-react";
 
 export function Homepage() {
   return (
@@ -30,7 +31,7 @@ function IntroSection() {
   return (
     <div className="intro-layout width-container">
       <div className="description-mobile">
-        <h2 className="name">Pooja Darade</h2>
+        <h1 className="name">Pooja Darade</h1>
         <JobTitle />
         <p>
           I'm a passionate junior web developer with a foundation in HTML, CSS,
@@ -52,7 +53,7 @@ function IntroSection() {
 
       <div className="description-desktop">
         <div className="description-desktop-text">
-          <h2 className="name">Pooja Darade</h2>
+          <h1 className="name">Pooja Darade</h1>
           <JobTitle />
           <p>
             I'm a passionate junior web developer with a foundation in HTML,
@@ -77,28 +78,71 @@ function IntroSection() {
 }
 
 function SkillSection() {
-  const skills = ["HTML", "CSS", "JavaScript", "React", "Git"];
+  const skills = [
+    {
+      title: "HTML",
+      icon: <Heading1 size={50} />,
+      description:
+        "HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
+    },
+    {
+      title: "CSS",
+      icon: <Box size={50} />,
+      description:
+        "Skilled in writing clean, responsive, and maintainable CSS, including the use of preprocessors like Sass and Tailwind CSS.",
+    },
+    {
+      title: "JavaScript",
+      icon: <Code size={50} />,
+      description:
+        "Proficient in modern JavaScript, including ES6+ features and popular frameworks like React and Node.js.",
+    },
+    {
+      title: "React",
+      icon: <Atom size={50} />,
+      description:
+        "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js",
+    },
+    {
+      title: "Git",
+      icon: <GitMerge size={50} />,
+      description:
+        "Proficient in using Git for version control, including branching, merging, and collaborating on projects.",
+    },
+  ];
 
   return (
     <div
       style={{
-        backgroundColor: "#d1d5db",
+        backgroundColor: "#e5e7eb",
         marginLeft: "-18px",
         marginRight: "-18px",
+        paddingLeft: "18px",
+        paddingRight: "18px",
       }}
     >
-      <div className="width-container">
-        <p>Skills</p>
-        <div className="card-container">
-          <div className="skills">
-            {skills.map(function (skill) {
-              return (
-                <div className="card">
-                  <p>{skill}</p>
+      <div
+        className="width-container"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "8px",
+          padding: "20px 0px",
+        }}
+      >
+        <h2 className="skills-title">Skills</h2>
+        <div className="skills">
+          {skills.map(function (skill) {
+            return (
+              <div className="card">
+                <div>
+                  {skill.icon}
+                  <p>{skill.title}</p>
                 </div>
-              );
-            })}
-          </div>
+                <p>{skill.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

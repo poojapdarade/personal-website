@@ -38,10 +38,6 @@
   }
 }
 
-p {
-  color: #374151;
-}
-
 .avatar {
   width: 500px;
 }
@@ -100,23 +96,47 @@ p {
 }
 
 .skills {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 16px;
-  color: black;
 }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
+@media (min-width: 600px) {
+  .skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .skills {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .card {
-  width: 200px;
-  background-color: #ecc2d4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 2px 4px rgba(red, green, blue, alpha);
-  margin: 20px;
+}
+
+.card:hover {
+  background-color: #f4f4f5;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.skills-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
 }
