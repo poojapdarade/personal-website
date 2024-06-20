@@ -5,3 +5,15 @@
 .title {
   margin-top: 0;
 }
+
+.footer {
+  padding: 20px;
+  margin-left: -18px;
+  margin-right: -18px;
+  background-color: #d4d4d8;
+}
+
+.footer p {
+  max-width: 100%;
+  text-align: center;
+}

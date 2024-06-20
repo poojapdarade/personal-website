@@ -1,15 +1,9 @@
 import { PageLayout } from "../components/PageLayout";
 import "./Homepage.css";
 import Sparkles from "react-sparkle";
-import {
-  Code,
-  Heading1,
-  Atom,
-  GitMerge,
-  Box,
-  Github,
-  Linkedin,
-} from "lucide-react";
+import { Code, Heading1, Atom, GitMerge, Box } from "lucide-react";
+import { GitHub } from "../components/icons/GitHub";
+import { LinkedIn } from "../components/icons/LinkedIn";
 
 export function Homepage() {
   return (
@@ -60,9 +54,11 @@ function IntroSection() {
         </div>
         <div className="social-net-pages">
           <a href="https://linkedin.com/in/pooja-darade-658008119">
-            {<Linkedin />}
+            <LinkedIn />
           </a>
-          <a href="https://github.com/poojapdarade">{<Github />}</a>
+          <a href="https://github.com/poojapdarade">
+            <GitHub />
+          </a>
         </div>
       </div>
 
@@ -87,9 +83,11 @@ function IntroSection() {
           </div>
           <div className="social-net-pages">
             <a href="https://linkedin.com/in/pooja-darade-658008119">
-              {<Linkedin />}
+              <LinkedIn />
             </a>
-            <a href="https://github.com/poojapdarade">{<Github />}</a>
+            <a href="https://github.com/poojapdarade">
+              <GitHub />
+            </a>
           </div>
         </div>
         <img src="/avatar.jpeg" className="avatar" />

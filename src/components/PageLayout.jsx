@@ -9,6 +9,9 @@ export function PageLayout({ title, children }) {
         {title && <h1 className="title">{title}</h1>}
         {children}
       </div>
+      <footer className="footer">
+        <p>copyright &copy; 2024-{new Date().getFullYear()}</p>
+      </footer>
     </div>
   );
 }
