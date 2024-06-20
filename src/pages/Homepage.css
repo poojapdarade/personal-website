@@ -140,3 +140,8 @@
   font-weight: 600;
   font-size: 3rem;
 }
+
+.social-net-pages {
+  display: flex;
+  gap: 16px;
+}

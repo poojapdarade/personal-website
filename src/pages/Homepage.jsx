@@ -1,7 +1,15 @@
 import { PageLayout } from "../components/PageLayout";
 import "./Homepage.css";
 import Sparkles from "react-sparkle";
-import { Code, Heading1, Atom, GitMerge, Box } from "lucide-react";
+import {
+  Code,
+  Heading1,
+  Atom,
+  GitMerge,
+  Box,
+  Github,
+  Linkedin,
+} from "lucide-react";
 
 export function Homepage() {
   return (
@@ -45,9 +53,16 @@ function IntroSection() {
           <a href="/articles" className="view-work">
             View Work
           </a>
+
           <a href="/contact" className="contact">
             Contact Me
           </a>
+        </div>
+        <div className="social-net-pages">
+          <a href="https://linkedin.com/in/pooja-darade-658008119">
+            {<Linkedin />}
+          </a>
+          <a href="https://github.com/poojapdarade">{<Github />}</a>
         </div>
       </div>
 
@@ -70,6 +85,12 @@ function IntroSection() {
               Contact Me
             </a>
           </div>
+          <div className="social-net-pages">
+            <a href="https://linkedin.com/in/pooja-darade-658008119">
+              {<Linkedin />}
+            </a>
+            <a href="https://github.com/poojapdarade">{<Github />}</a>
+          </div>
         </div>
         <img src="/avatar.jpeg" className="avatar" />
       </div>
@@ -77,40 +98,40 @@ function IntroSection() {
   );
 }
 
-function SkillSection() {
-  const skills = [
-    {
-      title: "HTML",
-      icon: <Heading1 size={50} />,
-      description:
-        "HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
-    },
-    {
-      title: "CSS",
-      icon: <Box size={50} />,
-      description:
-        "Skilled in writing clean, responsive, and maintainable CSS, including the use of preprocessors like Sass and Tailwind CSS.",
-    },
-    {
-      title: "JavaScript",
-      icon: <Code size={50} />,
-      description:
-        "Proficient in modern JavaScript, including ES6+ features and popular frameworks like React and Node.js.",
-    },
-    {
-      title: "React",
-      icon: <Atom size={50} />,
-      description:
-        "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js",
-    },
-    {
-      title: "Git",
-      icon: <GitMerge size={50} />,
-      description:
-        "Proficient in using Git for version control, including branching, merging, and collaborating on projects.",
-    },
-  ];
+const skills = [
+  {
+    title: "HTML",
+    icon: <Heading1 size={50} />,
+    description:
+      "HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
+  },
+  {
+    title: "CSS",
+    icon: <Box size={50} />,
+    description:
+      "Skilled in writing clean, responsive, and maintainable CSS, including the use of preprocessors like Sass and Tailwind CSS.",
+  },
+  {
+    title: "JavaScript",
+    icon: <Code size={50} />,
+    description:
+      "Proficient in modern JavaScript, including ES6+ features and popular frameworks like React and Node.js.",
+  },
+  {
+    title: "React",
+    icon: <Atom size={50} />,
+    description:
+      "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js",
+  },
+  {
+    title: "Git",
+    icon: <GitMerge size={50} />,
+    description:
+      "Proficient in using Git for version control, including branching, merging, and collaborating on projects.",
+  },
+];
 
+function SkillSection() {
   return (
     <div
       style={{
