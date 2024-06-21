@@ -10,7 +10,16 @@ export function PageLayout({ title, children }) {
         {children}
       </div>
       <footer className="footer">
-        <p>copyright &copy; 2024-{new Date().getFullYear()}</p>
+        <p>Pooja Darade</p>
+        <p>Junior Software Engineer</p>
+        <div className="footer-social-network-info">
+          <a href="mailto:poojap.darade@gmail.com">poojapdarade.gmail.com</a>
+          <a href="https://linkedin.com/in/pooja-darade-658008119">LinkedIn</a>
+          <a href="https://github.com/poojapdarade">GitHub</a>
+        </div>
+        <p>
+          copyright &copy; 2024-{new Date().getFullYear()}. All rights reserved.
+        </p>
       </footer>
     </div>
   );

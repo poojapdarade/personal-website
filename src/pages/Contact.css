@@ -1,0 +1,34 @@
+.contact-layout {
+  display: grid;
+}
+
+@media (min-width: 600px) {
+  .contact-layout {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    .contact-me {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  display: block;
+}

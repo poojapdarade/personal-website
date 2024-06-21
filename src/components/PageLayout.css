@@ -8,12 +8,21 @@
 
 .footer {
   padding: 20px;
+  margin-top: 16px;
   margin-left: -18px;
   margin-right: -18px;
-  background-color: #d4d4d8;
+  outline: solid #d4d4d8;
 }
 
 .footer p {
   max-width: 100%;
   text-align: center;
+  line-height: 2;
+}
+
+.footer-social-network-info {
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
