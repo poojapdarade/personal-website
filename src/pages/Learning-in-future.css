@@ -1,0 +1,45 @@
+.learnings {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .learnings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .learnings {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.learningCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+}
+
+.LearningCard:hover {
+  background-color: #f4f4f5;
+}
+
+.learningCard div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.learnings-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+}

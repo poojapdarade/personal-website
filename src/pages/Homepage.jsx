@@ -4,12 +4,14 @@ import Sparkles from "react-sparkle";
 import { Code, Heading1, Atom, GitMerge, Box } from "lucide-react";
 import { GitHub } from "../components/icons/GitHub";
 import { LinkedIn } from "../components/icons/LinkedIn";
+import { FutureSkills } from "./FutureSkills";
 
 export function Homepage() {
   return (
     <PageLayout>
       <IntroSection />
       <SkillSection />
+      <FutureSkills />
     </PageLayout>
   );
 }

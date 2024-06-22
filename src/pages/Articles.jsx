@@ -22,6 +22,9 @@ export function Articles() {
             <li>
               <a href="/articles/coding-puzzles">Coding Puzzles</a>
             </li>
+            <li>
+              <a href="/articles/Learnings-in-future">Future learnings</a>
+            </li>
           </ul>
         </nav>
       </div>
