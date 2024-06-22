@@ -6,7 +6,7 @@ import "./Learning-in-future.css";
 const futureSkills = [
   {
     title: "TypeScript",
-    icon: <TypeScript />,
+    icon: <TypeScript size={50} />,
     description: "Enhance my skills with the TypeScript programming language.",
   },
   {
@@ -27,7 +27,7 @@ export function FutureSkills() {
   return (
     <div
       style={{
-        backgroundColor: "#e5e7eb",
+        backgroundColor: "#ffffff",
         marginLeft: "-18px",
         marginRight: "-18px",
         paddingLeft: "18px",

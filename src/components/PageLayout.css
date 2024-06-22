@@ -11,7 +11,13 @@
   margin-top: 16px;
   margin-left: -18px;
   margin-right: -18px;
-  outline: solid #d4d4d8;
+  background-color: #52525b;
+  color: white;
+}
+
+.footer a {
+  background-color: #52525b;
+  color: white;
 }
 
 .footer p {

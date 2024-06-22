@@ -5,6 +5,7 @@ import { Code, Heading1, Atom, GitMerge, Box } from "lucide-react";
 import { GitHub } from "../components/icons/GitHub";
 import { LinkedIn } from "../components/icons/LinkedIn";
 import { FutureSkills } from "./FutureSkills";
+import { RecentProjects } from "./RecentProject";
 
 export function Homepage() {
   return (
@@ -12,6 +13,7 @@ export function Homepage() {
       <IntroSection />
       <SkillSection />
       <FutureSkills />
+      <RecentProjects />
     </PageLayout>
   );
 }
