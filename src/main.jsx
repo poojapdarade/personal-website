@@ -13,6 +13,7 @@ import { JewelsAndStones } from "./pages/coding-puzzles/JewelsAndStones.jsx";
 import { CodingPuzzle } from "./pages/coding-puzzles/CodingPuzzles.jsx";
 import { PageLayout } from "./components/PageLayout.jsx";
 import { MinimumNumberGame } from "./pages/coding-puzzles/MinimumNumberGame.jsx";
+import { MontyHallProblem } from "./pages/MontyHallProblem.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -37,6 +38,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/articles/coding-puzzles/minimum-number-game"
           element={<MinimumNumberGame />}
         />
+
+        <Route path="/projects/monty-hall" element={<MontyHallProblem />} />
         <Route path="*" element={<PageLayout title="404 - Page Not Found" />} />
       </Routes>
     </BrowserRouter>

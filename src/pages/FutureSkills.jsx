@@ -47,7 +47,7 @@ export function FutureSkills() {
         <div className="learnings">
           {futureSkills.map(function (futureSkill) {
             return (
-              <div className="learningCard">
+              <div className="learningCard" key={futureSkill.title}>
                 <div>
                   {futureSkill.icon}
                   <p>{futureSkill.title}</p>

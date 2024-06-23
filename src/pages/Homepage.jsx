@@ -6,6 +6,7 @@ import { GitHub } from "../components/icons/GitHub";
 import { LinkedIn } from "../components/icons/LinkedIn";
 import { FutureSkills } from "./FutureSkills";
 import { RecentProjects } from "./RecentProject";
+import { MontyHallProblem } from "./MontyHallProblem";
 
 export function Homepage() {
   return (
@@ -14,6 +15,7 @@ export function Homepage() {
       <SkillSection />
       <FutureSkills />
       <RecentProjects />
+      <MontyHallProblem />
     </PageLayout>
   );
 }
@@ -157,7 +159,7 @@ function SkillSection() {
         <div className="skills">
           {skills.map(function (skill) {
             return (
-              <div className="card">
+              <div className="card" key={skill.title}>
                 <div>
                   {skill.icon}
                   <p>{skill.title}</p>

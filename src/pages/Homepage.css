@@ -118,6 +118,10 @@
   }
 }
 
+.skills-title {
+  text-decoration: underline;
+}
+
 .card {
   display: flex;
   flex-direction: column;

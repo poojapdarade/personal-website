@@ -16,6 +16,10 @@
   }
 }
 
+.learnings-title {
+  text-decoration: underline;
+}
+
 .learningCard {
   display: flex;
   flex-direction: column;

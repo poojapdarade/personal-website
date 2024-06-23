@@ -4,4 +4,9 @@
   justify-content: end;
   max-width: 1000px;
   margin: auto;
+  text-decoration: underline;
+}
+
+.mainMenu a:hover {
+  color: hsl(240, 5%, 70%);
 }

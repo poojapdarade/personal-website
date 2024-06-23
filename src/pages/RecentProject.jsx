@@ -38,7 +38,7 @@ export function RecentProjects() {
         <div className="projects">
           {recentProjects.map(function (recentProject) {
             return (
-              <div className="projectsCard">
+              <div className="projectsCard" key={recentProject.title}>
                 <div>
                   {recentProject.icon}
                   <p>{recentProject.title}</p>
