@@ -6,7 +6,7 @@ export function MontyHallProblem() {
   const winningDoor = Math.floor(Math.random() * 3);
 
   const [gameStage, setGameStage] = useState("start");
-  const [decision, setDecision] = useState("yes");
+  //   const [decision, setDecision] = useState("yes");
 
   const [doors, setDoors] = useState([
     {
@@ -58,16 +58,16 @@ export function MontyHallProblem() {
     setGameStage("finished");
   }
 
-  function newDecision() {
-    const newDecision = doors.map((door) => {
-      return {
-        ...door,
-        isRevealed: true,
-      };
-    });
-    setDoors(newDecision);
-    setDecision("no");
-  }
+  //   function newDecision() {
+  //     const newDecision = doors.map((door) => {
+  //       return {
+  //         ...door,
+  //         isRevealed: true,
+  //       };
+  //     });
+  //     setDoors(newDecision);
+  //     setDecision("no");
+  //   }
 
   return (
     <PageLayout title="Monty Hall">
@@ -103,12 +103,12 @@ export function MontyHallProblem() {
           </p>
 
           <button>Yes</button>
-          <button onClick={(stay, newDecision)}>No</button>
+          <button onClick={stay}>No</button>
         </>
       )}
-
-      {gameStage === "finished" ||
-        (decision === "no" && <p>Thank you for playing</p>)}
+      {gameStage === "finished"}
+      {/* {gameStage === "finished" ||
+        (decision === "no" && <p>Thank you for playing</p>)} */}
     </PageLayout>
   );
 }
