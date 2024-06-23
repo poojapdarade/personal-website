@@ -103,11 +103,12 @@ export function MontyHallProblem() {
           </p>
 
           <button>Yes</button>
-          <button onClick={(stay, { newDecision })}>No</button>
+          <button onClick={(stay, newDecision)}>No</button>
         </>
       )}
 
-      {gameStage === "finished" && <p></p>}
+      {gameStage === "finished" ||
+        (decision === "no" && <p>Thank you for playing</p>)}
     </PageLayout>
   );
 }
