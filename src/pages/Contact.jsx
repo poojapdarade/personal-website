@@ -45,7 +45,7 @@ export function Contact() {
           action="https://formspree.io/f/xdknnazl"
           method="POST"
         >
-          <div className="name">
+          <div className="fullName">
             <label>Name</label>
             <input type="text" name="name" />
           </div>

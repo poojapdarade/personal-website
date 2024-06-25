@@ -279,10 +279,6 @@ export function LearningGit() {
         <code>git merge branch_name</code> takes commits from branch_name into
         current branch.
       </p>
-
-      <h4>
-        <a href="/articles/articles">Back</a>
-      </h4>
     </PageLayout>
   );
 }

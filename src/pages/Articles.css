@@ -1,13 +1,32 @@
 .article-menu {
-  background-color: var(--COLOR);
-
-  font-family: var(--FFamily);
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.article-menu ul {
+@media (min-width: 600px) {
+  .article-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .article-menu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.article-menu a {
   display: flex;
-  gap: 18px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  gap: 12px;
+  width: 32px 24px;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+}
+
+.article-menu a:hover {
+  background-color: #f4f4f5;
 }

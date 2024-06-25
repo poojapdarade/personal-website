@@ -6,26 +6,24 @@ export function Articles() {
     <PageLayout title="Articles">
       <div>
         <nav className="article-menu">
-          <ul>
-            <li>
-              <a href="/articles/learning-git">Learning Git</a>
-            </li>
-            <li>
-              <a href="/articles/learning-html">Learning HTML</a>
-            </li>
-            <li>
-              <a href="/articles/learning-css">Learning CSS</a>
-            </li>
-            <li>
-              <a href="/articles/learning-javaScript">Learning JavaScript</a>
-            </li>
-            <li>
-              <a href="/articles/coding-puzzles">Coding Puzzles</a>
-            </li>
-            <li>
-              <a href="/articles/Learnings-in-future">Future learnings</a>
-            </li>
-          </ul>
+          <p>
+            <a href="/articles/learning-git">Learning Git</a>
+          </p>
+          <p>
+            <a href="/articles/learning-html">Learning HTML</a>
+          </p>
+          <p>
+            <a href="/articles/learning-css">Learning CSS</a>
+          </p>
+          <p>
+            <a href="/articles/learning-javaScript">Learning JavaScript</a>
+          </p>
+          <p>
+            <a href="/articles/coding-puzzles">Coding Puzzles</a>
+          </p>
+          <p>
+            <a href="/articles/Learnings-in-future">Future learnings</a>
+          </p>
         </nav>
       </div>
     </PageLayout>
