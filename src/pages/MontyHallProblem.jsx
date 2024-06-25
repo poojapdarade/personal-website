@@ -47,27 +47,6 @@ export function MontyHallProblem() {
     setGameStage("revealed");
   }
 
-  function handleClickAfterYes(index) {
-    const newDoors = [...doors];
-    const clickedDoor = { ...doors[index], isSelected: true };
-
-    let doorToReveal = -1;
-    for (let i = 0; i < newDoors.length; i++) {
-      if (i === index) continue;
-      const currentDoor = newDoors[i];
-      if (currentDoor.item === "🐐") {
-        doorToReveal = i;
-      }
-    }
-    const revealedDoor = { ...doors[doorToReveal], isRevealed: true };
-
-    newDoors[index] = clickedDoor;
-    newDoors[doorToReveal] = revealedDoor;
-
-    setDoors(newDoors);
-    setGameStage("revealed");
-  }
-
   function stay() {
     const newDoors = doors.map((door) => {
       return {
@@ -88,16 +67,6 @@ export function MontyHallProblem() {
     });
     setDoors(newDecision);
     setDecision("no");
-  }
-
-  function newDecisionYes() {
-    const newDecision = doors.map((door) => {
-      return {
-        ...door,
-        isRevealed: false,
-      };
-    });
-    setDecision("yes");
   }
 
   return (
@@ -133,18 +102,7 @@ export function MontyHallProblem() {
             ?
           </p>
 
-          <button onClick={newDecisionYes} disabled={decision !== "yes"}>
-            {
-              <div>
-                {doors.map(function (door, index) {
-                  return (
-                    <button key={index} onClick={() => handleClick(index)}>
-                      {door.isRevealed ? door.item : `Door ${index + 1}`}
-                    </button>
-                  );
-                })}
-              </div>
-            }
+          <button onClick={stay} disabled={decision !== "yes"}>
             Yes
           </button>
 
@@ -154,8 +112,10 @@ export function MontyHallProblem() {
         </>
       )}
 
+      {gameStage === "true" || <p> You won this game. Thank you for playing</p>}
+
       {gameStage === "finished" ||
-        (decision === "no" && <p>Thank you for playing</p>)}
+        (decision === "no" && <p>You lost. Thank you for playing</p>)}
     </PageLayout>
   );
 }
