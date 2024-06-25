@@ -112,7 +112,8 @@ export function MontyHallProblem() {
         </>
       )}
 
-      {gameStage === "true" || <p> You won this game. Thank you for playing</p>}
+      {gameStage !== "finished" ||
+        (decision !== "no" && <p>You Won. Thank you for playing</p>)}
 
       {gameStage === "finished" ||
         (decision === "no" && <p>You lost. Thank you for playing</p>)}
