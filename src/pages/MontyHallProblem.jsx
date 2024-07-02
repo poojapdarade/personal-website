@@ -69,6 +69,17 @@ export function MontyHallProblem() {
     setDecision("no");
   }
 
+  function newDecisionYes() {
+    const newDecision = doors.map((door) => {
+      return {
+        ...door,
+        isRevealed: false,
+      };
+    });
+    setDoors(newDecision);
+    setDecision("yes");
+  }
+
   return (
     <PageLayout title="Monty Hall">
       <p>

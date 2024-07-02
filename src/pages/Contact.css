@@ -5,6 +5,8 @@
 .contact-layout {
   padding: 24px;
   display: grid;
+  max-width: 1000px;
+  margin: auto;
 }
 
 @media (min-width: 400px) {
