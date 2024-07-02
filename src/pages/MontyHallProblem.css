@@ -1,0 +1,93 @@
+.montyHallProblem {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.choice {
+  display: flex;
+  gap: 8px;
+}
+
+.choice button {
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  background-color: #831843;
+  border-color: #831843;
+  color: aliceblue;
+}
+
+.choice button:hover {
+  background-color: #530524;
+}
+
+.doors {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.door {
+  height: 200px;
+  width: 200px;
+  background-color: #831843;
+  border: 2px solid #000000;
+  border-color: #831843;
+  border-radius: 8px;
+  font-size: 24px;
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .door {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .door {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .doors {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
+  }
+
+  .door {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.door:disabled {
+  color: #000000;
+}
+
+.door:hover {
+  background-color: #530524;
+}
+
+.probabilityOfResult {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.simulationButton {
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #831843;
+  border-color: #831843;
+  color: aliceblue;
+}
+
+.simulationButton:hover {
+  background-color: #530524;
+}

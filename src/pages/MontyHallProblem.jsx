@@ -1,27 +1,36 @@
 import { PageLayout } from "../components/PageLayout";
+import { CarIcon } from "../components/icons/Car";
+import { GoatIcon } from "../components/icons/Goat";
 import "./MontyHallProblem.css";
 import React, { useState } from "react";
+
+const mapItemNameToComponent = new Map([
+  ["goat", <GoatIcon width={"100%"} height={"100%"} />],
+  ["car", <CarIcon width={"100%"} height={"100%"} />],
+]);
 
 export function MontyHallProblem() {
   const winningDoor = Math.floor(Math.random() * 3);
 
   const [gameStage, setGameStage] = useState("start");
-  const [decision, setDecision] = useState(undefined);
+  const [simulationResults, setSimulationResults] = useState(undefined);
+
+  for (let i = 0; i < 100; i++) {}
 
   const [doors, setDoors] = useState([
     {
       isSelected: false,
-      item: winningDoor === 0 ? "🚄" : "🐐",
+      item: winningDoor === 0 ? "car" : "goat",
       isRevealed: false,
     },
     {
       isSelected: false,
-      item: winningDoor === 1 ? "🚄" : "🐐",
+      item: winningDoor === 1 ? "car" : "goat",
       isRevealed: false,
     },
     {
       isSelected: false,
-      item: winningDoor === 2 ? "🚄" : "🐐",
+      item: winningDoor === 2 ? "car" : "goat",
       isRevealed: false,
     },
   ]);
@@ -34,7 +43,7 @@ export function MontyHallProblem() {
     for (let i = 0; i < newDoors.length; i++) {
       if (i === index) continue;
       const currentDoor = newDoors[i];
-      if (currentDoor.item === "🐐") {
+      if (currentDoor.item === "goat") {
         doorToReveal = i;
       }
     }
@@ -55,7 +64,6 @@ export function MontyHallProblem() {
       };
     });
     setDoors(newDoors);
-    setDecision("yes");
     setGameStage("finished");
   }
 
@@ -84,58 +92,144 @@ export function MontyHallProblem() {
     });
 
     setDoors(allDoorsRevealed);
-    setDecision("no");
     setGameStage("finished");
   }
 
-  const isWinner =
-    doors.find((door) => door.isSelected && door.item === "🚄") !== undefined;
+  const isWinner = doors.find((door) => door.isSelected && door.item === "car");
+
+  function simulation() {
+    let winCount = 0;
+    let loseCount = 0;
+    const SIMULATION_RUNS = 100;
+    const SWITCH_AFTER_REVEAL = true;
+
+    for (let i = 0; i < SIMULATION_RUNS; i++) {
+      const doors = [
+        { win: false, revealed: false, selected: false },
+        { win: false, revealed: false, selected: false },
+        { win: false, revealed: false, selected: false },
+      ];
+      const winningDoorIndex = Math.floor(Math.random() * 3);
+      const winningDoor = doors[winningDoorIndex];
+      winningDoor.win = true;
+
+      const playersDoorIndex = Math.floor(Math.random() * 3);
+      const playerDoor = doors[playersDoorIndex];
+      playerDoor.selected = true;
+
+      const indexes = [0, 1, 2].toSorted(() => Math.random() > 0.5);
+
+      for (const index of indexes) {
+        const door = doors[index];
+        if (door.selected) continue;
+        if (door.win) continue;
+        door.revealed = true;
+        break;
+      }
+
+      if (SWITCH_AFTER_REVEAL) {
+        const indexToChangeTo = doors.findIndex(
+          (door) => !door.selected && !door.revealed
+        );
+        doors[playersDoorIndex].selected = false;
+        doors[indexToChangeTo].selected = true;
+      }
+
+      const selectedDoor = doors.find((door) => door.selected);
+      const isWinner = selectedDoor.win;
+
+      if (isWinner) {
+        winCount++;
+      } else {
+        loseCount++;
+      }
+    }
+
+    setSimulationResults({
+      winCount,
+      loseCount,
+    });
+  }
 
   return (
     <PageLayout title="Monty Hall">
-      <p>
-        Behind two of the doors there is a goat and behind one is a Car. Please
-        pick a door.
-      </p>
+      <div className="montyHallProblem">
+        <p>
+          Behind two of the doors there is a goat and behind one is a Car.
+          Please pick a door.
+        </p>
 
-      <div>
-        {doors.map(function (door, index) {
-          return (
-            <button
-              key={index}
-              onClick={() => handleClick(index)}
-              disabled={gameStage !== "start"}
-            >
-              {door.isRevealed ? door.item : `Door ${index + 1}`}
+        <div className="doors">
+          {doors.map(function (door, index) {
+            return (
+              <button
+                className="door"
+                key={index}
+                onClick={() => handleClick(index)}
+                disabled={gameStage !== "start"}
+              >
+                {door.isRevealed
+                  ? mapItemNameToComponent.get(door.item)
+                  : `Door ${index + 1}`}
+              </button>
+            );
+          })}
+        </div>
+
+        {gameStage === "revealed" && (
+          <div>
+            <p>
+              You have selected Door{" "}
+              {doors.findIndex((door) => door.isSelected) + 1}, behind door{" "}
+              {doors.findIndex((door) => door.isRevealed) + 1} is a goat. Would
+              you like to change to door{" "}
+              {doors.findIndex((door) => !door.isRevealed && !door.isSelected) +
+                1}
+              ?
+            </p>
+            <div className="choice">
+              <button onClick={switchDoor}>Yes</button>
+              <button onClick={keepDoor}>No</button>
+            </div>
+          </div>
+        )}
+
+        {gameStage === "finished" && (
+          <div className="probabilityOfResult">
+            {isWinner && (
+              <p>"Congratulations on your win!!! Thank you for playing."</p>
+            )}
+
+            {!isWinner && (
+              <p>
+                "oh!!! Unfortunately, this time you didn't win. Thank you for
+                playing!"
+              </p>
+            )}
+
+            <p>
+              In the Monty Hall Problem, the best strategy is to always switch
+              doors after the host reveals one. This approach increases your
+              chances of winning to 2/3.
+            </p>
+            <p>
+              "If you're interested in seeing the simulation run 100 times, feel
+              free to click the button below."
+            </p>
+
+            <button className="simulationButton" onClick={simulation}>
+              Run a simulation
             </button>
-          );
-        })}
+
+            {simulationResults && (
+              <p>
+                You have a {simulationResults.winCount}% chance of winning and a{" "}
+                {simulationResults.loseCount}% chance of losing.
+              </p>
+            )}
+          </div>
+        )}
       </div>
-
-      {gameStage === "revealed" && (
-        <>
-          <p>
-            You have selected Door{" "}
-            {doors.findIndex((door) => door.isSelected) + 1}, behind door{" "}
-            {doors.findIndex((door) => door.isRevealed) + 1} is a goat. Would
-            you like to change to door{" "}
-            {doors.findIndex((door) => !door.isRevealed && !door.isSelected) +
-              1}
-            ?
-          </p>
-
-          <button onClick={switchDoor}>Yes</button>
-          <button onClick={keepDoor}>No</button>
-        </>
-      )}
-
-      {gameStage === "finished" && isWinner && (
-        <p>You Won. Thank you for playing</p>
-      )}
-
-      {gameStage === "finished" && !isWinner && (
-        <p>You lost. Thank you for playing</p>
-      )}
     </PageLayout>
   );
 }
