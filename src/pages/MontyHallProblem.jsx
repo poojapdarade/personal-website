@@ -6,7 +6,7 @@ export function MontyHallProblem() {
   const winningDoor = Math.floor(Math.random() * 3);
 
   const [gameStage, setGameStage] = useState("start");
-  const [decision, setDecision] = useState("yes");
+  const [decision, setDecision] = useState(undefined);
 
   const [doors, setDoors] = useState([
     {
@@ -47,7 +47,7 @@ export function MontyHallProblem() {
     setGameStage("revealed");
   }
 
-  function stay() {
+  function keepDoor() {
     const newDoors = doors.map((door) => {
       return {
         ...door,
@@ -55,30 +55,41 @@ export function MontyHallProblem() {
       };
     });
     setDoors(newDoors);
+    setDecision("yes");
     setGameStage("finished");
   }
 
-  function newDecisionNo() {
+  function switchDoor() {
     const newDecision = doors.map((door) => {
+      return {
+        ...door,
+      };
+    });
+
+    const indexOfOriginalDoorSelected = newDecision.findIndex(
+      (door) => door.isSelected
+    );
+    const indexOfNewDoorSelected = newDecision.findIndex(
+      (door) => !door.isSelected && !door.isRevealed
+    );
+
+    newDecision[indexOfOriginalDoorSelected].isSelected = false;
+    newDecision[indexOfNewDoorSelected].isSelected = true;
+
+    const allDoorsRevealed = newDecision.map((door) => {
       return {
         ...door,
         isRevealed: true,
       };
     });
-    setDoors(newDecision);
+
+    setDoors(allDoorsRevealed);
     setDecision("no");
+    setGameStage("finished");
   }
 
-  function newDecisionYes() {
-    const newDecision = doors.map((door) => {
-      return {
-        ...door,
-        isRevealed: false,
-      };
-    });
-    setDoors(newDecision);
-    setDecision("yes");
-  }
+  const isWinner =
+    doors.find((door) => door.isSelected && door.item === "🚄") !== undefined;
 
   return (
     <PageLayout title="Monty Hall">
@@ -113,21 +124,18 @@ export function MontyHallProblem() {
             ?
           </p>
 
-          <button onClick={stay} disabled={decision !== "yes"}>
-            Yes
-          </button>
-
-          <button onClick={(stay, newDecisionNo)} disabled={decision === "no"}>
-            No
-          </button>
+          <button onClick={switchDoor}>Yes</button>
+          <button onClick={keepDoor}>No</button>
         </>
       )}
 
-      {gameStage !== "finished" ||
-        (decision !== "no" && <p>You Won. Thank you for playing</p>)}
+      {gameStage === "finished" && isWinner && (
+        <p>You Won. Thank you for playing</p>
+      )}
 
-      {gameStage === "finished" ||
-        (decision === "no" && <p>You lost. Thank you for playing</p>)}
+      {gameStage === "finished" && !isWinner && (
+        <p>You lost. Thank you for playing</p>
+      )}
     </PageLayout>
   );
 }
