@@ -1,9 +1,10 @@
 import { PageLayout } from "../components/PageLayout";
+import "./LearningHTML.css";
 
 export function LearningHtml() {
   return (
     <PageLayout title="Learning HTML">
-      <div>
+      <div className="learning-html">
         <nav className="menu">
           <ul>
             <li>

@@ -1,0 +1,9 @@
+.learning-javascript {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.learning-javascript li {
+  padding-bottom: 24px;
+}
