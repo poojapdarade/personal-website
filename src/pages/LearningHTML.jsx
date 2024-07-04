@@ -5,17 +5,6 @@ export function LearningHtml() {
   return (
     <PageLayout title="Learning HTML">
       <div className="learning-html">
-        <nav className="menu">
-          <ul>
-            <li>
-              <a href="./index.html">Home</a>
-            </li>
-            <li>
-              <a href="./articles.html">Articles</a>
-            </li>
-          </ul>
-        </nav>
-
         <img
           src="/react-version/images/git-article.jpg"
           alt=" Cartoon girl studying technology"

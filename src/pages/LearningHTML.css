@@ -2,3 +2,7 @@
   max-width: 1000px;
   margin: auto;
 }
+
+.learning-html li {
+  padding-bottom: 16px;
+}
