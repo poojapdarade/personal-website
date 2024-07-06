@@ -1,4 +1,5 @@
 .mainMenu {
+  height: var(--header-height);
   display: flex;
   gap: 18px;
   justify-content: end;

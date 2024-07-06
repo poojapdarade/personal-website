@@ -5,7 +5,7 @@ export function PageLayout({ title, children }) {
   return (
     <div className="layout">
       <Navigation />
-      <div>
+      <div className="page-content">
         {title && <h1 className="title">{title}</h1>}
         {children}
       </div>

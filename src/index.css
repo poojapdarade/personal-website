@@ -1,7 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  --header-height: 25px;
+  --footer-height: 180px;
+  --layout-padding-top: 10px;
+}
+
+body {
+  margin: 0;
 }
 
 a {

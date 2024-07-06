@@ -1,15 +1,21 @@
 .layout {
-  padding: 10px 18px 0px 18px;
+  padding: var(--layout-padding-top) 18px 0px 18px;
 }
 
 .title {
   margin-top: 0;
 }
 
+.page-content {
+  min-height: calc(
+    100svh -
+      (var(--footer-height) + var(--header-height) + var(--layout-padding-top))
+  );
+}
+
 .footer {
-  position: absolute;
+  height: var(--footer-height);
   padding: 20px;
-  margin-top: 16px;
   margin-left: -18px;
   margin-right: -18px;
   background-color: hsl(240 5.9% 10%);
