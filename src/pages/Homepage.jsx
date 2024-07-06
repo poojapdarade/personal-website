@@ -106,31 +106,31 @@ const skills = [
     title: "HTML",
     icon: <Heading1 size={50} />,
     description:
-      "HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
+      "With a strong command of HTML, I create robust and accessible web structures that form the foundation for dynamic and user-friendly websites. My expertise ensures that every element is meticulously crafted to enhance both functionality and user experience.",
   },
   {
     title: "CSS",
     icon: <Box size={50} />,
     description:
-      "Skilled in writing clean, responsive, and maintainable CSS, including the use of preprocessors like Sass and Tailwind CSS.",
+      "Expert in CSS, I design visually appealing and responsive web interfaces that adapt seamlessly across devices. My proficiency in modern CSS techniques allows me to transform web designs into stunning and interactive user experiences.",
   },
   {
     title: "JavaScript",
     icon: <Code size={50} />,
     description:
-      "Proficient in modern JavaScript, including ES6+ features and popular frameworks like React and Node.js.",
+      "Skilled in JavaScript, I bring web applications to life with interactive and dynamic functionalities. My deep understanding of JavaScript enables me to build seamless, responsive, and engaging user experiences, pushing the boundaries of web development.",
   },
   {
     title: "React",
     icon: <Atom size={50} />,
     description:
-      "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js",
+      "Proficient in React, I develop high-performance, scalable, and maintainable front-end applications. Leveraging React's component-based architecture, I create sophisticated user interfaces that deliver a seamless and intuitive user experience.",
   },
   {
     title: "Git",
     icon: <GitMerge size={50} />,
     description:
-      "Proficient in using Git for version control, including branching, merging, and collaborating on projects.",
+      "Experienced with Git, I efficiently manage code versioning, ensuring seamless collaboration and integration across development teams. My proficiency with Git workflows and best practices allows for smooth project progression and robust codebase maintenance.",
   },
 ];
 

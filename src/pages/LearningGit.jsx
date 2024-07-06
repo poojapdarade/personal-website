@@ -5,140 +5,54 @@ export function LearningGit() {
   return (
     <PageLayout title="Learning git">
       <div className="learning-git">
-        <img
-          src="/images/git-article.jpg"
-          alt=" Cartoon girl studying technology"
-        />
-
         <p>
           I am learning about Git and here I am documenting my progress. As a
           part of learning I am using Git while making my website.
         </p>
+        <img
+          className="article-image"
+          src="/images/git-article.jpg"
+          alt=" Cartoon girl studying technology"
+        />
 
         <p>The commands I have learned so far:</p>
         <ol>
-          <li>git add</li>
+          <li>
+            git add :<p>-A is use to add al the changes to the staging area</p>
+          </li>
           <li>git status</li>
-          <li>git push</li>
-          <li>git commit</li>
+          <li>
+            git push:
+            <p>
+              {" "}
+              -f stands for force. this flag forces the changes from your local
+              repository to remote repository
+            </p>
+          </li>
+          <li>
+            git commit: <p>-m is used to add the commit message</p>
+            <p>--amend is used to amend changes to the most recent commit</p>
+            <p>
+              --no-edit means most recent message stays unchanged in the most
+              recent commit
+            </p>
+          </li>
           <li>git clone</li>
           <li>git log</li>
           <li>git pull</li>
-          <li>git branch</li>
-          <li>git checkout</li>
+          <li>
+            git branch:<p>-D is use to delete the branch</p>
+          </li>
+          <li>
+            git checkout :
+            <p>
+              -b branch-name is used to create a new branch and jump into it
+              straight away
+            </p>
+          </li>
           <li>git merge</li>
         </ol>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Git commands</th>
-
-              <th>Flags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>git commit</code>
-              </td>
-              <td>
-                <ul>
-                  <li>-m is used to add the commit message</li>
-                  <li>
-                    --amend is used to amend changes to the most recent commit
-                  </li>
-                  <li>
-                    --no-edit means most recent message stays unchanged in the
-                    most recent commit
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>git init</code>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <code>git add</code>
-              </td>
-              <td>
-                <ul>
-                  <li>-A is use to add al the changes to the staging area </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>git clone</code>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <code>git pull</code>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <code>git push</code>
-              </td>
-              <td>
-                <ul>
-                  <li>
-                    -f stands for force. this flag forces the changes from your
-                    local repository to remote repository
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>git status</code>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <code>git log</code>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <code>git branch</code>
-              </td>
-              <td>
-                <ul>
-                  <li>-D is use to delete the branch</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>git checkout</code>
-              </td>
-              <td>
-                <ul>
-                  <li>
-                    -b branch-name is used to create a new branch and jump into
-                    it straight away
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>git merge</code>
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
         <p>
           The commands I am planning to learn in further while I learn about
           branches:

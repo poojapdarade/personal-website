@@ -1,8 +1,11 @@
 .article-image {
   width: 250px;
 }
-
-.learning-git {
+.learning-css {
   max-width: var(--content-container-max-width);
   margin: auto;
+}
+
+.learning-css li {
+  padding-bottom: 24px;
 }

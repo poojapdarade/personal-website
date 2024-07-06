@@ -1,5 +1,5 @@
 .article-menu {
-  max-width: 1000px;
+  max-width: var(--content-container-max-width);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));

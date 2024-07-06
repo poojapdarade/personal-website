@@ -6,13 +6,15 @@ const recentProjects = [
   {
     title: "My Website",
     icon: <Website />,
-    description: "My Introduction project number 1",
+    description:
+      "Welcome to my portfolio! I'm a dedicated software engineer specializing in HTML, CSS, JavaScript, and React. With a passion for creating sleek and responsive web applications, I combine these technologies to deliver intuitive user interfaces and seamless experiences. Explore my projects to see how I leverage these skills to innovate and elevate user interaction.",
     link: "",
   },
   {
     title: "Monty Hall Problem",
     icon: <Game />,
-    description: "Project Number 2",
+    description:
+      "I'm a software engineer specializing in HTML, CSS, JavaScript, and React. Through these skills, I've created a captivating project—like my Monty Hall simulation—that demonstrates my ability to innovate and solve complex problems. Take a look at my portfolio to explore how I leverage these technologies to build intuitive and engaging web applications.",
     link: "/projects/monty-hall",
   },
 ];

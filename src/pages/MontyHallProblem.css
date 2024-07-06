@@ -1,5 +1,5 @@
 .montyHallProblem {
-  max-width: 1000px;
+  max-width: var(--content-container-max-width);
   margin: auto;
   display: flex;
   flex-direction: column;

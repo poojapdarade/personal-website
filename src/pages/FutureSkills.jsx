@@ -7,19 +7,20 @@ const futureSkills = [
   {
     title: "TypeScript",
     icon: <TypeScript size={50} />,
-    description: "Enhance my skills with the TypeScript programming language.",
+    description:
+      "Be proficient in TypeScript, I will use to build robust and maintainable web applications with enhanced type safety and improved developer experience. Leveraging TypeScript's strong typing and modern features, I ensure code quality and scalability, facilitating smoother development processes.",
   },
   {
     title: "Node.js",
     icon: <Node />,
     description:
-      "Proficient in modern JavaScript, including ES6+ features and popular frameworks like React and Node.js.",
+      "Learn and be skilled in Node.js, I will use this skill develop high-performance server-side applications and RESTful APIs that are scalable and efficient. Utilizing Node.js's non-blocking I/O and event-driven architecture, I create robust backend solutions that seamlessly handle real-time data and heavy traffic.",
   },
   {
     title: "tailwind CSS",
     icon: <Tailwind />,
     description:
-      "Leverage the power of Tailwind CSS for efficient and responsive styling.",
+      "Be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision. Utilizing Tailwind's utility-first approach, I create clean, maintainable, and scalable styles that enhance both development efficiency and user experience.",
   },
 ];
 

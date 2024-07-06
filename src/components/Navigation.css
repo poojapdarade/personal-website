@@ -3,7 +3,7 @@
   display: flex;
   gap: 18px;
   justify-content: end;
-  max-width: 1000px;
+  max-width: var(--content-container-max-width);
   margin: auto;
   text-decoration: underline;
 }

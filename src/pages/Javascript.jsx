@@ -5,14 +5,21 @@ export function LearningJavaScript() {
   return (
     <PageLayout title="Learning JavaScript">
       <div className="learning-javascript">
-        <code style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
-          {`<script> 
+        <img
+          className="article-image"
+          src="/images/git-article.jpg"
+          alt=" Cartoon girl studying technology"
+        />
+        <p>
+          <code style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
+            {`<script> 
 var name = "Pooja";
 var lastName = "Darade";
 var studyLevel = "Masters"
 console.log(name, lastName, studyLevel);
 </script>`}
-        </code>
+          </code>
+        </p>
         <h3>Following are the options to write JavaScript:</h3>
         <ul>
           <li>Use any code editor - I am using VS code</li>

@@ -1,5 +1,5 @@
 .learning-html {
-  max-width: 1000px;
+  max-width: var(--content-container-max-width);
   margin: auto;
 }
 

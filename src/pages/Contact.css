@@ -1,11 +1,7 @@
-:root {
-  --contact-me-form-font-size: 16px;
-}
-
 .contact-layout {
-  padding: 24px;
   display: grid;
-  max-width: 1000px;
+  gap: 16px;
+  max-width: var(--content-container-max-width);
   margin: auto;
 }
 
@@ -34,7 +30,7 @@
 }
 
 label {
-  font-size: var(--contact-me-form-font-size);
+  font-size: 16px;
 }
 
 input {

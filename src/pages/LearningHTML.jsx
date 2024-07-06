@@ -6,7 +6,8 @@ export function LearningHtml() {
     <PageLayout title="Learning HTML">
       <div className="learning-html">
         <img
-          src="/react-version/images/git-article.jpg"
+          className="article-image"
+          src="/images/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
 
