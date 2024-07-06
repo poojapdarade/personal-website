@@ -7,11 +7,13 @@ const recentProjects = [
     title: "My Website",
     icon: <Website />,
     description: "My Introduction project number 1",
+    link: "",
   },
   {
     title: "Monty Hall Problem",
     icon: <Game />,
     description: "Project Number 2",
+    link: "/projects/monty-hall",
   },
 ];
 export function RecentProjects() {
@@ -38,13 +40,15 @@ export function RecentProjects() {
         <div className="projects">
           {recentProjects.map(function (recentProject) {
             return (
-              <div className="projectsCard" key={recentProject.title}>
-                <div>
-                  {recentProject.icon}
-                  <p>{recentProject.title}</p>
+              <a href={recentProject.link}>
+                <div className="projectsCard" key={recentProject.title}>
+                  <div>
+                    {recentProject.icon}
+                    <p>{recentProject.title}</p>
+                  </div>
+                  <p>{recentProject.description}</p>
                 </div>
-                <p>{recentProject.description}</p>
-              </div>
+              </a>
             );
           })}
         </div>

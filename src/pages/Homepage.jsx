@@ -15,7 +15,6 @@ export function Homepage() {
       <SkillSection />
       <FutureSkills />
       <RecentProjects />
-      <MontyHallProblem />
     </PageLayout>
   );
 }
