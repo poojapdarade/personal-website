@@ -3,7 +3,7 @@ import "./LearningCss.css";
 
 export function LearningCss() {
   return (
-    <PageLayout title="Learning CSS">
+    <PageLayout title="Developing Skills in CSS">
       <div className="learning-css">
         <img
           className="article-image"

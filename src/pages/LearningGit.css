@@ -6,3 +6,12 @@
   max-width: var(--content-container-max-width);
   margin: auto;
 }
+
+.learning-git ol,
+ul,
+p,
+h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

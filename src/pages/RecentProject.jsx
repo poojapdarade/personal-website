@@ -1,3 +1,4 @@
+import React from "react";
 import { Game } from "../components/icons/Game";
 import { Website } from "../components/icons/Website";
 import "./Recent-projects.css";

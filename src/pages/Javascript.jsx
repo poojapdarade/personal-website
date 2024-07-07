@@ -3,7 +3,7 @@ import "./LearningJavaScript.css";
 
 export function LearningJavaScript() {
   return (
-    <PageLayout title="Learning JavaScript">
+    <PageLayout title="Building Proficiency in JavaScript">
       <div className="learning-javascript">
         <img
           className="article-image"

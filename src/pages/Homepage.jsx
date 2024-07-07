@@ -22,7 +22,7 @@ export function Homepage() {
 function JobTitle() {
   return (
     <div style={{ position: "relative", width: "fit-content" }}>
-      <p>Junior Web Developer</p>
+      <p>Software Engineer</p>
       <Sparkles
         color={["#f472b6", "#831843"]}
         count={10}
@@ -41,11 +41,12 @@ function IntroSection() {
         <h1 className="name">Pooja Darade</h1>
         <JobTitle />
         <p>
-          I'm a passionate junior web developer with a foundation in HTML, CSS,
-          JavaScript, and React. With a background in computer engineering and
-          business management, I&apos;m eager to apply my skills to build
-          engaging, user-friendly web applications and continuously improve my
-          expertise in modern web technologies.
+          As a software engineer with a strong foundation in HTML, CSS,
+          JavaScript, and React, complemented by a background in computer
+          engineering and business management, I am driven to craft engaging and
+          user-friendly web applications. I am dedicated to continuous learning
+          and improvement in modern web technologies, ensuring that each project
+          I undertake pushes the boundaries of innovation and functionality.
         </p>
         <img src="/avatar.jpeg" className="avatar" />
         <div className="intro-buttons">
@@ -72,12 +73,15 @@ function IntroSection() {
           <h1 className="name">Pooja Darade</h1>
           <JobTitle />
           <p>
-            I'm a passionate junior web developer with a foundation in HTML,
-            CSS, JavaScript, and React. With a background in computer
-            engineering and business management, I&apos;m eager to apply my
-            skills to build engaging, user-friendly web applications and
-            continuously improve my expertise in modern web technologies.
+            As a software engineer with a strong foundation in HTML, CSS,
+            JavaScript, and React, complemented by a background in computer
+            engineering and business management, I am driven to craft engaging
+            and user-friendly web applications. I am dedicated to continuous
+            learning and improvement in modern web technologies, ensuring that
+            each project I undertake pushes the boundaries of innovation and
+            functionality.
           </p>
+
           <div className="intro-buttons">
             <a href="/articles" className="view-work">
               View Work
@@ -106,25 +110,25 @@ const skills = [
     title: "HTML",
     icon: <Heading1 size={50} />,
     description:
-      "With a strong command of HTML, I create robust and accessible web structures that form the foundation for dynamic and user-friendly websites. My expertise ensures that every element is meticulously crafted to enhance both functionality and user experience.",
+      "With a strong knowledge of HTML, I create robust and accessible web structures that form the foundation for dynamic and user-friendly websites. My expertise ensures that every element is meticulously crafted to enhance both functionality and user experience.",
   },
   {
     title: "CSS",
     icon: <Box size={50} />,
     description:
-      "Expert in CSS, I design visually appealing and responsive web interfaces that adapt seamlessly across devices. My proficiency in modern CSS techniques allows me to transform web designs into stunning and interactive user experiences.",
+      "Skilled in CSS, I design visually appealing and responsive web interfaces that adapt seamlessly across devices. My proficiency in modern CSS techniques allows me to transform web designs into stunning and interactive user experiences.",
   },
   {
     title: "JavaScript",
     icon: <Code size={50} />,
     description:
-      "Skilled in JavaScript, I bring web applications to life with interactive and dynamic functionalities. My deep understanding of JavaScript enables me to build seamless, responsive, and engaging user experiences, pushing the boundaries of web development.",
+      "Competent in JavaScript, I bring web applications to life with interactive and dynamic functionalities. My understanding of JavaScript enables me to build seamless, responsive, and engaging user experiences, pushing the boundaries of web development.",
   },
   {
     title: "React",
     icon: <Atom size={50} />,
     description:
-      "Proficient in React, I develop high-performance, scalable, and maintainable front-end applications. Leveraging React's component-based architecture, I create sophisticated user interfaces that deliver a seamless and intuitive user experience.",
+      "Knowledgeable in React, I develop high-performance, scalable, and maintainable front-end applications. Leveraging React's component-based architecture, I create sophisticated user interfaces that deliver a seamless and intuitive user experience.",
   },
   {
     title: "Git",

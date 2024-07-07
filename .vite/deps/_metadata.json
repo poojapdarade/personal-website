@@ -1,0 +1,46 @@
+{
+  "hash": "4c066be1",
+  "configHash": "4c4d8811",
+  "lockfileHash": "42ad6cf6",
+  "browserHash": "4e12c9a4",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f5354c56",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bed79f58",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "e4fbe9c9",
+      "needsInterop": false
+    },
+    "react-sparkle": {
+      "src": "../../node_modules/react-sparkle/dist/index.js",
+      "file": "react-sparkle.js",
+      "fileHash": "7c9808ce",
+      "needsInterop": true
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "685fb5b1",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-RGPC2OD2": {
+      "file": "chunk-RGPC2OD2.js"
+    },
+    "chunk-64MM4EP5": {
+      "file": "chunk-64MM4EP5.js"
+    }
+  }
+}
