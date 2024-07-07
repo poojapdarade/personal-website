@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PageLayout } from "../../components/PageLayout";
 export function MinimumNumberGame() {
   const [playArray, setPlayArray] = useState([]);
   const [gameArray, setGameArray] = useState([]);
@@ -32,25 +33,27 @@ export function MinimumNumberGame() {
   }
 
   return (
-    <div>
-      <p>Add Numbers</p>
+    <PageLayout title={"Minimum Number Game"}>
+      <div className="coding-challenges">
+        <p>Add Numbers</p>
 
-      <input
-        type="number"
-        value={number1}
-        onChange={(event) => setNumber1(Number(event.target.value))}
-      />
-      <input
-        type="number"
-        value={number2}
-        onChange={(event) => setNumber2(Number(event.target.value))}
-      />
-      <button onClick={addNumbers}>Add Numbers</button>
-      <p>Numbers in the array are : {playArray}</p>
+        <input
+          type="number"
+          value={number1}
+          onChange={(event) => setNumber1(Number(event.target.value))}
+        />
+        <input
+          type="number"
+          value={number2}
+          onChange={(event) => setNumber2(Number(event.target.value))}
+        />
+        <button onClick={addNumbers}>Add Numbers</button>
+        <p>Numbers in the array are : {playArray}</p>
 
-      <button onClick={playTheGame}>Play</button>
-      <p>The output array is: {gameArray}</p>
-      <button onClick={reset}>Reset</button>
-    </div>
+        <button onClick={playTheGame}>Play</button>
+        <p>The output array is: {gameArray}</p>
+        <button onClick={reset}>Reset</button>
+      </div>
+    </PageLayout>
   );
 }
