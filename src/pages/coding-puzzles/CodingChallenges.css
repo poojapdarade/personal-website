@@ -2,3 +2,8 @@
   max-width: var(--content-container-max-width);
   margin: auto;
 }
+
+.coding-challenges input {
+  display: block;
+  max-width: 100px;
+}

@@ -15,6 +15,8 @@ import { PageLayout } from "./components/PageLayout.jsx";
 import { MinimumNumberGame } from "./pages/coding-puzzles/MinimumNumberGame.jsx";
 import { MontyHallProblem } from "./pages/MontyHallProblem.jsx";
 import { LearningReact } from "./pages/LearningReact.jsx";
+import { Board } from "./pages/SlidingPuzzle/Board.jsx";
+import { SlidingPuzzlesPage } from "./pages/SlidingPuzzle/SlidingPuzzlesPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -40,8 +42,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/articles/coding-puzzles/minimum-number-game"
           element={<MinimumNumberGame />}
         />
-
         <Route path="/projects/monty-hall" element={<MontyHallProblem />} />
+        <Route
+          path="/projects/sliding-puzzle"
+          element={<SlidingPuzzlesPage />}
+        />
         <Route path="*" element={<PageLayout title="404 - Page Not Found" />} />
       </Routes>
     </BrowserRouter>

@@ -43,7 +43,7 @@ export function RecentProjects() {
         <div className="projects">
           {recentProjects.map(function (recentProject) {
             return (
-              <a href={recentProject.link}>
+              <a href={recentProject.link} key={recentProject.title}>
                 <div className="projectsCard" key={recentProject.title}>
                   <div>
                     {recentProject.icon}
