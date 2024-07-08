@@ -1,37 +1,49 @@
 import { TILE_COUNT, GRID_SIZE } from "./Constants";
 
-export function isSolvable(tiles) {
-  let product = 1;
-  for (let i = 1, l = TILE_COUNT - 1; i <= l; i++) {
-    for (let j = i + 1, m = l + 1; j <= m; j++) {
-      product *= tiles[i + 1] - tiles[j - 1] / (i - j);
+function isSolvable(puzzle) {
+  const size = Math.sqrt(puzzle.length);
+  let inversions = 0;
+  let blankRowFromBottom = 0;
+
+  for (let i = 0; i < puzzle.length; i++) {
+    for (let j = i + 1; j < puzzle.length; j++) {
+      if (puzzle[i] && puzzle[j] && puzzle[i] > puzzle[j]) {
+        inversions++;
+      }
     }
   }
-  return Math.round(product) === 1;
+
+  for (let i = 0; i < puzzle.length; i++) {
+    if (puzzle[i] === 0) {
+      blankRowFromBottom = Math.floor(i / size);
+      break;
+    }
+  }
+  blankRowFromBottom = size - blankRowFromBottom;
+
+  if (size % 2 !== 0) {
+    // If grid width is odd
+    return inversions % 2 === 0;
+  } else {
+    // If grid width is even
+    if (blankRowFromBottom % 2 === 0) {
+      // Blank on even row from bottom
+      return inversions % 2 !== 0;
+    } else {
+      // Blank on odd row from bottom
+      return inversions % 2 === 0;
+    }
+  }
 }
 
 export function isSolved(tiles) {
-  for (let i = 0, l = tiles.length; i < l; i++) {
-    if (tiles[i] !== i) {
+  for (let i = 0; i < tiles.length; i++) {
+    const tileValue = tiles[i] - 1;
+    if (tileValue !== i) {
       return false;
     }
   }
   return true;
-}
-
-export function getIndex(row, col) {
-  return parseInt(row, 10) * GRID_SIZE + parseInt(col, 10);
-}
-
-export function getMatrixPosition(index) {
-  return {
-    row: Math.floor(index / GRID_SIZE),
-    col: index % GRID_SIZE,
-  };
-}
-
-export function getVisualPosition(row, col, width, height) {
-  return { x: col * width, y: row * height };
 }
 
 export function shuffle(tiles) {
@@ -41,19 +53,31 @@ export function shuffle(tiles) {
       .sort(() => Math.random() - 0.5),
     tiles.length - 1,
   ];
-  return isSolvable(shuffleTiles) && !isSolvable(shuffleTiles)
+  return isSolvable(shuffleTiles) && !isSolved(shuffleTiles)
     ? shuffleTiles
     : shuffle(shuffleTiles);
 }
 
-export function canSwap(srcIndex, destIndex) {
-  const { row: srcRow, col: srcCol } = getMatrixPosition(srcIndex);
-  const { row: destRow, col: destCol } = getMatrixPosition(destIndex);
-  return Math.abs(srcRow - destRow) + Math.abs(srcCol - destCol) === 1;
+export function canSwap(tiles, tileIndex) {
+  const neighborTiles = [
+    tiles[tileIndex - GRID_SIZE],
+    tiles[tileIndex - 1],
+    tiles[tileIndex + 1],
+    tiles[tileIndex + GRID_SIZE],
+  ];
+
+  const emptyNeighbor = neighborTiles.some((value) => value === TILE_COUNT);
+
+  return emptyNeighbor;
 }
 
-export function swap(tiles, src, dest) {
+export function swap(tiles, tileIndex) {
   const tilesResult = [...tiles];
-  [tilesResult[src], tilesResult[dest]] = [tilesResult[dest], tilesResult[src]];
+
+  const indexOfEndTile = tilesResult.indexOf(TILE_COUNT);
+
+  tilesResult[indexOfEndTile] = tilesResult[tileIndex];
+  tilesResult[tileIndex] = TILE_COUNT;
+
   return tilesResult;
 }
