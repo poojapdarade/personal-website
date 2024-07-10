@@ -18,6 +18,13 @@ const recentProjects = [
       "I'm a software engineer specializing in HTML, CSS, JavaScript, and React. Through these skills, I've created a captivating project—like my Monty Hall simulation—that demonstrates my ability to innovate and solve complex problems. Take a look at my portfolio to explore how I leverage these technologies to build intuitive and engaging web applications.",
     link: "/projects/monty-hall",
   },
+  {
+    title: "Sliding Picture Puzzle",
+    link: "/projects/sliding-puzzle",
+    icon: <Game />,
+    description:
+      "Sliding Picture Puzzle Game is perfect for a quick brain exercise or a relaxing break. Test your skills, challenge yourself with different images, and have fun reassembling beautiful pictures!",
+  },
 ];
 export function RecentProjects() {
   return (
