@@ -27,7 +27,8 @@ const futureSkills = [
   {
     title: "Testing",
     icon: <Testing />,
-    description: "adsc",
+    description:
+      "I plan to learn testing in computer engineering to enhance the reliability and performance of software and hardware systems. Mastering techniques like unit testing and automation will help me improve product quality and ensure robust, secure systems.",
   },
 ];
 
