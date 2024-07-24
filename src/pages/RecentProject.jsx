@@ -50,15 +50,18 @@ export function RecentProjects() {
         <div className="projects">
           {recentProjects.map(function (recentProject) {
             return (
-              <a href={recentProject.link} key={recentProject.title}>
-                <div className="projectsCard" key={recentProject.title}>
-                  <div>
-                    {recentProject.icon}
-                    <p>{recentProject.title}</p>
-                  </div>
-                  <p>{recentProject.description}</p>
+              //<a href={recentProject.link} key={recentProject.title}>
+              <div className="projectsCard" key={recentProject.title}>
+                <div>
+                  {recentProject.icon}
+                  <p>
+                    <a href={recentProject.link} key={recentProject.title}>
+                      {recentProject.title}
+                    </a>
+                  </p>
                 </div>
-              </a>
+                <p>{recentProject.description}</p>
+              </div>
             );
           })}
         </div>

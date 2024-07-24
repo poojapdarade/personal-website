@@ -6,7 +6,6 @@ import { GitHub } from "../components/icons/GitHub";
 import { LinkedIn } from "../components/icons/LinkedIn";
 import { FutureSkills } from "./FutureSkills";
 import { RecentProjects } from "./RecentProject";
-import { MontyHallProblem } from "./MontyHallProblem";
 
 export function Homepage() {
   return (

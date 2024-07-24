@@ -3,6 +3,7 @@ import { Node } from "../components/icons/Node";
 import { Tailwind } from "../components/icons/TailWind";
 import { TypeScript } from "../components/icons/TypeScript";
 import "./Learning-in-future.css";
+import { Testing } from "../components/icons/Testing";
 
 const futureSkills = [
   {
@@ -22,6 +23,11 @@ const futureSkills = [
     icon: <Tailwind />,
     description:
       "Be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision. Utilizing Tailwind's utility-first approach, I create clean, maintainable, and scalable styles that enhance both development efficiency and user experience.",
+  },
+  {
+    title: "Automation Testing",
+    icon: <Testing />,
+    description: "adsc",
   },
 ];
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Tile } from "./Tile";
-import { TILE_COUNT, GRID_SIZE, BOARD_SIZE } from "./Constants";
+import { TILE_COUNT } from "./Constants";
 import { canSwap, shuffle, isSolved, swap } from "./Helpers";
 import "./board.css";
 
