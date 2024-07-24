@@ -25,7 +25,7 @@ const futureSkills = [
       "Be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision. Utilizing Tailwind's utility-first approach, I create clean, maintainable, and scalable styles that enhance both development efficiency and user experience.",
   },
   {
-    title: "Automation Testing",
+    title: "Testing",
     icon: <Testing />,
     description: "adsc",
   },
