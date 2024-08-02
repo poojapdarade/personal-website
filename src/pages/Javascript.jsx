@@ -10,6 +10,7 @@ export function LearningJavaScript() {
           src="/images/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
+
         <p>
           <code style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
             {`<script> 
@@ -20,6 +21,8 @@ console.log(name, lastName, studyLevel);
 </script>`}
           </code>
         </p>
+
+        <p>Important data structures in Javascript</p>
         <h3>Following are the options to write JavaScript:</h3>
         <ul>
           <li>Use any code editor - I am using VS code</li>
