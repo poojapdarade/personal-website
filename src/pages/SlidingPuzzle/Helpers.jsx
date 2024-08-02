@@ -1,5 +1,3 @@
-import { TILE_COUNT, GRID_SIZE } from "./Constants";
-
 function isSolvable(puzzle) {
   const size = Math.sqrt(puzzle.length);
   let inversions = 0;
@@ -58,26 +56,26 @@ export function shuffle(tiles) {
     : shuffle(shuffleTiles);
 }
 
-export function canSwap(tiles, tileIndex) {
+export function canSwap(tiles, tileIndex, gridSize, tileCount) {
   const neighborTiles = [
-    tiles[tileIndex - GRID_SIZE],
+    tiles[tileIndex - gridSize],
     tiles[tileIndex - 1],
     tiles[tileIndex + 1],
-    tiles[tileIndex + GRID_SIZE],
+    tiles[tileIndex + gridSize],
   ];
 
-  const emptyNeighbor = neighborTiles.some((value) => value === TILE_COUNT);
+  const emptyNeighbor = neighborTiles.some((value) => value === tileCount);
 
   return emptyNeighbor;
 }
 
-export function swap(tiles, tileIndex) {
+export function swap(tiles, tileIndex, tileCount) {
   const tilesResult = [...tiles];
 
-  const indexOfEndTile = tilesResult.indexOf(TILE_COUNT);
+  const indexOfEndTile = tilesResult.indexOf(tileCount);
 
   tilesResult[indexOfEndTile] = tilesResult[tileIndex];
-  tilesResult[tileIndex] = TILE_COUNT;
+  tilesResult[tileIndex] = tileCount;
 
   return tilesResult;
 }

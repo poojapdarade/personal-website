@@ -1,11 +1,10 @@
 import React from "react";
-import { TILE_COUNT } from "./Constants";
 
-export function Tile({ value, index, handleTileClick }) {
+export function Tile({ value, index, handleTileClick, tileCount }) {
   return (
     <div
       style={{
-        opacity: value === TILE_COUNT ? 0 : 1,
+        opacity: value === tileCount ? 0 : 1,
       }}
       className="tile"
       onClick={() => handleTileClick(index)}
