@@ -9,8 +9,7 @@
 }
 
 .board {
-  width: fit-content;
-  display: grid;
+  position: relative;
 }
 
 .tile {

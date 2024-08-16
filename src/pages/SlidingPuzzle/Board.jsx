@@ -81,17 +81,24 @@ export function Board({ imgUrl }) {
       </p>
       <div
         className="board"
-        style={{ gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))` }}
+        style={{ width: `${96 * gridSize}px`, height: `${96 * gridSize}px` }}
       >
-        {tiles.map((tile, index) => (
-          <Tile
-            key={tile}
-            value={tile}
-            index={index}
-            handleTileClick={handleTileClick}
-            tileCount={tileCount}
-          />
-        ))}
+        {tiles.map((tile, index) => {
+          const row = Math.floor(index / gridSize);
+          const column = index % gridSize;
+
+          return (
+            <Tile
+              key={tile}
+              value={tile}
+              index={index}
+              handleTileClick={handleTileClick}
+              tileCount={tileCount}
+              row={row}
+              column={column}
+            />
+          );
+        })}
       </div>
 
       {hasWon && isStarted && <div>Puzzle Solved</div>}
