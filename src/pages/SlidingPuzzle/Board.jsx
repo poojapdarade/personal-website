@@ -1,7 +1,18 @@
 import { useState } from "react";
 import { Tile } from "./Tile";
 import { canSwap, shuffle, isSolved, swap } from "./Helpers";
+import { useWindowSize } from "@uidotdev/usehooks";
 import "./board.css";
+
+function calculateTileSize(currentWindowSize, gridSize) {
+  const pagePadding = 18 * 2;
+  const screenWidthLeft = currentWindowSize - pagePadding;
+
+  const tileSize = Math.floor(screenWidthLeft / gridSize);
+  const maxTileSize = 700 / gridSize;
+
+  return Math.min(tileSize, maxTileSize);
+}
 
 export function Board() {
   const [gridSize, setGridSize] = useState(5);
@@ -15,6 +26,7 @@ export function Board() {
       .map((value, index) => index + 1)
   );
   const [isStarted, setIsStarted] = useState(false);
+  const { width } = useWindowSize();
 
   function shuffleTiles() {
     const shuffledTiles = shuffle(tiles);
@@ -66,30 +78,57 @@ export function Board() {
     setSelectedImage(imageName);
   }
 
+  const tileSize = calculateTileSize(width, gridSize);
+
   const hasWon = isSolved(tiles);
 
   return (
     <div className="container">
-      <button
-        onClick={() => changeGridSize(gridSize - 1)}
-        disabled={gridSize === 3 || isStarted}
-      >
-        -
-      </button>
-      <button
-        onClick={() => changeGridSize(gridSize + 1)}
-        disabled={gridSize === 7 || isStarted}
-      >
-        +
-      </button>
-      <p>
-        The grid size is: {gridSize} x {gridSize}
-      </p>
+      <div className="controls">
+        <div className="size-controls">
+          <button
+            onClick={() => changeGridSize(gridSize - 1)}
+            disabled={gridSize === 3 || isStarted}
+          >
+            -
+          </button>
+          <button
+            onClick={() => changeGridSize(gridSize + 1)}
+            disabled={gridSize === 7 || isStarted}
+          >
+            +
+          </button>
+        </div>
+        <p>
+          The grid size is: {gridSize} x {gridSize}
+        </p>
+        {hasWon && isStarted && <div>Puzzle Solved</div>}
+        {!isStarted ? (
+          <button onClick={() => handleStartClick()}>Start Game</button>
+        ) : (
+          <button onClick={() => handleShuffleClick()}>Restart Game</button>
+        )}
+
+        <div>
+          <label>Select Image: </label>
+          <select
+            value={selectedImage}
+            onChange={(e) => updateSelectedImage(e.target.value)}
+            disabled={isStarted}
+          >
+            <option value="scenic-cove.webp">Beach</option>
+            <option value="jungle.webp">Jungle</option>
+            <option value="tiger.webp">Tiger</option>
+            <option value="flower.webp">Flowers</option>
+            <option value="mansion.webp">Mansion</option>
+          </select>
+        </div>
+      </div>
       <div
         className="board"
         style={{
-          width: `${96 * gridSize}px`,
-          height: `${96 * gridSize}px`,
+          width: `${tileSize * gridSize}px`,
+          height: `${tileSize * gridSize}px`,
         }}
       >
         {tiles.map((tile, index) => (
@@ -101,29 +140,9 @@ export function Board() {
             tileCount={tileCount}
             selectedImage={selectedImage}
             gridSize={gridSize}
+            tileSize={tileSize}
           />
         ))}
-      </div>
-
-      {hasWon && isStarted && <div>Puzzle Solved</div>}
-      {!isStarted ? (
-        <button onClick={() => handleStartClick()}>Start Game</button>
-      ) : (
-        <button onClick={() => handleShuffleClick()}>Restart Game</button>
-      )}
-
-      <div>
-        <label>Select Image: </label>
-        <select
-          value={selectedImage}
-          onChange={(e) => updateSelectedImage(e.target.value)}
-        >
-          <option value="scenic-cove.webp">Beach</option>
-          <option value="jungle.webp">Jungle</option>
-          <option value="tiger.webp">Tiger</option>
-          <option value="flower.webp">Flowers</option>
-          <option value="mansion.webp">Mansion</option>
-        </select>
       </div>
     </div>
   );

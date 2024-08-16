@@ -8,9 +8,8 @@ export function Tile({
   tileCount,
   gridSize,
   selectedImage,
+  tileSize,
 }) {
-  const tileSize = 96;
-
   const tileIndex = value - 1;
   const originalRow = Math.floor(tileIndex / gridSize);
   const originalColumn = tileIndex % gridSize;
@@ -23,12 +22,15 @@ export function Tile({
       style={{
         opacity: value === tileCount ? 0 : 1,
         position: "absolute",
-        backgroundImage: `url(/images/${selectedImage})`,
+        backgroundImage: `url(/sliding-puzzle-images/${selectedImage})`,
         backgroundSize: `${tileSize * gridSize}px ${tileSize * gridSize}px`,
         backgroundPosition: `-${originalColumn * tileSize}px -${
           originalRow * tileSize
         }px`,
+        width: tileSize,
+        height: tileSize,
       }}
+      v
       animate={{
         top: currentRow * tileSize,
         left: currentColumn * tileSize,
