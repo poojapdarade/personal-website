@@ -3,10 +3,14 @@
   margin: 0 auto;
 }
 
+.container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .board {
-  width: 300px;
+  width: fit-content;
   display: grid;
-  /* grid-template-columns: repeat(5, minmax(0, 1fr)); */
 }
 
 .tile {
@@ -15,4 +19,6 @@
   list-style: none;
   font-size: 1.25rem;
   background: #ec6f66;
+  height: 96px;
+  width: 96px;
 }

@@ -14,35 +14,33 @@ export function Board({ imgUrl }) {
   );
   const [isStarted, setIsStarted] = useState(false);
 
-  const shuffleTiles = () => {
+  function shuffleTiles() {
     const shuffledTiles = shuffle(tiles);
     setTiles(shuffledTiles);
-  };
+  }
 
-  const swapTiles = (tileIndex) => {
+  function swapTiles(tileIndex) {
     const tilesCanSwap = canSwap(tiles, tileIndex, gridSize, tileCount);
-
-    console.log("index", tileIndex);
-    console.log("canSwap", tilesCanSwap);
 
     if (!tilesCanSwap) return;
 
     const swappedTiles = swap(tiles, tileIndex, tileCount);
     setTiles(swappedTiles);
-  };
+  }
 
-  const handleTileClick = (index) => {
+  function handleTileClick(index) {
     swapTiles(index);
-  };
+  }
 
-  const handleShuffleCLick = () => {
+  function handleShuffleClick() {
     shuffleTiles();
-  };
+    setIsStarted(false);
+  }
 
-  const handleStartClick = () => {
+  function handleStartClick() {
     shuffleTiles();
     setIsStarted(true);
-  };
+  }
 
   function updateTiles(gridSize) {
     const tileCount = gridSize * gridSize;
@@ -55,6 +53,7 @@ export function Board({ imgUrl }) {
   }
 
   function changeGridSize(newGridSize) {
+    if (isStarted) return;
     if (newGridSize < 3 || newGridSize > 7) return;
 
     setGridSize(newGridSize);
@@ -64,18 +63,18 @@ export function Board({ imgUrl }) {
   const hasWon = isSolved(tiles);
 
   return (
-    <>
-      <button
-        onClick={() => changeGridSize(gridSize + 1)}
-        disabled={gridSize === 7}
-      >
-        +
-      </button>
+    <div className="container">
       <button
         onClick={() => changeGridSize(gridSize - 1)}
-        disabled={gridSize === 3}
+        disabled={gridSize === 3 || isStarted}
       >
         -
+      </button>
+      <button
+        onClick={() => changeGridSize(gridSize + 1)}
+        disabled={gridSize === 7 || isStarted}
+      >
+        +
       </button>
       <p>
         The grid size is: {gridSize} x {gridSize}
@@ -99,8 +98,8 @@ export function Board({ imgUrl }) {
       {!isStarted ? (
         <button onClick={() => handleStartClick()}>Start Game</button>
       ) : (
-        <button onClick={() => handleShuffleCLick()}>Restart Game</button>
+        <button onClick={() => handleShuffleClick()}>Restart Game</button>
       )}
-    </>
+    </div>
   );
 }
