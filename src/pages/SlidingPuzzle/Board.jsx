@@ -3,8 +3,10 @@ import { Tile } from "./Tile";
 import { canSwap, shuffle, isSolved, swap } from "./Helpers";
 import "./board.css";
 
-export function Board({ imgUrl }) {
+export function Board() {
   const [gridSize, setGridSize] = useState(5);
+  const [selectedImage, setSelectedImage] = useState("scenic-cove.webp");
+
   const tileCount = gridSize * gridSize;
 
   const [tiles, setTiles] = useState(
@@ -60,6 +62,10 @@ export function Board({ imgUrl }) {
     updateTiles(newGridSize);
   }
 
+  function updateSelectedImage(imageName) {
+    setSelectedImage(imageName);
+  }
+
   const hasWon = isSolved(tiles);
 
   return (
@@ -86,22 +92,17 @@ export function Board({ imgUrl }) {
           height: `${96 * gridSize}px`,
         }}
       >
-        {tiles.map((tile, index) => {
-          const row = Math.floor(index / gridSize);
-          const column = index % gridSize;
-
-          return (
-            <Tile
-              key={tile}
-              value={tile}
-              index={index}
-              handleTileClick={handleTileClick}
-              tileCount={tileCount}
-              row={row}
-              column={column}
-            />
-          );
-        })}
+        {tiles.map((tile, index) => (
+          <Tile
+            key={tile}
+            value={tile}
+            index={index}
+            handleTileClick={handleTileClick}
+            tileCount={tileCount}
+            selectedImage={selectedImage}
+            gridSize={gridSize}
+          />
+        ))}
       </div>
 
       {hasWon && isStarted && <div>Puzzle Solved</div>}
@@ -110,6 +111,20 @@ export function Board({ imgUrl }) {
       ) : (
         <button onClick={() => handleShuffleClick()}>Restart Game</button>
       )}
+
+      <div>
+        <label>Select Image: </label>
+        <select
+          value={selectedImage}
+          onChange={(e) => updateSelectedImage(e.target.value)}
+        >
+          <option value="scenic-cove.webp">Beach</option>
+          <option value="jungle.webp">Jungle</option>
+          <option value="tiger.webp">Tiger</option>
+          <option value="flower.webp">Flowers</option>
+          <option value="mansion.webp">Mansion</option>
+        </select>
+      </div>
     </div>
   );
 }
