@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export function Tile({
   value,
@@ -9,17 +10,23 @@ export function Tile({
   column,
 }) {
   return (
-    <div
+    <motion.div
       style={{
         opacity: value === tileCount ? 0 : 1,
+        position: "absolute",
+      }}
+      animate={{
         top: row * 96,
         left: column * 96,
-        position: "absolute",
+      }}
+      transition={{
+        duration: 0.4,
+        ease: "easeInOut",
       }}
       className="tile"
       onClick={() => handleTileClick(index)}
     >
       {value}
-    </div>
+    </motion.div>
   );
 }

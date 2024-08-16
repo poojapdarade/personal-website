@@ -81,7 +81,10 @@ export function Board({ imgUrl }) {
       </p>
       <div
         className="board"
-        style={{ width: `${96 * gridSize}px`, height: `${96 * gridSize}px` }}
+        style={{
+          width: `${96 * gridSize}px`,
+          height: `${96 * gridSize}px`,
+        }}
       >
         {tiles.map((tile, index) => {
           const row = Math.floor(index / gridSize);
