@@ -23,9 +23,5 @@
 }
 
 .tile {
-  display: grid;
-  place-items: center;
-  list-style: none;
-  font-size: 1.25rem;
-  background: #ec6f66;
+  background: #f0fdf4;
 }
