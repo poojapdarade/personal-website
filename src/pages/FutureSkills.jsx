@@ -1,17 +1,9 @@
 import React from "react";
 import { Node } from "../components/icons/Node";
 import { Tailwind } from "../components/icons/TailWind";
-import { TypeScript } from "../components/icons/TypeScript";
 import "./Learning-in-future.css";
-import { Testing } from "../components/icons/Testing";
 
 const futureSkills = [
-  {
-    title: "TypeScript",
-    icon: <TypeScript size={50} />,
-    description:
-      "Be proficient in TypeScript, I will use to build robust and maintainable web applications with enhanced type safety and improved developer experience. Leveraging TypeScript's strong typing and modern features, I ensure code quality and scalability, facilitating smoother development processes.",
-  },
   {
     title: "Node.js",
     icon: <Node />,
@@ -23,12 +15,6 @@ const futureSkills = [
     icon: <Tailwind />,
     description:
       "Be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision. Utilizing Tailwind's utility-first approach, I create clean, maintainable, and scalable styles that enhance both development efficiency and user experience.",
-  },
-  {
-    title: "Testing",
-    icon: <Testing />,
-    description:
-      "I plan to learn testing in computer engineering to enhance the reliability and performance of software and hardware systems. Mastering techniques like unit testing and automation will help me improve product quality and ensure robust, secure systems.",
   },
 ];
 

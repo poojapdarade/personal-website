@@ -4,6 +4,9 @@ import Sparkles from "react-sparkle";
 import { Code, Heading1, Atom, GitMerge, Box } from "lucide-react";
 import { GitHub } from "../components/icons/GitHub";
 import { LinkedIn } from "../components/icons/LinkedIn";
+import { TypeScript } from "../components/icons/TypeScript";
+import { Testing } from "../components/icons/Testing";
+
 import { FutureSkills } from "./FutureSkills";
 import { RecentProjects } from "./RecentProject";
 
@@ -134,6 +137,18 @@ const skills = [
     icon: <GitMerge size={50} />,
     description:
       "Experienced with Git, I efficiently manage code versioning, ensuring seamless collaboration and integration across development teams. My proficiency with Git workflows and best practices allows for smooth project progression and robust codebase maintenance.",
+  },
+  {
+    title: "TypeScript",
+    icon: <TypeScript size={50} />,
+    description:
+      "Be proficient in TypeScript, I will use to build robust and maintainable web applications with enhanced type safety and improved developer experience. Leveraging TypeScript's strong typing and modern features, I ensure code quality and scalability, facilitating smoother development processes.",
+  },
+  {
+    title: "Testing",
+    icon: <Testing />,
+    description:
+      "I plan to learn testing in computer engineering to enhance the reliability and performance of software and hardware systems. Mastering techniques like unit testing and automation will help me improve product quality and ensure robust, secure systems.",
   },
 ];
 
