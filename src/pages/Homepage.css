@@ -103,6 +103,7 @@
 .skills {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+
   gap: 16px;
 }
 
@@ -125,6 +126,7 @@
 .card {
   display: flex;
   text-align: justify;
+  text-wrap: pretty;
   flex-direction: column;
   gap: 12px;
   padding: 16px 24px;
