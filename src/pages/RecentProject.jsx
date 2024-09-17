@@ -1,6 +1,7 @@
 import React from "react";
 import { Game } from "../components/icons/Game";
 import { Website } from "../components/icons/Website";
+import { InProcess } from "../components/icons/InProcess";
 import "./Recent-projects.css";
 
 const recentProjects = [
@@ -24,6 +25,11 @@ const recentProjects = [
     icon: <Game />,
     description:
       "Sliding Picture Puzzle Game is perfect for a quick brain exercise or a relaxing break. Test your skills, challenge yourself with different images, and have fun reassembling beautiful pictures!",
+  },
+  {
+    title: "In Process ⏳",
+    link: "",
+    icon: <InProcess />,
   },
 ];
 export function RecentProjects() {

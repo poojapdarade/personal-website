@@ -4,9 +4,9 @@ import "./LearningHTML.css";
 export function LearningHtml() {
   return (
     <PageLayout title="Gaining Competency in HTML">
-      <div className="learning-html">
+      <div class="learning-html">
         <img
-          className="article-image"
+          class="article-image"
           src="/images/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
