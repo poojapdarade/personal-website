@@ -7,7 +7,7 @@ export function LearningJavaScript() {
       <div className="learning-javascript">
         <img
           className="article-image"
-          src="/images/git-article.jpg"
+          src="/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
 

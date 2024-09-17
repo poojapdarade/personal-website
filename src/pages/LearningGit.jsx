@@ -11,7 +11,7 @@ export function LearningGit() {
         </p>
         <img
           className="article-image"
-          src="/images/git-article.jpg"
+          src="/cartoonGirl.jpeg"
           alt=" Cartoon girl studying technology"
         />
 

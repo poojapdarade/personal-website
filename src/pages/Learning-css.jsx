@@ -7,7 +7,7 @@ export function LearningCss() {
       <div className="learning-css">
         <img
           className="article-image"
-          src="/images/git-article.jpg"
+          src="/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
         <h3>What is CSS?</h3>

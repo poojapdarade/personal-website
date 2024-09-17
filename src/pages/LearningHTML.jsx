@@ -7,7 +7,7 @@ export function LearningHtml() {
       <div class="learning-html">
         <img
           class="article-image"
-          src="/images/git-article.jpg"
+          src="/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
 
