@@ -10,7 +10,6 @@ export function LearningHtml() {
           src="/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
-
         <p>
           I am learning HTML and here I am documenting my progress. As a part of
           learning I am using HTML tags while making my website.

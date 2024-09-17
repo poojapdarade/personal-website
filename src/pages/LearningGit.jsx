@@ -15,7 +15,7 @@ export function LearningGit() {
           alt=" Cartoon girl studying technology"
         />
 
-        <p>The commands I have learned so far:</p>
+        <p>Commands:</p>
         <ol>
           <li>
             git add :<p>-A is use to add al the changes to the staging area</p>
@@ -51,18 +51,11 @@ export function LearningGit() {
             </p>
           </li>
           <li>git merge</li>
-        </ol>
-
-        <p>
-          The commands I am planning to learn in further while I learn about
-          branches:
-        </p>
-        <ul>
           <li>git remote</li>
           <li>git fetch</li>
           <li>git reset</li>
           <li>git diff</li>
-        </ul>
+        </ol>
 
         <p>
           {" "}
