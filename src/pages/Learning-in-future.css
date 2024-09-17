@@ -22,6 +22,7 @@
 
 .learningCard {
   display: flex;
+  text-align: justify;
   flex-direction: column;
   gap: 12px;
   padding: 16px 24px;

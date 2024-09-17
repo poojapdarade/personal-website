@@ -6,7 +6,6 @@ import { GitHub } from "../components/icons/GitHub";
 import { LinkedIn } from "../components/icons/LinkedIn";
 import { TypeScript } from "../components/icons/TypeScript";
 import { Testing } from "../components/icons/Testing";
-
 import { FutureSkills } from "./FutureSkills";
 import { RecentProjects } from "./RecentProject";
 

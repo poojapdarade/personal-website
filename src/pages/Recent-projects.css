@@ -23,6 +23,7 @@
 .projectsCard {
   display: flex;
   flex-direction: column;
+  text-align: justify;
   gap: 12px;
   padding: 16px 24px;
   background-color: white;

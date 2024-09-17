@@ -2,6 +2,7 @@ import React from "react";
 import { Node } from "../components/icons/Node";
 import { Tailwind } from "../components/icons/TailWind";
 import "./Learning-in-future.css";
+import { Cloud } from "lucide-react";
 
 const futureSkills = [
   {
@@ -15,6 +16,17 @@ const futureSkills = [
     icon: <Tailwind />,
     description:
       "Be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision. Utilizing Tailwind's utility-first approach, I create clean, maintainable, and scalable styles that enhance both development efficiency and user experience.",
+  },
+  {
+    title: "AWS",
+    icon: <Cloud />,
+    description:
+      "Learning AWS is highly beneficial as it equips you with cloud computing skills that are in high demand across industries. AWS offers scalable, cost-effective solutions, making you proficient in managing infrastructure, security, and data services. Mastering AWS will enhance your career prospects, enabling you to contribute to digital transformation efforts and cloud-based innovations.",
+  },
+  {
+    title: "C#/.NET",
+    description:
+      "Learning C# and .NET is a great choice because they are widely used to build everything from websites to business applications. These tools make it easier to create reliable, high-performing software, helping you improve your development skills and become more versatile in building different types of programs.",
   },
 ];
 
