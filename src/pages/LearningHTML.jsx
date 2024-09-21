@@ -17,19 +17,24 @@ export function LearningHtml() {
         />
         <h3>Basic web architecture</h3>
         <p>Web architecture is made up of three essential elements:</p>
-        <p>
-          Website: Frontend-Interface of an user application which is visible to
-          user. Your browser started by loading the main HTML file, then css and
-          Javascript.
-        </p>
-        <p>
-          Server: Once you've developed your website you need to host it on a
-          server to make it accessible on the internet.
-        </p>
-        <p>
-          Address: Address assigned to website in order to be accessible on the
-          internet. Website is hosted on an IP Address.
-        </p>
+        <ul>
+          <li>
+            <h4>Website:</h4>
+            Frontend-Interface of an user application which is visible to user.
+            Your browser started by loading the main HTML file, then css and
+            Javascript.
+          </li>
+          <li>
+            <h4>Server:</h4>
+            Once you've developed your website you need to host it on a server
+            to make it accessible on the internet.
+          </li>
+          <li>
+            <h4>Address:</h4>
+            Address assigned to website in order to be accessible on the
+            internet. Website is hosted on an IP Address.
+          </li>
+        </ul>
         <p>
           <h3>What is HTML?</h3>
         </p>
@@ -38,25 +43,31 @@ export function LearningHtml() {
           defines the structure and content to the website. The following are
           some HTML elements:
         </p>
-        <p>
-          DOCTYPE: It is an instruction which indicates the browser that the
-          document type to be served to the user is a HTML document. It should
-          be included at very top of your HTML page.
-        </p>
-        <p>
-          HTML: The top level root element that all other HTML tags are
-          contained within.
-        </p>
-        <p>
-          Head: This is the first section of the HTML that contains all of the
-          information the webpage's properties, links and more. It can have
-          meta-information about the page such as the title, description. It can
-          also include styling information with a style tag.
-        </p>
-        <p>
-          Body: Body tag contains all the displayable contents of your webpage
-          including heading, paragraphs, div containers, tables and more.
-        </p>
+        <ul>
+          <li>
+            <h4>DOCTYPE:</h4>
+            It is an instruction which indicates the browser that the document
+            type to be served to the user is a HTML document. It should be
+            included at very top of your HTML page.
+          </li>
+          <li>
+            <h4>HTML:</h4>
+            The top level root element that all other HTML tags are contained
+            within.
+          </li>
+          <li>
+            <h4>Head:</h4>
+            This is the first section of the HTML that contains all of the
+            information the webpage's properties, links and more. It can have
+            meta-information about the page such as the title, description. It
+            can also include styling information with a style tag.
+          </li>
+          <li>
+            <h4>Body:</h4>
+            Body tag contains all the displayable contents of your webpage
+            including heading, paragraphs, div containers, tables and more.
+          </li>
+        </ul>
         <h2>HTML Tags List</h2>
         <h3>Basic Structure</h3>
         <pre>
