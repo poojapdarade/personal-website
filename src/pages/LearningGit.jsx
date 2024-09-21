@@ -4,7 +4,7 @@ import "./LearningGit.css";
 export function LearningGit() {
   return (
     <PageLayout title="Understanding Git">
-      <div className="learning-git">
+      <div className="learning-git article">
         <p>
           I am learning about Git and here I am documenting my progress. As a
           part of learning I am using Git while making my website.

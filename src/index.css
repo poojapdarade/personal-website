@@ -46,3 +46,22 @@ img {
   max-width: var(--content-container-max-width);
   margin: 0 auto;
 }
+
+.article {
+  p {
+    margin-top: 16px;
+    text-align: justify;
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 24px;
+  }
+  img {
+    margin-top: 16px;
+  }
+}
