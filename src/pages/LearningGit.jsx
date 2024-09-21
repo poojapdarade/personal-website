@@ -57,11 +57,10 @@ export function LearningGit() {
           <li>git diff</li>
         </ol>
 
-        <p>
-          {" "}
-          Detailed description of the commands I know which are listed above:
-        </p>
         <h2>
+          <p>
+            Detailed description of the commands I know which are listed above:
+          </p>
           <code>git add</code>
         </h2>
         <p>

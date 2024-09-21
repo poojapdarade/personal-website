@@ -3,9 +3,13 @@
 }
 
 .title {
+  background-color: #831843;
+  color: white;
+  border-radius: 8px 16px;
   max-width: var(--content-container-max-width);
   margin: 0 auto;
-  margin-top: 0;
+  margin-bottom: 16px;
+  /* margin-top: 0; */
 }
 
 .page-content {
