@@ -24,12 +24,12 @@
   gap: 12px;
   /* width: 32px 24px; */
   padding: 16px 24px;
-  color: #ffffff;
-  background-color: #831843;
-  border: 2px solid #ffffff;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
   border-radius: 8px;
 }
 
 .article-menu a:hover {
-  background-color: #db2777;
+  background-color: #f3f4f6;
 }

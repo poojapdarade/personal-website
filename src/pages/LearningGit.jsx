@@ -6,8 +6,10 @@ export function LearningGit() {
     <PageLayout title="Understanding Git">
       <div className="learning-git article">
         <p>
-          I am learning about Git and here I am documenting my progress. As a
-          part of learning I am using Git while making my website.
+          I've gained a solid understanding of Git and regularly use it to
+          manage my projects. In this section, I’m documenting useful Git
+          commands and best practices that I’ve learned while building my
+          website.
         </p>
         <img
           className="article-image"

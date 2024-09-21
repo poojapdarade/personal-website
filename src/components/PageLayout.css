@@ -3,9 +3,9 @@
 }
 
 .title {
-  background-color: #831843;
-  color: white;
-  border-radius: 8px 16px;
+  background-color: #e5e7eb;
+  padding: 8px;
+  color: black;
   max-width: var(--content-container-max-width);
   margin: 0 auto;
   margin-bottom: 16px;
