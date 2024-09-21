@@ -4,13 +4,13 @@ import "./LearningJavaScript.css";
 export function LearningJavaScript() {
   return (
     <PageLayout title="Building Proficiency in JavaScript">
-      <div className="learning-javascript">
+      <div className="learning-javascript article">
         <img
           className="article-image"
           src="/git-article.jpg"
           alt=" Cartoon girl studying technology"
         />
-
+        <h3>Important data structures in Javascript</h3>
         <p>
           <code style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
             {`<script> 
@@ -22,19 +22,22 @@ console.log(name, lastName, studyLevel);
           </code>
         </p>
 
-        <p>Important data structures in Javascript</p>
         <h3>Following are the options to write JavaScript:</h3>
         <ul>
           <li>Use any code editor - I am using VS code</li>
           <li>Another option is online code editors such as codepen</li>
           <li>Create a HTML File as you can run that in a any web browser</li>
         </ul>
-        <h3>Important things to know to write JavaScript</h3>
+
+        <h3>
+          Following are some important concepts I have learnt to write
+          JavaScript:
+        </h3>
         <ol>
           <li>
             <p>
-              First thing we are going to learn is how to add{" "}
-              <b>comments in JavaScript</b>
+              First thing we are going to learn is how to add comments in
+              JavaScript:
             </p>
             <p>
               <code>//</code> is used for in-line comments.
