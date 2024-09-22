@@ -14,9 +14,9 @@ export function LearningJavaScript() {
         <p>
           <code style={{ textWrap: "wrap", whiteSpace: "pre-line" }}>
             {`<script> 
-var name = "Pooja";
-var lastName = "Darade";
-var studyLevel = "Masters"
+let name = "Pooja";
+let lastName = "Darade";
+let studyLevel = "Masters"
 console.log(name, lastName, studyLevel);
 </script>`}
           </code>
@@ -26,7 +26,7 @@ console.log(name, lastName, studyLevel);
         <ul>
           <li>Use any code editor - I am using VS code</li>
           <li>Another option is online code editors such as codepen</li>
-          <li>Create a HTML File as you can run that in a any web browser</li>
+          <li>Create a HTML File as you can run that in any web browser</li>
         </ul>
 
         <h3>
@@ -45,7 +45,6 @@ console.log(name, lastName, studyLevel);
             <p>
               <code>/* */</code> is used for multi-line comment.
             </p>
-            <p>You end every line in JavaScript with a ";"" semicolon.</p>
           </li>
           <li>
             <p>Data types:</p>
@@ -53,8 +52,8 @@ console.log(name, lastName, studyLevel);
             <ul>
               <li>undefined: Something which has not been defined yet</li>
               <li>
-                null: When you set this property to an element that results
-                nothing for the output for that element
+                null: When you set this property, that element explicitly means
+                nothing.
               </li>
               <li>boolean: true or false</li>
               <li>string: set of characters</li>
@@ -78,7 +77,7 @@ console.log(name, lastName, studyLevel);
 
             <ol>
               <li>
-                <code>var muName = "Beau" followed by myName = 8</code>
+                <code>let muName = "Beau" followed by myName = 8</code>
               </li>
               <li>
                 <code>let ourName = "Pooja"</code>
@@ -92,7 +91,7 @@ console.log(name, lastName, studyLevel);
               A difference between <code>var, const and let.</code> Var is going
               to be able to be used throughout your whole program. Let will only
               be able to use within scope where you declare that and const is a
-              variable that can never change.
+              variable that can never ne reassigned.
             </p>
             <p>
               There is difference between declaring a variable and assigning a
@@ -104,7 +103,7 @@ console.log(name, lastName, studyLevel);
 
             <p>
               <code>
-                var b=2; By using = assignment operator we can assign variable
+                let b=2; By using = assignment operator we can assign variable
                 to a value.
               </code>
             </p>
@@ -116,9 +115,9 @@ console.log(name, lastName, studyLevel);
             </p>
 
             <p>
-              <code>var a=9;</code>
+              <code>let a=9;</code>
               In this we are declaring and initializing variable at the same
-              time. var a is declaring it and by using assignment operator = we
+              time. let a is declaring it and by using assignment operator = we
               are initializing value 9.
             </p>
           </li>
@@ -155,12 +154,12 @@ console.log(name, lastName, studyLevel);
             <p>Concatenating strings with the plus operator:</p>
             <p>
               <code>
-                Option 1: var ourStr = "I come first." + "I come second.";{" "}
+                Option 1: let ourStr = "I come first." + "I come second.";{" "}
               </code>
             </p>
 
             <p>
-              var myStr2 = "This is the start" + "This is the end.";
+              let myStr2 = "This is the start" + "This is the end.";
               console.log(myStr2);
             </p>
 
@@ -176,7 +175,7 @@ console.log(name, lastName, studyLevel);
             <p>Constructing strings with variables:</p>
             <p>
               <code>
-                var ourName="Pooja"; var ourStr="Hello, my name is "+ ourName +
+                let ourName="Pooja"; let ourStr="Hello, my name is "+ ourName +
                 "how are you?";
               </code>
             </p>
@@ -187,10 +186,10 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>Appending variables to strings:</p>
             <p>
-              <code>var anAdjective="Awesome!";</code>
+              <code>let anAdjective="Awesome!";</code>
             </p>
             <code>
-              <p>var ourStr="The Earth is ";</p>
+              <p>let ourStr="The Earth is ";</p>
               <p>ourStr+=anAdjective;</p>
             </code>
           </li>
@@ -200,7 +199,7 @@ console.log(name, lastName, studyLevel);
               length of the string
             </p>
             <p>
-              <code>var firstNameLength=0;</code>
+              <code>let firstNameLength=0;</code>
             </p>
             <code>
               <p> firstName="Ada";</p>
@@ -214,7 +213,7 @@ console.log(name, lastName, studyLevel);
               get a character at a specific index within a string.
             </p>
             <p>
-              <code>var firstLetter="";</code>
+              <code>let firstLetter="";</code>
             </p>
             <p>
               <code> firstName=Ada";firstLetter=firstName[0];</code>
@@ -230,10 +229,10 @@ console.log(name, lastName, studyLevel);
             </p>
             <p>You can find whatever position by subtracting nth number.</p>
             <p>
-              <code>var firstName="Ada";</code>
+              <code>let firstName="Ada";</code>
             </p>
             <p>
-              <code>var lastLetter=firstName[firstName.length-1];</code>
+              <code>let lastLetter=firstName[firstName.length-1];</code>
             </p>
           </li>
           <li>
@@ -243,7 +242,7 @@ console.log(name, lastName, studyLevel);
               created.
             </p>
             <code>
-              <p>var myStr="Jello World";</p>
+              <p>let myStr="Jello World";</p>
               <p>myStr="Hello World";</p>
             </code>
           </li>
@@ -252,7 +251,7 @@ console.log(name, lastName, studyLevel);
             <p>
               <code>
                 function wordBlanks(myNoun, myAdjective,myVerb,MyAdverb) &#123;
-                var result=""; &#125;
+                let result=""; &#125;
               </code>
             </p>
             <p>
@@ -279,7 +278,7 @@ console.log(name, lastName, studyLevel);
               <code>Following is the example of array:</code>
             </p>
             <p>
-              <code>var ourArray=["John", 23];</code>
+              <code>const ourArray=["John", 23];</code>
             </p>
             <p>
               <code>It can be any data types.</code>
@@ -290,15 +289,15 @@ console.log(name, lastName, studyLevel);
             <p>It means arrays within another Array</p>
             <p>
               <code>
-                var ourArray=[["The universe",42],["everything",101010]];
+                const ourArray=[["The universe",42],["everything",101010]];
               </code>
             </p>
           </li>
           <li>
             <p>Access Array data with Indexes:</p>
             <code>
-              <p>var ourArray=[50,60,70];</p>
-              <p>var ourData=ourArray[0];</p>
+              <p>const ourArray=[50,60,70];</p>
+              <p>const ourData=ourArray[0];</p>
             </code>
             <p>
               <code>console.log(ourData);</code>
@@ -307,7 +306,7 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>Modify array data :</p>
             <p>
-              <code>var ourArray=[18,64,99];</code>
+              <code>const ourArray=[18,64,99];</code>
             </p>
             <p>
               <code>ourArray[1]=45;</code>
@@ -315,21 +314,21 @@ console.log(name, lastName, studyLevel);
             <p>And for multi-dimensional Arrays:</p>
             <p>
               <code>
-                var myArray=[[1,2,3],[4,5,6,],[7,8,9][[10,11,12],12,14]];
+                const myArray=[[1,2,3],[4,5,6,],[7,8,9][[10,11,12],12,14]];
               </code>
             </p>
             <p>
-              <code>var myData=myArray[2][1];</code>
+              <code>let myData=myArray[2][1];</code>
             </p>
           </li>
           <li>
             <p>Manipulate array with push():</p>
             <p>
-              You can have pinned data to the end of an array with the push
+              You can add the data to the end of an array with the push
               function.
             </p>
             <p>
-              <code>var ourArray=["Stimpson","J","Cat"];</code>
+              <code>const ourArray=["Stimpson","J","Cat"];</code>
             </p>
 
             <p>
@@ -346,10 +345,10 @@ console.log(name, lastName, studyLevel);
             <p>Manipulate array with pop():</p>
             <p> We can remove an item from an Array with the pop().</p>
             <p>
-              <code>var ourArray=[1,2,3];</code>
+              <code>const ourArray=[1,2,3];</code>
             </p>
             <p>
-              <code>var removedFromOurArray=ourArray.pop();</code>
+              <code>let removedFromOurArray=ourArray.pop();</code>
             </p>
             <p>The above code gives following output</p>
             <p>
@@ -365,10 +364,10 @@ console.log(name, lastName, studyLevel);
               element of the array instead of the final element.
             </p>
             <p>
-              <code>var ourArray=["Stimpson","J",["cat"]];</code>
+              <code>const ourArray=["Stimpson","J",["cat"]];</code>
             </p>
             <p>
-              <code> var removedFromOurArray=ourArray.shift();</code>
+              <code> const removedFromOurArray=ourArray.shift();</code>
             </p>
           </li>
           <li>
@@ -379,7 +378,7 @@ console.log(name, lastName, studyLevel);
               the array.
             </p>
             <p>
-              <code>var ourArray=["Stimpson","J",["cat"]];</code>
+              <code>const ourArray=["Stimpson","J",["cat"]];</code>
             </p>
             <p>
               <code>ourArray.shift(); //ourArray now equals ["J","cat"]</code>
@@ -435,7 +434,7 @@ console.log(name, lastName, studyLevel);
               scope means they can be seen everywhere is your JavaScript scope.
             </p>
             <p>
-              <code>var myVar=5</code>
+              <code>let myVar=5</code>
             </p>
             <p>
               <code>function myGlobalScope()</code>
@@ -619,7 +618,7 @@ console.log(name, lastName, studyLevel);
               <code>function chainToSwitch(val)&#123;</code>
             </p>
             <p>
-              <code>var answer="";</code>
+              <code>let answer="";</code>
             </p>
             <p>
               <code>switch(val)&#123;</code>
@@ -697,7 +696,7 @@ console.log(name, lastName, studyLevel);
               access data, we use properties.
             </p>
             <p>
-              <code>var ourDog = &#123;</code>
+              <code>let ourDog = &#123;</code>
             </p>
             <p>"name":"Camper";</p>
             <p>"legs"=4;</p>
@@ -708,19 +707,19 @@ console.log(name, lastName, studyLevel);
               <li>Dot notation</li>
               <li>Bracket Notation.</li>
             </ol>
-            <p>var ourDog=&#123;</p>
+            <p>let ourDog=&#123;</p>
             <p>"name":"Camper";</p>
             <p>"legs"=4;</p>
             <p>"friends"=[]</p>
             <p>&#125;;</p>
-            <p>var dogName=ourDog.name;</p>
-            <p> var dogLegs=ourDog["legs"];</p>
+            <p>let dogName=ourDog.name;</p>
+            <p> let dogLegs=ourDog["legs"];</p>
             <p>
               Bracket notation also can be used to look up object properties
               using variables.
             </p>
             <p>
-              <code>var ourDog=&#123;</code>
+              <code>let ourDog=&#123;</code>
             </p>
             <p>
               <code>"name":"Camper";</code>
@@ -735,10 +734,10 @@ console.log(name, lastName, studyLevel);
               <code>&#125;;</code>
             </p>
             <p>
-              <code>var dogName="name";</code>
+              <code>let dogName="name";</code>
             </p>
             <p>
-              <code>var dog=ourDog[dogName];</code>
+              <code>let dog=ourDog[dogName];</code>
             </p>
           </li>
           <li>
@@ -761,10 +760,10 @@ console.log(name, lastName, studyLevel);
             <p>Objects for lookup values: For example,</p>
             <p>function phoneticLookup(val)&#123;</p>
             <p>
-              <code>var result="";</code>
+              <code>let result="";</code>
             </p>
             <p>
-              <code>var lookup=&#123;</code>
+              <code>let lookup=&#123;</code>
             </p>
             <p>
               <code>"alpha":"Adams",</code>
@@ -790,13 +789,6 @@ console.log(name, lastName, studyLevel);
             <p>
               <code>console.log(phoneticLookup("charlie"));</code>
             </p>
-          </li>
-
-          <li>
-            <p>Testing objects for properties</p>
-          </li>
-          <li>
-            <p>Manipulating complex objects </p>
           </li>
         </ol>
       </div>
