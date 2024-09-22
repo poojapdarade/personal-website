@@ -21,7 +21,7 @@ export function LearningHtml() {
           <li>
             <h4>Website:</h4>
             Frontend-Interface of an user application which is visible to user.
-            Your browser started by loading the main HTML file, then css and
+            Your browser started by loading the main HTML file, then CSS and
             Javascript.
           </li>
           <li>
