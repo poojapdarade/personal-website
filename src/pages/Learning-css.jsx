@@ -19,12 +19,12 @@ export function LearningCss() {
         <h3>What is CSS?</h3>
         <ul>
           <li>
-            CSS is a simple design language used for making web pages look good
-            and presentable.
+            CSS is a design language used for making web pages look good and
+            presentable.
           </li>
           <li>
-            It can be attached by any HTML element and style it or even position
-            it according to developer's choice.
+            It can be attached to any HTML element and styled or positioned
+            according to developer's choice.
           </li>
         </ul>
         <h4>CSS : Cascading style sheets. </h4>
@@ -34,7 +34,7 @@ export function LearningCss() {
           <li>External</li>
           <li>Inline</li>
         </ol>
-        <h4>syntax for css:</h4> <p>selector (property = property_value) </p>
+        <h4>Syntax for CSS:</h4> <p>selector (property = property_value) </p>
         <p>3 types of selectors:</p>
         <ol>
           <li>Element - Least specific </li>
@@ -47,7 +47,7 @@ export function LearningCss() {
         </p>
         <section>
           <h3>What I have learned in CSS:</h3>
-          <h4>What is selectors?</h4>
+          <h4>Selectors</h4>
           <p>
             {" "}
             In CSS, selectors are patterns that target HTML elements for
