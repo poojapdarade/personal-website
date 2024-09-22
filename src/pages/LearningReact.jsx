@@ -73,21 +73,6 @@ export function LearningReact() {
             navigation between different views.
           </li>
           <li>
-            State Management: Techniques for managing state in larger
-            applications, such as:
-            <ul>
-              <li>Redux: A predictable state container for JavaScript apps.</li>
-              <li>
-                MobX: A simpler state management solution that uses observable
-                states.
-              </li>
-              <li>
-                Recoil: A state management library for React that offers a more
-                flexible way to manage state.
-              </li>
-            </ul>
-          </li>
-          <li>
             Testing: Essential for ensuring code quality. Familiarize yourself
             with:
             <ul>
