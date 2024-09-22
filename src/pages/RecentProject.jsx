@@ -53,7 +53,9 @@ export function RecentProjects() {
           padding: "20px 0px",
         }}
       >
-        <h2 className="project-title">My Projects</h2>
+        <h2 className="project-title" id="my-projects">
+          My Projects
+        </h2>
         <div className="projects">
           {recentProjects.map(function (recentProject) {
             return (

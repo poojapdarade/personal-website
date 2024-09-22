@@ -16,12 +16,14 @@ import { MinimumNumberGame } from "./pages/coding-puzzles/MinimumNumberGame.jsx"
 import { MontyHallProblem } from "./pages/MontyHallProblem.jsx";
 import { LearningReact } from "./pages/LearningReact.jsx";
 import { SlidingPuzzlesPage } from "./pages/SlidingPuzzle/SlidingPuzzlesPage.jsx";
+import { RecentProjects } from "./pages/RecentProject.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/my-projects" element={<RecentProjects />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/articles/learning-git" element={<LearningGit />} />
