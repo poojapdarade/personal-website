@@ -71,7 +71,7 @@ console.log(name, lastName, studyLevel);
             <p>
               Variables, we often set data into a variable. A variable allows
               computers to store and manipulate data in a dynamic fashion. It is
-              basically a label to point to a data.
+              basically a label to point to data.
             </p>
 
             <p>There are three ways to declare variables:</p>
@@ -89,11 +89,10 @@ console.log(name, lastName, studyLevel);
             </ol>
 
             <p>
-              A difference between <code>var</code>,<code>const</code> and{" "}
-              <code>let</code>. A var is going to be able to be used throughout
-              your whole program. Let will only be able to use within scope
-              where you declare that and const is a variable that can never
-              change.
+              A difference between <code>var, const and let.</code> Var is going
+              to be able to be used throughout your whole program. Let will only
+              be able to use within scope where you declare that and const is a
+              variable that can never change.
             </p>
             <p>
               There is difference between declaring a variable and assigning a
@@ -126,13 +125,12 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>Case sensitivity in variables:</p>
             <p>
-              {" "}
-              Variable names and function names are case sensitive in the
-              JavaScript. Use camelCase when are you declaring variable. For
-              example. start a variable name with small letters and when you
-              have new work use capital letter
+              Variable names and function names are case sensitive in
+              JavaScript. Use camelCase when are you declaring variables. For
+              example, start a variable name with small letters and when you
+              have a new word use a capital letter.
             </p>
-            <code>study JavaScript</code>
+            <code>studyJavaScript</code>
           </li>
           <li>
             <p>Adding numbers</p>
@@ -154,7 +152,7 @@ console.log(name, lastName, studyLevel);
           </li>
 
           <li>
-            <p>Concatenating strings with plus operator: </p>
+            <p>Concatenating strings with the plus operator:</p>
             <p>
               <code>
                 Option 1: var ourStr = "I come first." + "I come second.";{" "}
@@ -169,7 +167,6 @@ console.log(name, lastName, studyLevel);
             <p>
               Option 2:
               <code>
-                {" "}
                 ourStr = "I come first."; ourStr += "I come second";
                 console.log(ourStr);
               </code>
@@ -242,9 +239,8 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>String Immutability:</p>
             <p>
-              Strings are immutable,meaning they cannot be altered once
-              created.It does not mean it cannot be changed, just that the
-              individual characters of a string literal cannot be changed.
+              Strings are immutable, meaning they cannot be altered once
+              created.
             </p>
             <code>
               <p>var myStr="Jello World";</p>
@@ -386,7 +382,7 @@ console.log(name, lastName, studyLevel);
               <code>var ourArray=["Stimpson","J",["cat"]];</code>
             </p>
             <p>
-              <code>ourArray.shift();//oueArray now equals ["J","cat"]</code>
+              <code>ourArray.shift(); //ourArray now equals ["J","cat"]</code>
             </p>
             <p>
               <code>
@@ -395,16 +391,13 @@ console.log(name, lastName, studyLevel);
               </code>
             </p>
           </li>
-          <li>
-            <p>Shopping list</p>
-          </li>
 
           <li>
             <p>Write reusable code with functions:</p>
             <p>Functions allows us to create reusable code in JavaScript.</p>
             <p>to write a function:</p>
             <p>
-              <code>function function-name()&#123;&#125;</code>
+              <code>function functionName()&#123;&#125;</code>
             </p>
             <p>
               Anything inside the curly bracket will learn every time function
@@ -437,7 +430,7 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>Global scope and functions:</p>
             <p>
-              Scope refers to the visibility of the variables.Variables which
+              Scope refers to the visibility of the variables. Variables which
               are defined outside of a function have a global scope. Global
               scope means they can be seen everywhere is your JavaScript scope.
             </p>
@@ -445,7 +438,7 @@ console.log(name, lastName, studyLevel);
               <code>var myVar=5</code>
             </p>
             <p>
-              <code> myGlobalScope()</code>
+              <code>function myGlobalScope()</code>
             </p>
             <p>
               <code>&#123;</code>
@@ -487,7 +480,7 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>Return a value from a function:</p>
             <p>
-              <code>function minusSever(num)&#123;</code>
+              <code>function minusSeven(num)&#123;</code>
             </p>
             <p>
               <code>return num-7;</code>
@@ -500,20 +493,16 @@ console.log(name, lastName, studyLevel);
             </p>
             <p>
               The above code explain that you can return a value from the return
-              statement.When you pass a number from the minusSeven() it will
+              statement. When you pass a number from the minusSeven() it will
               execute whatever is after the return statement.
             </p>
           </li>
           <li>
-            <p>Undefined value entered:</p>
+            <p>Undefined value returned:</p>
             <p>
               If we don't specify the return value then return value is
               undefined.
             </p>
-          </li>
-
-          <li>
-            <p>Stand in Line</p>
           </li>
 
           <li>
@@ -526,6 +515,9 @@ console.log(name, lastName, studyLevel);
             </p>
             <p>
               <code>return true;</code>
+            </p>
+            <p>
+              <code>&#125;</code>
             </p>
           </li>
 
@@ -555,11 +547,11 @@ console.log(name, lastName, studyLevel);
             <p>
               This is a sign of equality operator. By val==12 we are not
               declaring that value is equals to 12 it is checking if val is 12
-              or not. this equality operator converts the type for example it
-              will convert a string to a number.There is also a{" "}
-              <b>Strict Equality Operator ===</b>: this operator needs same type
-              of element on the other side as it does not do any conversions and
-              it will evaluate false if the type is not same.
+              or not. This equality operator converts the type for example it
+              will convert a string to a number. There is also a Strict Equality
+              Operator === This operator needs same type of element on the other
+              side as it does not do any conversions and it will evaluate false
+              if the type is not same.
             </p>
           </li>
 
@@ -568,8 +560,8 @@ console.log(name, lastName, studyLevel);
             <p> !=is the sign of inequality operator.</p>
             <p>
               {" "}
-              Strict inequality operator used !== .it works opposite of strict
-              equality operator. We can use &gt; &gt;= &lt; &lt;=in out code.
+              Strict inequality operator used !== It works opposite of strict
+              equality operator. We can use &gt; &gt;= &lt; &lt;= in our code.
             </p>
           </li>
 
@@ -582,27 +574,37 @@ console.log(name, lastName, studyLevel);
             </p>
             <p>For Example,</p>
             <p>
-              <code>function testLogicalAnd(val)&#123;&#125; </code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>if(val &lt;=50 &amp;&amp; val&gt;=25)&#123;</code>
-            </p>
-            <p>
-              <code>return "Yes";</code>
-            </p>
-            <p>
-              <code>return "No";</code>
-            </p>
-            <p>
-              <code>testLogicalAnd(10);&#125;</code>
+              <code>
+                function testLogicalAnd(val)&#123;
+                <p>
+                  <code>if(val &lt;=50 &amp;&amp; val&gt;=25)&#123;</code>
+                </p>
+                <p>
+                  <code>return "Yes";</code>
+                </p>
+                <p>
+                  <code>&#125;</code>
+                </p>
+                <p>
+                  <code>return "No";</code>
+                </p>
+                <p>
+                  <code>
+                    {" "}
+                    <code>&#125;</code>
+                  </code>
+                </p>
+                <p>
+                  <code>testLogicalAnd(10)</code>
+                </p>
+              </code>
             </p>
             <p>
               Above example explains that both the statements in the if
               statement have to be true otherwise answer will be No.
             </p>
           </li>
+
           <li>
             <p>if-else statements</p>
           </li>
@@ -651,30 +653,30 @@ console.log(name, lastName, studyLevel);
               value. For example-
             </p>
             <p>
-              <code>function isLess(a,c)&#123;&#125;</code>
+              <code>
+                function isLess(a,c)&#123;
+                <p>
+                  <code>if(a&lt;c)&#123;</code>
+                </p>
+                <p>
+                  <code>return true;</code>
+                </p>
+                <p>
+                  <code> else &#123;</code>
+                </p>
+                <p>
+                  <code>return false;</code>
+                </p>
+                <p>
+                  <code>&#125;</code>
+                </p>
+              </code>
             </p>
-            <p>
-              <code>(a&lt;c)&#123;</code>
-            </p>
-            <p>
-              <code>return true;</code>
-            </p>
-            <p>
-              <code> else &#123;</code>
-            </p>
-            <p>
-              <code>return false;</code>
-            </p>
-            <p>
-              <code>&#125;</code>
-            </p>
-            <p>
-              <code>&#125;;</code>
-            </p>
+
             <p>
               <code>isLess(10,15);</code>
             </p>
-            <p>Instead we can write it as follows :</p>
+            <p>Instead we can write it as follows:</p>
             <p>
               <code>function isLess(a,c)&#123;</code>
             </p>
@@ -691,11 +693,11 @@ console.log(name, lastName, studyLevel);
           <li>
             <p>Objects:</p>
             <p>
-              Objects are similar to arrays except instead of using indexes
+              Objects are similar to arrays except instead of using indexes to
               access data, we use properties.
             </p>
             <p>
-              <code>var ourDog=&#123;</code>
+              <code>var ourDog = &#123;</code>
             </p>
             <p>"name":"Camper";</p>
             <p>"legs"=4;</p>
@@ -704,7 +706,7 @@ console.log(name, lastName, studyLevel);
             <p>There are two ways to access the property of an object.</p>
             <ol>
               <li>Dot notation</li>
-              <li>2.Bracket Notation.</li>
+              <li>Bracket Notation.</li>
             </ol>
             <p>var ourDog=&#123;</p>
             <p>"name":"Camper";</p>
@@ -747,16 +749,16 @@ console.log(name, lastName, studyLevel);
           </li>
           <li>
             <p>Add and delete properties to object:</p>
-            <p>To add a property -</p>
+            <p>To add a property:</p>
             <p>
               <code>ourDog.bark="bow-wow";</code>
             </p>
             <p>
-              To delete a property : <code>delete ourDog.bark;</code>
+              To delete a property: <code>delete ourDog.bark;</code>
             </p>
           </li>
           <li>
-            <p>Objects for lookup values:For example,</p>
+            <p>Objects for lookup values: For example,</p>
             <p>function phoneticLookup(val)&#123;</p>
             <p>
               <code>var result="";</code>

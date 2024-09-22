@@ -28,9 +28,6 @@ export function LearningReact() {
             Props: Short for properties, used to pass data between components.
             <ul>
               <li>Read-only in child components.</li>
-              <li>
-                Default props and prop types can help with component validation.
-              </li>
             </ul>
           </li>
           <li>
@@ -48,6 +45,9 @@ export function LearningReact() {
               <li>
                 Common methods include componentDidMount, componentDidUpdate,
                 and componentWillUnmount.
+              </li>
+              <li>
+                In functional components take advantage of useEffect instead
               </li>
             </ul>
           </li>
