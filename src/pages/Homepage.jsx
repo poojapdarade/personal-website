@@ -78,9 +78,7 @@ function IntroSection() {
             JavaScript, and React, complemented by a background in computer
             engineering and business management, I am driven to craft engaging
             and user-friendly web applications. I am dedicated to continuous
-            learning and improvement in modern web technologies, ensuring that
-            each project I undertake pushes the boundaries of innovation and
-            functionality.
+            learning and improvement in modern web technologies.
           </p>
 
           <div className="intro-buttons">
@@ -111,7 +109,7 @@ const skills = [
     title: "HTML",
     icon: <Heading1 size={50} />,
     description:
-      "With a strong knowledge of HTML, I create robust and accessible web structures that form the foundation for dynamic and user-friendly websites. My expertise ensures that every element is meticulously crafted to enhance both functionality and user experience.",
+      "With a strong knowledge of HTML, I create robust and accessible web structures that form the foundation for dynamic and user-friendly websites.rafted to enhance both functionality and user experience.",
   },
   {
     title: "CSS",
@@ -123,7 +121,7 @@ const skills = [
     title: "JavaScript",
     icon: <Code size={50} />,
     description:
-      "Competent in JavaScript, I bring web applications to life with interactive and dynamic functionalities. My understanding of JavaScript enables me to build seamless, responsive, and engaging user experiences, pushing the boundaries of web development.",
+      "Competent in JavaScript, my understanding of JavaScript enables me to build seamless, responsive, and engaging user experiences.",
   },
   {
     title: "React",
@@ -141,13 +139,13 @@ const skills = [
     title: "TypeScript",
     icon: <TypeScript size={50} />,
     description:
-      "Be proficient in TypeScript, I will use to build robust and maintainable web applications with enhanced type safety and improved developer experience. Leveraging TypeScript's strong typing and modern features, I ensure code quality and scalability, facilitating smoother development processes.",
+      "I use TypeScript to build robust and maintainable web applications. By leveraging TypeScript's strong typing and modern features, I ensure code quality and scalability, facilitating smoother development processes.",
   },
   {
     title: "Testing",
     icon: <Testing />,
     description:
-      "I plan to learn testing in computer engineering to enhance the reliability and performance of software and hardware systems. Mastering techniques like unit testing and automation will help me improve product quality and ensure robust, secure systems.",
+      "I have learned testing in computer engineering to enhance the reliability and performance of software and hardware systems. Gaining proficiency in techniques like unit testing and automation has helped me improve product quality and ensure robust, secure systems.",
   },
 ];
 

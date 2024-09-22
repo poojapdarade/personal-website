@@ -9,19 +9,19 @@ const futureSkills = [
     title: "Node.js",
     icon: <Node />,
     description:
-      "Learn and be skilled in Node.js, I will use this skill develop high-performance server-side applications and RESTful APIs that are scalable and efficient. Utilizing Node.js's non-blocking I/O and event-driven architecture, I create robust backend solutions that seamlessly handle real-time data and heavy traffic.",
+      "Learn and be skilled in Node.js, I will use this skill develop high-performance server-side applications and RESTful APIs that are scalable and efficient.",
   },
   {
-    title: "tailwind CSS",
+    title: "Tailwind CSS",
     icon: <Tailwind />,
     description:
-      "Be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision. Utilizing Tailwind's utility-first approach, I create clean, maintainable, and scalable styles that enhance both development efficiency and user experience.",
+      "I plan to be proficient in Tailwind CSS, I will use this skill to design highly customizable and responsive web interfaces with speed and precision.",
   },
   {
     title: "AWS",
     icon: <Cloud />,
     description:
-      "Learning AWS is highly beneficial as it equips you with cloud computing skills that are in high demand across industries. AWS offers scalable, cost-effective solutions, making you proficient in managing infrastructure, security, and data services. Mastering AWS will enhance your career prospects, enabling you to contribute to digital transformation efforts and cloud-based innovations.",
+      "Learning AWS will be highly beneficial as it will equipped me with cloud computing skills that are in high demand across industries. AWS offers scalable, cost-effective solutions, and I will gain proficiency in managing infrastructure, security, and data services. This knowledge will enhance my ability to contribute to digital transformation efforts and cloud-based innovations.",
   },
   {
     title: "C#/.NET",
