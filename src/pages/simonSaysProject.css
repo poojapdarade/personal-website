@@ -1,5 +1,5 @@
 .simon-says-layout {
-  background-color: #1c1c1e;
+  background-color: #030712;
   font-family: "Roboto", sans-serif;
   color: white;
   display: flex;
@@ -59,37 +59,37 @@
 }
 
 .square-container .red {
-  background-color: red;
+  background-color: #b91c1c;
   border-radius: 50% 0 0 0;
 }
 
 .red:hover {
-  background-color: red;
+  background-color: #b91c1c;
 }
 
 .green {
-  background-color: green;
+  background-color: #15803d;
   border-radius: 0% 50% 0 0;
 }
 
 .green:hover {
-  background-color: green;
+  background-color: #15803d;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #1e40af;
   border-radius: 0 0 0 50%;
 }
 .blue:hover {
-  background-color: blue;
+  background-color: #1e40af;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #eab308;
   border-radius: 0 0 50% 0;
 }
 .yellow:hover {
-  background-color: yellow;
+  background-color: #eab308;
 }
 
 .red[data-is-color="true"],

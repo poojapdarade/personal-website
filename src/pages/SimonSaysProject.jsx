@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./simonSaysProject.css";
+import { PageLayout } from "../components/PageLayout";
 
 function randomColor() {
   const randomIndex = Math.floor(Math.random() * 4);
@@ -80,53 +81,55 @@ export function SimonSaysGame() {
   }
 
   return (
-    <div className="simon-says-layout">
-      <div
-        className="square-container"
-        data-is-animating={
-          animationColors.length > 0 && currentGameState !== "game-over"
-        }
-        data-is-playing={currentGameState === "playing"}
-      >
-        <div className="score">
-          <p>{Math.max(gameColors.length - 1, 0)}</p>
+    <PageLayout>
+      <div className="simon-says-layout">
+        <div
+          className="square-container"
+          data-is-animating={
+            animationColors.length > 0 && currentGameState !== "game-over"
+          }
+          data-is-playing={currentGameState === "playing"}
+        >
+          <div className="score">
+            <p>{Math.max(gameColors.length - 1, 0)}</p>
+          </div>
+          <div
+            className="quadrant red"
+            data-is-color={animatedColor === "red"}
+            onClick={() => handleClick("red")}
+          />
+          <div
+            className="quadrant green"
+            data-is-color={animatedColor === "green"}
+            onClick={() => handleClick("green")}
+          />
+          <div
+            className="quadrant blue"
+            data-is-color={animatedColor === "blue"}
+            onClick={() => handleClick("blue")}
+          />
+          <div
+            className="quadrant yellow"
+            data-is-color={animatedColor === "yellow"}
+            onClick={() => handleClick("yellow")}
+          />
         </div>
-        <div
-          className="quadrant red"
-          data-is-color={animatedColor === "red"}
-          onClick={() => handleClick("red")}
-        />
-        <div
-          className="quadrant green"
-          data-is-color={animatedColor === "green"}
-          onClick={() => handleClick("green")}
-        />
-        <div
-          className="quadrant blue"
-          data-is-color={animatedColor === "blue"}
-          onClick={() => handleClick("blue")}
-        />
-        <div
-          className="quadrant yellow"
-          data-is-color={animatedColor === "yellow"}
-          onClick={() => handleClick("yellow")}
-        />
-      </div>
 
-      <div className="controls">
-        {currentGameState === "not-started" && (
-          <button onClick={startGame}>Start Game</button>
-        )}
-        {currentGameState !== "not-started" && (
-          <button onClick={resetGame}>Restart Game</button>
-        )}
-      </div>
-
-      {isGameOver && (
-        <div className="game-over-message">
-          <h2>Game Over!</h2>
+        <div className="controls">
+          {currentGameState === "not-started" && (
+            <button onClick={startGame}>Start Game</button>
+          )}
+          {currentGameState !== "not-started" && (
+            <button onClick={resetGame}>Restart Game </button>
+          )}
         </div>
-      )}
-    </div>
+
+        {isGameOver && (
+          <div className="game-over-message">
+            <h2>Game Over!</h2>
+          </div>
+        )}
+      </div>
+    </PageLayout>
   );
 }
