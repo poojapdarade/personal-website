@@ -1,7 +1,6 @@
 import React from "react";
 import { Game } from "../components/icons/Game";
 import { Website } from "../components/icons/Website";
-import { InProcess } from "../components/icons/InProcess";
 import "./Recent-projects.css";
 
 const recentProjects = [
@@ -28,9 +27,9 @@ const recentProjects = [
   },
 
   {
-    title: "In Progress ⏳",
-    link: "",
-    icon: <InProcess />,
+    title: "Simon Says Game",
+    link: "/projects/simon-says-game",
+    icon: <Game />,
   },
 ];
 export function RecentProjects() {

@@ -1,0 +1,137 @@
+body {
+  background-color: #1c1c1e;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.square-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 8px;
+}
+
+.score {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  font-size: 36px;
+}
+
+.square-container[data-is-animating="true"] .quadrant {
+  cursor: not-allowed;
+}
+
+.quadrant {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.square-container:not([data-is-animating="true"]) > .quadrant:focus,
+.square-container:not([data-is-animating="true"]) > .quadrant:active {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+  transition: box-shadow 300ms, transform 300ms;
+}
+
+.square-container:not([data-is-playing="true"]) > .quadrant:focus,
+.square-container:not([data-is-playing="true"]) > .quadrant:active {
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+
+.square-container .red {
+  background-color: red;
+  border-radius: 50% 0 0 0;
+}
+
+.red:hover {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+  border-radius: 0% 50% 0 0;
+}
+
+.green:hover {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+  border-radius: 0 0 0 50%;
+}
+.blue:hover {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+  border-radius: 0 0 50% 0;
+}
+.yellow:hover {
+  background-color: yellow;
+}
+
+.red[data-is-color="true"],
+.green[data-is-color="true"],
+.blue[data-is-color="true"],
+.yellow[data-is-color="true"] {
+  animation: glowEffect 1s infinite;
+}
+
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.controls button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.game-over-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.game-over-message h2 {
+  color: red;
+}

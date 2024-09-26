@@ -51,7 +51,7 @@ function IntroSection() {
         </p>
         <img src="/avatar.jpeg" className="avatar" />
         <div className="intro-buttons">
-          <a href="/articles" className="view-work">
+          <a href="#my-projects" className="view-work">
             View Work
           </a>
 
@@ -82,7 +82,7 @@ function IntroSection() {
           </p>
 
           <div className="intro-buttons">
-            <a href="/articles" className="view-work">
+            <a href="#my-projects" className="view-work">
               View Work
             </a>
             <a href="/contact" className="contact">
