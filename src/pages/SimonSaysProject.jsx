@@ -80,7 +80,7 @@ export function SimonSaysGame() {
   }
 
   return (
-    <div>
+    <div className="simon-says-layout">
       <div
         className="square-container"
         data-is-animating={
