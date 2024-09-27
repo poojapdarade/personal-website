@@ -115,7 +115,7 @@ export function SimonSaysGame() {
           />
         </div>
 
-        <div className="controls">
+        <div className="simon-says-controls">
           {currentGameState === "not-started" && (
             <button onClick={startGame}>Start Game</button>
           )}

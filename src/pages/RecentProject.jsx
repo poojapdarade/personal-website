@@ -28,8 +28,10 @@ const recentProjects = [
 
   {
     title: "Simon Says Game",
-    link: "/projects/simon-says-game",
     icon: <Game />,
+    description:
+      "I built a Simon Says game using JavaScript, HTML and CSS. The game lets users follow a sequence of colors that gets harder as they play. It helped me improve my skills in JavaScript and handling user interactions.",
+    link: "/projects/simon-says-game",
   },
 ];
 export function RecentProjects() {

@@ -111,13 +111,13 @@
   }
 }
 
-.controls {
+.simon-says-controls {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-.controls button {
+.simon-says-controls button {
   background-color: black;
   color: white;
   border: none;
