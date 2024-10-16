@@ -17,6 +17,7 @@ import { MontyHallProblem } from "./pages/MontyHallProblem.jsx";
 import { LearningReact } from "./pages/LearningReact.jsx";
 import { SlidingPuzzlesPage } from "./pages/SlidingPuzzle/SlidingPuzzlesPage.jsx";
 import { SimonSaysGame } from "./pages/SimonSaysProject.jsx";
+import { LearningTypescript } from "./pages/LearningTypeScript.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,6 +32,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/articles/learning-javaScript"
           element={<LearningJavaScript />}
+        />
+        <Route
+          path="/articles/learning-typescript"
+          element={<LearningTypescript />}
         />
         <Route path="/articles/learning-react" element={<LearningReact />} />
         <Route path="/articles/coding-puzzles" element={<CodingPuzzle />} />

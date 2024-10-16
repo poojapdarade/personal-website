@@ -24,6 +24,9 @@ export function Articles() {
             <a href="/articles/learning-react">Deepening Expertise in React</a>
           </p>
           <p>
+            <a href="/articles/learning-typescript">Discover TypeScript</a>
+          </p>
+          <p>
             <a href="/articles/coding-puzzles">Coding Puzzles</a>
           </p>
         </nav>

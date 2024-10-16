@@ -1,0 +1,14 @@
+.compiler-error {
+  width: 250px;
+}
+
+.learning-typescript {
+  max-width: var(--content-container-max-width);
+  margin: auto;
+}
+
+.learning-typescript p,
+li {
+  margin-bottom: 16px;
+  text-align: justify;
+}
